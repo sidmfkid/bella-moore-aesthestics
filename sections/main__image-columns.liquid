@@ -1,0 +1,80 @@
+<div class="image-columns">
+
+
+
+    <div class="image-columns__column"
+        style="background-image: url('https://cdn.shopify.com/s/files/1/0581/1680/0605/files/image-colum-1.jpg?v=1652466360');">
+        <div class="image-columns__heading">
+            <span>Medical Weight Loss</span>
+        </div>
+        <div class="image-columns__content">
+            <p class="image-columns__para">
+                We take the appropriate time to assess your
+                personal goals and take a scientific, data-driven approach
+                to aide you in reaching, as well as maintaining your desired physique. You can be confident that every
+                step you take is in the right direction and feel secure that we will be there for every one.
+            </p>
+            <div class="image-columns__btn">
+                <a href="" class="btn btn__secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% schema %}
+{
+"name": "main__image-columns",
+"settings": [
+],
+"max_blocks": 5,
+"blocks": [
+{
+"name": "Column",
+"type": "column",
+"settings": [
+{
+"type": "text",
+"id": "heading",
+"label": "Heading"
+},
+{
+"type": "textarea",
+"id": "para",
+"label": "Paragraph"
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "Button Text"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Heading"
+}
+]
+}
+],
+"presets": [
+{
+"name":"Image Columns",
+"blocks": [
+{
+"type": "column"
+},
+{
+"type": "column"
+},
+{
+"type": "column"
+},
+{
+"type": "column"
+}
+]
+}
+]
+}
+{% endschema %}

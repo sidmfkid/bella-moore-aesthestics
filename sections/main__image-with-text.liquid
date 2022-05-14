@@ -1,0 +1,70 @@
+<div class="image-with-text">
+    <div class="image-with-text__content">
+        <div class="image-with-text__image">
+            <img width="230" height="230" src="{{section.settings.image | img_url }}" alt="">
+        </div>
+        <div class="image-with-text__text-box">
+            <h2 class="image-with-text__heading">{{ section.settings.title }}</h2>
+            <p class="image-with-text__para">{{ section.settings.para }}</p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "main__image-with-text",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Type In A Heading"
+},
+{
+"type": "textarea",
+"id": "para",
+"label": "Type In A Description"
+},
+{
+"type": "select",
+"id": "image_position",
+"label": "Image Position",
+"options": [
+{
+"value": "reverse",
+"label": "Right"
+},
+{
+"value": "row",
+"label": "Left"
+}
+],
+"default": "row"
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Select An Image"
+},
+{
+"type": "header",
+"content": "Button Settings"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Button Link"
+},
+{
+"type": "text",
+"id": "button_text",
+"label": "Type Button Text"
+}
+],
+"presets": [
+{
+"category": "Images",
+"name":"Image With Text 2"
+}
+]
+}
+{% endschema %}
