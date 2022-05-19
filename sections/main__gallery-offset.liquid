@@ -1,16 +1,12 @@
 <div class="gallery-offset">
     <div class="gallery-offset__center-image">
-        <img width="1200" height="615"
-            src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/gallery-long.jpg?v=1652919364" alt=""
-            class="gallery-offset__image">
+        <img alt="" class="gallery-offset__image" height="615" src="{{ section.settings.image__main | image_url }}" width="1200">
         <div class="gallery-offset__heading-container">
-            <h2 class="gallery-offset__heading">GALLERY</h2>
+            <h2 class="gallery-offset__heading">{{ section.settings.heading }}</h2>
         </div>
 
         <div class="gallery-offset__offset-image-container">
-            <img width="200" height="400"
-                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/gallery-narrow.jpg?v=1652919364" alt=""
-                class="gallery-offset__offset-image">
+            <img alt="" class="gallery-offset__offset-image" height="615" src="{{ section.settings.image__main | image_url }}" width="1200">
         </div>
     </div>
 </div>
@@ -19,7 +15,16 @@
 {
 "name": "main__gallery-offset",
 "settings": [
-
-]
+{
+   "type": "image_picker",
+   "id": "image__main",
+   "label": "Main Image"
+},
+{
+   "type": "text",
+   "id": "heading",
+   "label": "Heading",
+   "default": "Gallery"
 }
-{% endschema %}
+]
+} {% endschema %}

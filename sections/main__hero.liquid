@@ -1,27 +1,93 @@
+{% style %}
+    .hero__bg{
+        background: url({{ section.settings.image | image_url }});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+{% endstyle %}
+
+
 <div class="hero">
     <div class="hero__bg"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
         <div class="hero__logo">
-            <img width="116" height="116"
-                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Logo_116x116_c309b8e0-02e5-45e5-9e05-1cafc83b8f7c.png?v=1652412442"
-                alt="">
+            <img
+                alt=""
+                height="116"
+                src="{{ section.settings.logo | image_url}}"
+                width="116">
         </div>
         <div class="hero__text-box">
-            <h1 class="hero__title">BELLA MOORE AESTHETICS</h1>
-            <span class="hero__subtitle">Lifestyle Innovation</span>
+            <h1 class="hero__title">{{ section.settings.heading }}</h1>
+            <span class="hero__subtitle">{{ section.settings.subheading}}</span>
         </div>
     </div>
     <div class="hero__cta">
-        <a href="/" class="hero__btn btn btn__secondary">Book Now</a>
+        <a class="hero__btn {{ section.settings.button__type }}" href="/">{{ section.settings.button__text }}</a>
     </div>
 </div>
 
+
+
+
 {% schema %}
 {
-"name": "main__hero",
+"name": "Hero",
 "settings": [
-
+   {
+    "type": "header",
+    "content": "Image"
+    },
+    {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Image",
+       "info": "1500 x 1000px recommended"
+    },
+    {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo",
+        "info": "116 x 116px recommended"
+     },
+    {
+       "type": "header",
+       "content": "Text"
+    },
+    {
+       "type": "text",
+       "id": "heading",
+       "label": "Heading",
+      "default": "Heading Here"
+    },
+    {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subeading",
+       "default": "Subheading Here"
+    },
+    {
+        "type": "text",
+        "id": "button__text",
+        "label": "Button text",
+        "default": "Button"
+    },
+    {
+        "type": "select",
+        "id": "button__type",
+        "label": "Button Style",
+        "options": [
+            {
+                "value": "btn btn__secondary--lg",
+                "label": "Secondary button"
+            },
+            {
+                "value": "btn btn__primary--lg",
+                "label": "Primary button"
+            }
+        ]
+    }
 ]
-}
-{% endschema %}
+} {% endschema %}

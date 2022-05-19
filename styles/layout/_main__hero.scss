@@ -1,11 +1,12 @@
-.hero{
+.hero {
     width: 100%;
     height: 100.3rem;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    &__bg{
+
+    &__bg {
         position: absolute;
         top: 0rem;
         left: 0;
@@ -13,12 +14,11 @@
         z-index: -2;
         width: 100%;
         height: 100%;
-        background-image: url('https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Hero-BG.jpg?v=1652411800');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-image: url('https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Hero-BG.jpg?v=1652411800');
+
     }
-    &__overlay{
+
+    &__overlay {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -27,99 +27,114 @@
         z-index: -1;
         background-color: rgba(0, 0, 0, 0.35);
     }
-    &__content{
+
+    &__content {
         display: flex;
         justify-content: center;
     }
 
-    &__cta{
+    &__cta {
         align-self: flex-end;
         position: absolute;
         right: 2rem;
         bottom: 13.2rem;
 
     }
-    &__btn{
+
+    &__btn {
         font-size: font-size(regular);
         font-family: var(--font-body-family);
         text-decoration: none;
-        &::after{
+
+        &::after {
             top: -8px;
             left: 0;
         }
-        &:hover::after{
+
+        &:hover::after {
             top: -14px;
         }
-        &::before{
+
+        &::before {
             bottom: -8px;
             left: 0;
         }
-        &:hover::before{
+
+        &:hover::before {
             bottom: -14px;
         }
     }
-    &__logo{
+
+    &__logo {
         margin-right: 2rem;
     }
-    &__text-box{
 
-    }
-    &__title{
+    &__text-box {}
+
+    &__title {
         font-size: font-size(medium);
         font-weight: 100;
         color: white;
         width: 35rem;
     }
-    &__subtitle{
+
+    &__subtitle {
         @include text-gradient;
         font-size: font-size(small);
         letter-spacing: 2px;
         text-transform: uppercase;
     }
-    @include media-tablet{
+
+    @include media-tablet {
         // height: 50rem;
         display: flex;
         justify-content: center;
-    align-items: flex-end;
+        align-items: flex-end;
         flex-wrap: wrap;
         height: 45rem;
 
-        &__content{
+        &__content {
             align-items: center;
             // width: 100%;
         }
-        &__title{
-        font-size: font-size(medium);
-        width: fit-content;
+
+        &__title {
+            font-size: font-size(medium);
+            width: fit-content;
         }
-        &__subtitle{
-        font-size: font-size(small);
+
+        &__subtitle {
+            font-size: font-size(small);
         }
-        &__cta{
+
+        &__cta {
             position: relative;
             align-self: unset;
             width: 100%;
             right: 0;
             bottom: 0;
         }
-        &__btn{
+
+        &__btn {
             width: 12rem;
             margin: 0 auto 10rem auto;
         }
-        &__logo{
+
+        &__logo {
             height: 4.6rem;
             width: 4.6rem;
             // flex-basis: 4.6rem;
             // flex-grow: 1;
 
-            img{
-            width: 100%;
-            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
             }
         }
-        &__text-box{
-min-width: min-content;
-// max-width: calc(10rem + 5vw);
+
+        &__text-box {
+            min-width: min-content;
+            // max-width: calc(10rem + 5vw);
 
         }
     }

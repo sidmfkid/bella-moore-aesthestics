@@ -1,21 +1,26 @@
 .gallery-offset {
     position: relative;
     width: 100%;
+
     // height: calc(22rem + 10vw);
-    &__center-image{
+    &__center-image {
         position: relative;
-display: block;
-margin: calc(-2rem - 5vw) auto 0 auto;
-width: 80%;
-box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
+        display: block;
+        // margin: calc(-2rem - 5vw) auto 0 auto;
+        margin: 0 auto;
+        width: 80%;
+        box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
     }
-    &__image{
+
+    &__image {
         display: block;
         margin: 0 auto;
         width: 100%;
         height: auto;
+        filter: saturate(0) brightness(.76);
     }
-    &__heading-container{
+
+    &__heading-container {
         display: flex;
         width: 100%;
         height: 100%;
@@ -26,36 +31,47 @@ box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
         left: 0;
         z-index: 2;
     }
-    &__heading{
+
+    &__heading {
         color: white;
         font-size: calc(2.1rem + 15vw);
         font-weight: 100;
     }
-    &__offset-image-container{
+
+    &__offset-image-container {
         position: absolute;
         top: -11rem;
         right: 10rem;
-        // width: calc(15rem + 5vw);
-        height: auto;
-        
-    }
-    &__offset-image{
-        width: 100%;
-        height: auto;
-box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
+        width: calc(15rem + 5vw);
+        height: calc(25rem + 10vw);
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
 
     }
 
-    @include media-tablet{
-        &__offset-image-container{
-            width: calc(10rem + 2vw);
+    &__offset-image {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
+
+    }
+
+    @include media-tablet {
+        &__offset-image-container {
+            width: calc(10rem + 5vw);
+            height: calc(20rem + 5vw);
+
             top: -6rem;
             right: 5rem;
         }
     }
+
     @include media-medium {
-        &__offset-image-container{
-            width: calc(5rem + 5vw);
+        &__offset-image-container {
+            width: calc(7rem + 5vw);
+            height: calc(12rem + 10vw);
             top: -3rem;
             right: 4rem;
         }

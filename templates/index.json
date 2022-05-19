@@ -2,7 +2,14 @@
   "sections": {
     "hero": {
       "type": "main__hero",
-      "settings": {}
+      "settings": {
+        "heading": "BELLA MOORE AESTHETICS",
+        "subheading": "Lifestyle Innovation",
+        "image": "shopify:\/\/shop_images\/HERO-BG.jpg",
+        "logo": "shopify:\/\/shop_images\/logo2.png",
+        "button__text": "Book Now",
+        "button__type": "btn btn__secondary--lg"
+      }
     },
     "image-with-text": {
       "type": "main__image-with-text",
@@ -18,35 +25,47 @@
       "blocks": {
         "column-1": {
           "type": "column",
-        "settings":{
-          "heading": "Medical Weight Loss"
-        }
+          "settings": {
+            "heading": "Medical Weight Loss",
+            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
+            "button__text": "Learn More"
+          }
         },
         "column-2": {
           "type": "column",
-        "settings":{
-          "heading": "Medical Weight Loss"
-        }
+          "settings": {
+            "heading": "Medical Weight Loss",
+            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
+            "button__text": "Learn More"
+          }
         },
         "column-3": {
           "type": "column",
-        "settings":{
-          "heading": "Medical Weight Loss"
-        }
+          "settings": {
+            "heading": "Medical Weight Loss",
+            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
+            "button__text": "Learn More"
+          }
         },
         "column-4": {
           "type": "column",
-        "settings":{
-          "heading": "Medical Weight Loss"
-        }
+          "settings": {
+            "heading": "Medical Weight Loss",
+            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
+            "button__text": "Learn More"
+          }
         }
       },
-        "block_order": [
-          "column-1",
-          "column-2",
-          "column-3",
-          "column-4"
-        ]
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ]
     },
     "image-columns-2": {
       "type": "main__image-columns",
@@ -58,11 +77,20 @@
     },
     "text-overlay-image": {
       "type": "main__text-overlay-image",
-      "settings": {}
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "image": "shopify:\/\/shop_images\/bg-image-overlay.jpg",
+        "heading": "Begin Your Welness journey Today",
+        "para": "You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step.",
+        "button__text": "GET STARTED"
+      }
     },
     "gallery-offset": {
       "type": "main__gallery-offset",
-      "settings": {}
+      "settings": {
+        "image__main": "shopify:\/\/shop_images\/gallery-long-color.jpg",
+        "heading": "GALLERY"
+      }
     },
     "image-with-text-2": {
       "type": "main__image-with-text",
@@ -70,7 +98,11 @@
     },
     "quote-text": {
       "type": "main__quote-text",
-      "settings": {}
+      "settings": {
+        "quote__text": "Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise",
+        "quote__author": "Sheila P.",
+        "quote__info": "Medical Grade HCG"
+      }
     },
     "two-columns": {
       "type": "main__two-columns",
