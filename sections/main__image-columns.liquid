@@ -2,7 +2,8 @@
 
 
 
-    <div class="image-columns__column"
+    {% for block in section.blocks %}
+    <div {{ block.shopify_attributes }} class="image-columns__column"
         style="background-image: url('https://cdn.shopify.com/s/files/1/0581/1680/0605/files/image-colum-1.jpg?v=1652466360');">
         <div class="image-columns__heading">
             <span>Medical Weight Loss</span>
@@ -19,6 +20,8 @@
             </div>
         </div>
     </div>
+
+    {% endfor %}
 
 
 </div>

@@ -39,14 +39,14 @@
         "settings":{
           "heading": "Medical Weight Loss"
         }
-        },
+        }
+      },
         "block_order": [
           "column-1",
           "column-2",
           "column-3",
           "column-4"
         ]
-      }
     },
     "image-columns-2": {
       "type": "main__image-columns",
@@ -89,7 +89,7 @@
       "settings": {}
     },
     "image-with-text-square": {
-      "type": "main__image-with-text-square",
+      "type": "main__image-with-text-sq",
       "settings": {}
     }
   },
@@ -100,9 +100,9 @@
     "text-overlay-image",
     "image-banner-callout",
     "gallery-offset",
+    "quote-text",
     "image-with-text-2",
     "image-columns-2",
-    "quote-text",
     "two-columns",
     "image-with-card",
     "two-columns-2",

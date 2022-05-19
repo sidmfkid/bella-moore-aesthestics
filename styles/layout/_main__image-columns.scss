@@ -1,10 +1,24 @@
 .image-columns{
 display: grid;
 grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 68.5rem;
     &__column{
+        overflow-y: hidden;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        display: grid;
+        grid-template-columns: 1rem 1fr 1rem;
+        grid-template-rows: repeat(7, 1fr);
+        transition: all .3s ease-in-out;
+        filter: saturate(0) brightness(.8);
+        &:active, &:hover{
+        filter: saturate(1) brightness(1);
+
+            .image-columns__content{
+                transform: translateY(0);
+            }
+        }
         &--1{
             columns: 1 / 2;
         }
@@ -16,6 +30,85 @@ grid-template-columns: repeat(4, 1fr);
         }
         &--4{
             columns: 4/5;
+        }
+    }
+    &__heading{
+        font-size: font-size(small);
+        color: white;
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 4/5 ;
+        place-self: center;
+        span{
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            // transform: scaleY(1.35);
+        }
+    }
+    &__content{
+        transition: transform .3s ease-in-out;
+        transform: translateY(69rem);
+        place-self: stretch;
+        padding: 2rem 2rem 0rem 2rem;
+        grid-column: 1/4;
+        grid-row: 5 / 8 ;
+        background-color: rgba(0, 0, 0, 0.90);
+        border-top: 10px solid $primary-color;
+    }
+    &__para{
+        font-size: font-size(xsmall);
+        color: white;
+        text-align: center;
+    }
+    &__btn{
+        min-width: 11.5rem;
+        max-width: 15.5rem;
+        height: auto;
+        margin: 3rem auto 0 auto;
+        a{
+            font-size: font-size(small);
+            letter-spacing: 5px;
+            text-decoration: none;
+            &::after{
+                top: -2px;
+            }
+            &::before{
+                bottom: -2px;
+            }
+        }
+    }
+    @include media-tablet{
+        grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: repeat(4,68.5rem);
+    &__column{
+    &:nth-of-type(1){
+    grid-row: auto;
+    grid-column: 1/ 3;
+    }
+    &:nth-of-type(2){
+        grid-row: auto;
+        grid-column: 3/ 5;
+    }
+    &:nth-of-type(3){
+        grid-row: auto;
+        grid-column: 1/ 3;
+    }
+    &:nth-of-type(4){
+        grid-row: auto;
+        grid-column: 3/ 5;
+    }
+}
+    }
+    @include media-medium{
+        grid-template-rows: repeat(4,58.5rem);
+
+        &__column{
+            &:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4){
+            grid-column: 1 / 5;
+
+            }
         }
     }
 }

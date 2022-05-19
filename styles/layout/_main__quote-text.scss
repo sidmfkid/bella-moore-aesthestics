@@ -1,0 +1,30 @@
+.quote-text {
+    width: 100%;
+    height: 30rem;
+    padding: 4rem 4rem;
+    &__quote-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+    &__quote{
+        display: block;
+        font-size: font-size(medium);
+        width: calc(23rem + 25vw);
+        text-align: center;
+        font-weight: 500;
+    }
+    &__author-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        span{
+            font-size: font-size(small);
+            @include text-gradient;
+        }
+    }
+}
