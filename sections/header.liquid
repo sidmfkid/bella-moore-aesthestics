@@ -1,10 +1,4 @@
-<input
-    checked
-    class="header__input"
-    hidden
-    id="menu"
-    name="menu"
-    type="checkbox">
+<input class="header__input" hidden id="menu" name="menu" type="checkbox">
 <header class="header">
     <div class="header__wrapper">
 
@@ -22,6 +16,7 @@
                 {% for link in linklists.main-menu.links %}
                     <li class="header__nav-item">
                         <a class="header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                        <!-- if sub menu add this -->
                         <div class="header__icon-container">
                             {% render 'icon-caret'%}
                         </div>
