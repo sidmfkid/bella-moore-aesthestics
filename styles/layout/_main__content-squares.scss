@@ -132,6 +132,7 @@
 
         &__button.btn.btn__secondary--md {
             font-size: font-size(regular);
+            @include text-gradient;
 
         }
     }

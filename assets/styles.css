@@ -1527,6 +1527,11 @@ html {
   }
   .content-squares__button.btn.btn__secondary--md {
     font-size: calc(1.5rem + 1vw);
+    background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+    background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
