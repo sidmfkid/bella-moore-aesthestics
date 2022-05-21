@@ -644,6 +644,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: calc(1.2rem + 0.5vw);
   letter-spacing: 2px;
@@ -715,6 +716,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: calc(1.5rem + 5vw);
   font-weight: 100;
@@ -933,6 +935,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: calc(1.5rem + 2vw);
   font-weight: 100;
@@ -1159,6 +1162,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1364,6 +1368,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: calc(1.5rem + 1vw);
   font-weight: 100;
@@ -1469,6 +1474,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: calc(1.5rem + 2vw);
   font-weight: 100;
@@ -1483,6 +1489,7 @@ html {
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: calc(20rem + 5vw);
   margin: 0 auto;
