@@ -1,0 +1,91 @@
+<div class="content-squares">
+
+    {% for block in section.blocks %}
+    {%- assign image = block.settings.image -%}
+
+
+
+    <div {{block.shopify_attributes }} class="content-squares__square">
+        {% case block.type %}
+            {% when 'image' %}
+            <img
+            alt=""
+            class="content-squares__image"
+            height="{{ image.height }}"
+            src="{{ image | image_url }}"
+            width="{{ image.width }}">
+            {% when 'text' %}
+            <div class="content-squares__content-wrapper">
+                <div class="content-squares__heading-container">
+                    <h4 class="content-squares__heading">{{ block.settings.heading }}</h4>
+                </div>
+                <div class="content-squares__para-container">
+                    <p class="content-squares__para">
+                        {{ block.settings.para}}
+                    </p>
+                </div>
+                <div class="content-squares__button-container">
+                    <a class="content-squares__button btn btn__secondary--md" href="{{ block.settings.button_link }}">{{ block.settings.button_text}}</a>
+                </div>
+            </div>
+        {% endcase %}
+
+    </div>
+    {% endfor %}
+
+
+
+    <!-- <div class="content-squares__square">
+</div>
+<div class="content-squares__square">
+</div>
+<div class="content-squares__square">
+</div> -->
+</div>
+
+{% schema %}
+{
+"name": "Content Squares",
+"settings": [
+],
+"max_blocks": 6,
+"blocks": [
+    {
+       "name": "Square Image",
+       "type": "image",
+      "settings": [
+          {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Image"
+          }
+      ]
+    },
+    {
+        "name": "Square text",
+        "type": "text",
+       "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+               "type": "textarea",
+               "id": "para",
+               "label": "Paragraph"
+            },
+            {
+               "type": "text",
+               "id": "button_text",
+               "label": "Button text"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button link"
+             }
+       ]
+     }
+]
+} {% endschema %}

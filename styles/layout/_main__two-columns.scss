@@ -1,0 +1,135 @@
+.two-columns {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: calc(65rem + 10vw);
+    position: relative;
+
+    &__logo-container {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--hidden {
+            @extend .two-columns__logo-container;
+            display: none;
+        }
+    }
+
+    &__logo {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    &__col {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0 calc(3.5rem + 8vw);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        height: calc(60% - 5vw);
+
+    }
+
+    &__bg-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__bg {
+        width: auto;
+        height: 120%;
+        filter: grayscale(1) brightness(.65);
+
+    }
+
+    &__heading-container {
+        width: 100%;
+        // margin-bottom: calc(.5rem + 2vw);
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: font-size(medium);
+        font-weight: 100;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: -1px;
+    }
+
+    &__para-container {
+        width: 100%;
+        // margin-bottom: calc(.5rem + 2vw);
+    }
+
+    &__para {
+        color: white;
+        font-size: font-size(small);
+        font-weight: 100;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+
+    @include media-tablet {
+        &__col {
+            justify-content: center;
+
+            padding: 0 calc(1rem + 5.5vw);
+        }
+
+        &__logo {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+
+    @include media-medium {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, calc(55rem + 10vw));
+
+
+        &__col {
+            // padding: 3rem calc(1rem + 5.5vw);
+        }
+
+        &__heading-container {
+            // margin-bottom: calc(1rem + 2vw);
+        }
+
+        &__para-container {
+            // margin-bottom: calc(1rem + 2vw);
+        }
+
+        &__button-container {}
+
+        &__heading {
+            font-size: font-size(large);
+        }
+
+        &__para {
+            font-size: font-size(regular);
+        }
+    }
+}

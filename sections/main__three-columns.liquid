@@ -1,8 +1,49 @@
+<div class="three-columns">
+
+    {% for block in section.blocks %}
+        
+    <div {{ block.shopify_attributes }} class="three-columns__col">
+        <div class="three-columns__image-container">
+            <img
+                alt=""
+                class="three-columns__image"
+                src="{{ block.settings.image | image_url }}">
+        </div>
+        <a class="three-columns__content" href="{{ block.settings.link }}">
+            <h3 class="three-columns__heading">{{ block.settings.heading }}</h3>
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
 {% schema %}
 {
-"name": "main__three-columns",
+"name": "Three Columns",
 "settings": [
-
+],
+"max_blocks": 3,
+"blocks": [
+    {
+       "name": "Column",
+      "type": "column",
+     "settings": [
+         {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Background image"
+         },
+         {
+            "type": "text",
+            "id": "heading",
+            "label": "heading"
+         },
+         {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+         }
+     ]
+    }
 ]
-}
-{% endschema %}
+} {% endschema %}

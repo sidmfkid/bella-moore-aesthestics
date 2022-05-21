@@ -4,7 +4,7 @@
         <img height="575" width="1506" src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/banner-bg.png?v=1653001061" alt="" class="banner-callout__bg">
     </div>
     
-        <h2 class="banner-callout__heading">Begin Your Health Revolution Today</h2>
+        <h2 class="banner-callout__heading">{{ section.settings.heading }}</h2>
     </div>
 </div>
 
@@ -12,7 +12,11 @@
 {
 "name": "main__banner-callout",
 "settings": [
-
+    {
+       "type": "text",
+       "id": "heading",
+       "label": "Heading"
+    }
 ]
 }
 {% endschema %}

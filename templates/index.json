@@ -67,13 +67,151 @@
         "column-4"
       ]
     },
+    "image-with-card": {
+      "type": "main__image-with-card",
+      "settings": {},
+      "blocks": {
+        "tab-1": {
+          "type": "tab",
+          "settings": {
+            "heading": "Cool Sculpting",
+            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "button__text": "Get Started",
+            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+          }
+        },
+        "tab-2": {
+          "type": "tab",
+          "settings": {
+            "heading": "Laser Hair Removal",
+            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+          }
+        },
+        "tab-3": {
+          "type": "tab",
+          "settings": {
+            "heading": "Injectables",
+            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+          }
+        },
+        "tab-4": {
+          "type": "tab",
+          "settings": {
+            "heading": "Skincare",
+            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "button__text": "See Treatments",
+            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tab-1",
+        "tab-2",
+        "tab-3",
+        "tab-4"
+      ]
+    },
+    "three-columns": {
+      "type": "main__three-columns",
+      "settings": {},
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Botox",
+            "image": "shopify:\/\/shop_images\/3Col-1.jpg"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Fillers",
+            "image": "shopify:\/\/shop_images\/3Col-2.jpg"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "heading": "Skin Care",
+            "image": "shopify:\/\/shop_images\/3Col-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ]
+    },
+    "content-squares": {
+      "type": "main__content-squares",
+      "settings": {},
+      "blocks": {
+        "square-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-1.jpg"
+          }
+        },
+        "square-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Service",
+            "para": "At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals. We are proud to offer the absolute highest level of patient-centric care at our Henderson, Las Vegas, Nashville, Greenville, and Indianapolis clinics.",
+            "button_text": "Learn More"
+          }
+        },
+        "square-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-2.jpg"
+          }
+        },
+        "square-4": {
+          "type": "text",
+          "settings": {
+            "heading": "About Us",
+            "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet maecenas in nisl imperdiet. Euismod adipiscing amet eu lacinia. Ac vel malesuada sem mauris. Venenatis, sed sapien elementum laoreet. Diam porttitor amet, amet eget maecenas facilisis nunc sagittis. Quam tellus, aliquet pellentesque ultrices lacus. Condimentum et praesent netus sit odio in nibh.",
+            "button_text": "Learn More"
+          }
+        },
+        "square-5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-3.jpg"
+          }
+        },
+        "square-6": {
+          "type": "text",
+          "settings": {
+            "heading": "Experience",
+            "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet maecenas in nisl imperdiet. Euismod adipiscing amet eu lacinia. Ac vel malesuada sem mauris. Venenatis, sed sapien elementum laoreet. Diam porttitor amet, amet eget maecenas facilisis nunc sagittis. Quam tellus, aliquet pellentesque ultrices lacus. Condimentum et praesent netus sit odio in nibh.",
+            "button_text": "Learn More"
+          }
+        }
+      },
+      "block_order": [
+        "square-1",
+        "square-2",
+        "square-3",
+        "square-4",
+        "square-5",
+        "square-6"
+      ]
+    },
     "image-columns-2": {
       "type": "main__image-columns",
       "settings": {}
     },
     "image-banner-callout": {
       "type": "main__banner-callout",
-      "settings": {}
+      "settings": {
+        "heading": "Begin Your Health Revolution Today"
+      }
     },
     "text-overlay-image": {
       "type": "main__text-overlay-image",
@@ -106,22 +244,21 @@
     },
     "two-columns": {
       "type": "main__two-columns",
-      "settings": {}
-    },
-    "image-with-card": {
-      "type": "main__image-with-card",
-      "settings": {}
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "first-column_image": "shopify:\/\/shop_images\/col-1.jpg",
+        "first-column_heading": "Hormone Therapy",
+        "first-column_para": "The hormonal changes that occur during middle age can make you feel like you’re losing yourself. This is why we offer effective hormone replacement therapy to restore your body back into balance.",
+        "first-column_button-text": "Learn More",
+        "second-column_image": "shopify:\/\/shop_images\/col-2.jpg",
+        "second-column_heading": "Joint Pain",
+        "second-column_button-text": "Learn More",
+        "second-column_para": "Joint pain and other uncomfortable conditions can have a disheartening effect on your day-to-day life — but with our joint pain therapy, you can welcome back the functionality of your body.",
+        "logo_display": ""
+      }
     },
     "two-columns-2": {
       "type": "main__two-columns",
-      "settings": {}
-    },
-    "three-columns": {
-      "type": "main__three-columns",
-      "settings": {}
-    },
-    "image-with-text-square": {
-      "type": "main__image-with-text-sq",
       "settings": {}
     }
   },
@@ -134,11 +271,11 @@
     "gallery-offset",
     "quote-text",
     "image-with-card",
+    "two-columns",
+    "three-columns",
+    "content-squares",
     "image-with-text-2",
     "image-columns-2",
-    "two-columns",
-    "two-columns-2",
-    "three-columns",
-    "image-with-text-square"
+    "two-columns-2"
   ]
 }

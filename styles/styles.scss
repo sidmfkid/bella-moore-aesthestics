@@ -23,15 +23,13 @@
 @import 'layout/main__two-columns.scss';
 @import 'layout/main__three-columns.scss';
 @import 'layout/main__image-with-card.scss';
-@import 'layout/main__image-with-text-square.scss';
+@import 'layout/main__content-squares.scss';
 
 
-body{
+body {
 
     width: 100%;
     height: 100vh;
 }
 
-.text-test{
-
-}
+.text-test {}
