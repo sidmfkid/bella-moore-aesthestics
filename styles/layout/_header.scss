@@ -1,9 +1,11 @@
 .header {
     width: 100%;
     height: 10.2rem;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
+
     // padding: 0 2rem;
-    &__wrapper{
+    &__wrapper {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -11,9 +13,10 @@
         width: 100%;
     }
 
-    .nav{
+    &__nav {
         position: relative;
-        &::after{
+
+        &::after {
             position: absolute;
             content: "";
             bottom: -1rem;
@@ -22,92 +25,201 @@
             width: 110%;
             background-color: white;
         }
-        &__list{
-            display: flex;
-            justify-content: space-evenly;
+    }
+
+    &__nav-list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__nav-item {
+        list-style: none;
+        margin: 0 1rem;
+    }
+
+    &__nav-link {
+        text-decoration: none;
+        font-size: font-size(small);
+        color: white;
+        font-family: var(--font-body-family);
+        // font-weight: 200;
+    }
+
+
+    &__menu {}
+
+    &__button {
+        display: flex;
+        align-items: center;
+        height: 3.6rem;
+        width: 6.2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__button-line {
+        display: block;
+        margin: auto;
+        z-index: -1;
+        position: relative;
+        width: inherit;
+        height: 3px;
+        background-color: $primary-color;
+
+        &::after {
+            position: absolute;
+            height: 3px;
+            content: "";
+            width: 100%;
+            background-color: $primary-color;
+            top: -12px;
+            left: 0;
         }
-        &__item{
-            list-style: none;
-            margin: 0 1rem;
-        }
-        &__link {
-            text-decoration: none;
-            font-size: font-size(small);
-            color: white;
-            font-family: var(--font-body-family);
-            // font-weight: 200;
+
+        &::before {
+            position: absolute;
+            height: 3px;
+            content: "";
+            width: 100%;
+            background-color: $primary-color;
+            bottom: -12px;
+            left: 0;
         }
     }
-    .menu{
-        &__button{
-            display: block;
-            height: 3.6rem;
-            width: 6.2rem;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            .line{
-                z-index: 2;
-                position: relative;
-                width: 100%;
-                height: 3px;
-                background-color: $primary-color;
-                &::after{
-                    position: absolute;
-                    height: 3px;
-                    content: "";
-                    width: 100%;
-                    background-color: $primary-color;
-                    top: -9px;
-                    left: 0;
-                }
-                &::before{
-                    position: absolute;
-                    height: 3px;
-                    content: "";
-                    width: 100%;
-                    background-color: $primary-color;
-                    bottom: -9px;
-                    left: 0;
-                }
-            }
-        }
+
+    &__overlay {
+        height: 100%;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // height: 0;
+        transform: translateY(-100%);
+        transition: all .5s ease-in-out;
+
     }
+
+
     @include media-tablet {
-        &__wrapper{
+        &__wrapper {
             justify-content: space-between;
             padding: 0 2rem;
         }
-        .nav{
+
+        &__nav {
             position: relative;
             width: 100%;
             height: 100%;
 
-            &::after{
+            &::after {
                 display: none;
             }
-            &__list{
-                position: absolute;
-                flex-wrap: wrap;
-                top: -50rem;
-                left: 0;
-                width: 100%;
+        }
+
+        &__input {
+            &:checked {
                 transition: all .3s ease-in-out;
 
-                justify-content: space-between;
-                &.open{
+                ~.header {
+                    transition: all .3s ease-in-out;
+
+                    height: 100%;
+                    overflow-y: hidden;
+
+                    .header__logo-container,
+                    .header__menu {
+                        position: fixed;
+                        top: 3rem;
+                        z-index: 4;
+                    }
+
+                    .header__logo-container {
+                        left: 2rem;
+                    }
+
+                    .header__menu {
+                        right: 2rem;
+                    }
+
+                    .header__nav {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: 3;
+                        width: 100vw;
+                        overflow-y: hidden;
+                    }
+
+                    .header__overlay {
+                        transition: transform .5s ease-in-out;
+                        position: fixed;
+                        // overflow: hidden;
+                        transform: translateY(0);
+
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        height: 100%;
+                        width: 100vw;
+                        background-color: $primary-color;
+                    }
+                }
+
+                ~.header .header__wrapper {
+                    align-items: flex-start;
+                }
+
+                ~.header .header__wrapper {
+                    position: relative;
+                    z-index: 4;
+                }
+
+                ~.header .header__wrapper .header__menu .header__button-line,
+                ~.header .header__wrapper .header__menu .header__button-line::after,
+                ~.header .header__wrapper .header__menu .header__button-line::before {
+
+                    z-index: 4;
+                    box-shadow: 0px 4px 5px black;
+                }
+
+
+
+                ~.header .header__wrapper .header__nav .header__nav-list {
+                    // position: fixed;
                     top: 20rem;
+                    z-index: 3;
                 }
             }
-            &__item{
-                width: 100%;
-            }
-            &__link{
-                font-size: font-size(regular);
-                margin-top: 2rem;
-                display: block;
-                text-align: center;
+        }
+
+        &__nav-list {
+            position: absolute;
+            flex-wrap: wrap;
+            top: -50rem;
+            left: 0;
+            width: 100%;
+            transition: all .3s ease-in-out;
+
+            justify-content: space-between;
+
+            &.open {
+                top: 20rem;
             }
         }
+
+        &__nav-item {
+            width: 100%;
+        }
+
+        &__nav-link {
+            font-size: font-size(regular);
+            margin-top: 2rem;
+            display: block;
+            text-align: center;
+        }
+
     }
 }

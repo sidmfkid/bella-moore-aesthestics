@@ -1,22 +1,30 @@
+<input checked class="header__input" hidden id="menu" name="menu" type="checkbox">
 <header class="header">
     <div class="header__wrapper">
-        <div class="logo__container">
-            <img src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Logo.png?v=1652389237" alt="">
+
+        <div class="header__logo-container">
+            <img
+                alt=""
+                class="header__logo"
+                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Logo.png?v=1652389237">
         </div>
-        <div class="nav">
-            <ul class="nav__list">
+
+        <div class="header__nav">
+            <div class="header__overlay"></div>
+
+            <ul class="header__nav-list">
                 {% for link in linklists.main-menu.links %}
-                <li class="nav__item">
-                    <a class="nav__link" href="{{ link.url }}">{{ link.title }}</a>
-                </li>
+                    <li class="header__nav-item">
+                        <a class="header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
                 {% endfor %}
             </ul>
 
         </div>
-        <div class="menu">
-            <button id="menuButton" class="menu__button">
-                <div class="line"></div>
-            </button>
+        <div class="header__menu">
+            <label class="header__button" for="menu" id="menuButton">
+                <div class="header__button-line"></div>
+            </label>
         </div>
     </div>
 </header>
@@ -33,5 +41,4 @@
 "info": "Select Menu"
 }
 ]
-}
-{% endschema %}
+} {% endschema %}
