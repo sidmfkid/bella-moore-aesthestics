@@ -1,23 +1,18 @@
-{% style %}
+<style>
     .hero__bg{
         background: url({{ section.settings.image | image_url }});
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-{% endstyle %}
-
+</style>
 
 <div class="hero">
     <div class="hero__bg"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
         <div class="hero__logo">
-            <img
-                alt=""
-                height="116"
-                src="{{ section.settings.logo | image_url}}"
-                width="116">
+            <img alt="" height="116" src="{{ section.settings.logo | image_url }}" width="116">
         </div>
         <div class="hero__text-box">
             <h1 class="hero__title">{{ section.settings.heading }}</h1>
@@ -28,9 +23,6 @@
         <a class="hero__btn {{ section.settings.button__type }}" href="/">{{ section.settings.button__text }}</a>
     </div>
 </div>
-
-
-
 
 {% schema %}
 {

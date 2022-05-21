@@ -1,12 +1,16 @@
 <div class="image-columns">
+
+    {% for block in section.blocks %}
+
         <style>
+
     .image-columns__column--{{ forloop.index }}{
         background: url({{ block.settings.image | image_url }});
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
-    </style>
+</style>
 
         <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
             <div class="image-columns__heading">
