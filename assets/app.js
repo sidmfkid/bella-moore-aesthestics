@@ -3,23 +3,28 @@ const navList = document.querySelector(".nav__list");
 
 const subLinkList = document.querySelectorAll("#subLinkList");
 
-// subLinkList.forEach(el => {
-//     el.addEventListener('click', openSubLinks.bind(this))
-// });
+const navShop = document.querySelector('.shopify-section.main__header');
+const nav = document.querySelector('.header');
+const hero = document.querySelector('.shopify-section.main__hero');
+
+let options = {
+    root: null,
+    rootMargin: '150px',
+    threshold: .3
+}
+
+let observer = new IntersectionObserver(toggleStickyNav, options);
 
 
 
-// function openSubLinks(e) {
-//       e.preventDefault();
-//     console.log(e.target)
-//     e.target.classList.toggle("open")
-// }
+function toggleStickyNav(entries, observer) {
 
-// menuButton.addEventListener("click", openMobileMenu.bind(this));
+console.log(entries)
+if (!entries[0].isIntersecting) {
+    nav.classList.add('sticky');
+} else {
+    nav.classList.remove('sticky');
+}
+}
 
-// function openMobileMenu(e) {
-//   e.preventDefault();
-//   menuButton.classList.toggle("open");
-//   navList.classList.toggle("open");
-//   console.log(e);
-// }
+ observer.observe(hero)
