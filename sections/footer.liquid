@@ -1,0 +1,20 @@
+<footer class="footer">
+    <div class="footer__brand-container"></div>
+    <nav class="footer__nav">
+        {% for link in linklists.main-menu.links %}{% endfor %}
+    </nav>
+</footer>
+
+{% schema %}
+{
+"name": "Footer",
+"settings": [
+{
+"type": "link_list",
+"id": "new-menu",
+"label": "Navigation Menu",
+"default": "main-menu",
+"info": "Select Menu"
+}
+]
+} {% endschema %}
