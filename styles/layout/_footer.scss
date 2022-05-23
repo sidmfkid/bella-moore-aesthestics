@@ -153,6 +153,12 @@
         }
     }
 
+    .copyright {
+        font-size: font-size(xxsmall);
+        color: grey;
+        margin: 2rem auto 1rem auto;
+    }
+
     @include media-tablet {
         flex-wrap: wrap;
 
@@ -183,9 +189,27 @@
     }
 
     @include media-medium {
+        justify-content: flex-start;
+
+        &__brand {
+            width: 100%;
+        }
+
+        &__brand-content {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo-container {
+            margin: 0 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         &__heading {
             font-size: font-size(large);
+            text-align: left;
         }
 
         &__nav-item {
@@ -199,10 +223,15 @@
         &__sub-link {
             font-size: font-size(small);
         }
+
+        &__address,
+        &__phone,
+        &__hours {
+            text-align: left;
+        }
     }
 
-    .copyright {
-        font-size: font-size(xxsmall);
-        color: grey;
-    }
+
+
+
 }

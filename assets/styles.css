@@ -2037,6 +2037,11 @@ html {
 .footer__sub-link:active, .footer__sub-link:hover {
   color: var(--primary-color);
 }
+.footer .copyright {
+  font-size: calc(0.7rem + 0.5vw);
+  color: grey;
+  margin: 2rem auto 1rem auto;
+}
 @media screen and (max-width: 900px) {
   .footer {
     flex-wrap: wrap;
@@ -2061,8 +2066,25 @@ html {
   }
 }
 @media screen and (max-width: 600px) {
+  .footer {
+    justify-content: flex-start;
+  }
+  .footer__brand {
+    width: 100%;
+  }
+  .footer__brand-content {
+    display: flex;
+    align-items: center;
+  }
+  .footer__logo-container {
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .footer__heading {
     font-size: calc(1.5rem + 5vw);
+    text-align: left;
   }
   .footer__nav-item {
     width: 50%;
@@ -2073,10 +2095,9 @@ html {
   .footer__sub-link {
     font-size: calc(1.2rem + 0.5vw);
   }
-}
-.footer .copyright {
-  font-size: calc(0.7rem + 0.5vw);
-  color: grey;
+  .footer__address, .footer__phone, .footer__hours {
+    text-align: left;
+  }
 }
 
 body {
