@@ -81,17 +81,21 @@
         width: 100%;
     }
 
-    &__button.btn.btn__secondary--md {
-        @include text-gradient;
-        width: calc(20rem + 5vw);
+    &__button {
         margin: 0 auto;
-        text-transform: uppercase;
-
-        &::after,
-        &::before {
-            background: black;
-        }
     }
+
+    // &__button.btn.btn__secondary--md {
+    //     @include text-gradient;
+    //     width: calc(20rem + 5vw);
+    //     margin: 0 auto;
+    //     text-transform: uppercase;
+
+    //     &::after,
+    //     &::before {
+    //         background: black;
+    //     }
+    // }
 
     &__para-container {
         // display: none;

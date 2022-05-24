@@ -152,7 +152,7 @@
     }
 
     &__tertiary {
-        background-color: transparent;
+        // background-color: transparent;
         @include text-gradient;
         transition: all .4s ease-in-out;
         position: relative;

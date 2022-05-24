@@ -15,5 +15,7 @@ $transparent-gradient: linear-gradient(rgb(226, 206, 156) 0%, rgb(204, 172, 92) 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+
 
 }
