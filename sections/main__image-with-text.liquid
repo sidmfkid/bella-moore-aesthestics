@@ -1,7 +1,9 @@
+{% assign image = section.settings.image %}
+
 <div class="image-with-text">
     <div class="image-with-text__content">
         <div class="image-with-text__image">
-            <img width="230" height="230" src="{{section.settings.image | img_url }}" alt="">
+            <img width="{{ image.width }}" height="{{ image.height }}" src="{{ image | img_url }}" alt="">
         </div>
         <div class="image-with-text__text-box">
             <h2 class="image-with-text__heading">{{ section.settings.title }}</h2>

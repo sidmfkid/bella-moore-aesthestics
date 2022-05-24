@@ -36,8 +36,10 @@
     &__cta {
         align-self: flex-end;
         position: absolute;
-        right: 2rem;
+        right: 0rem;
         bottom: 13.2rem;
+        display: block;
+        width: 100%;
 
     }
 
@@ -45,6 +47,7 @@
         font-size: font-size(regular);
         font-family: var(--font-body-family);
         text-decoration: none;
+        margin: 0 4rem 0 auto;
 
         &::after {
             top: -8px;
@@ -116,7 +119,7 @@
         }
 
         &__btn {
-            width: 12rem;
+            // width: 12rem;
             margin: 0 auto 10rem auto;
         }
 

@@ -1,53 +1,98 @@
-.image-with-text{
+.image-with-text {
     height: 46.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    &__image{
+
+    &__image {
         height: calc(20rem + 5vw);
         width: calc(20rem + 5vw);
-        img{}
-    }
-    &__text-box{
-        margin-left: 2rem;
 
+        img {
+            width: auto;
+            height: 100%;
+        }
     }
-    &__content{
+
+    &__text-box {
+        margin-left: 2rem;
+        min-width: calc(20rem + 15vw);
+        padding: 0 0 0 calc(1.4rem + 3vw);
+    }
+
+    &__content {
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 62.8rem;
+        max-width: calc(32.8rem + 20vw);
     }
-    &__heading{
+
+    &__heading {
         @include text-gradient;
-        font-size: font-size(large);
+        font-size: font-size(medium);
         font-weight: 100;
-        letter-spacing: -4.5px;
+        letter-spacing: -2.5px;
     }
-    &__para{
+
+    &__para {
         font-size: font-size(small);
-        font-weight: bold;
+        font-weight: normal;
+        margin-top: 1rem;
     }
+
     @include media-tablet {
-        &__content{
-        flex-wrap: wrap;
-        align-items: stretch;
+        &__content {
+            // height: 20rem;
+            align-items: unset;
+            max-width: calc(42.8rem + 20vw);
+            padding-top: 4rem;
 
         }
-        &__image{
-            img{
-                width: 100%;
-                height: auto;
-            }
+
+        &__image {
+
+            // max-width: 50%;
+
+            img {}
         }
-        &__text-box{
+
+        &__text-box {
             margin-top: 2rem;
-        margin-left: 0rem;
-        padding: 0 5rem;
+            margin-left: 0rem;
+            min-width: calc(15rem + 15vw);
+            height: min-content;
+            align-self: flex-start;
+
         }
+
         &__heading {
             letter-spacing: normal;
+        }
+
+        &__para {
+            margin-top: 1rem;
+        }
+    }
+
+    @include media-medium {
+        &__content {
+            flex-wrap: wrap;
+            align-items: unset;
+            padding: 0 calc(.8rem + 2vw);
+
+        }
+
+        &__text-box {
+            padding: 0 0 0 0;
+
+        }
+    }
+
+    @include media-small {
+        &__image {
+            height: calc(20rem + 10vw);
+            width: calc(20rem + 10vw);
         }
     }
 }

@@ -84,6 +84,14 @@
         // margin-bottom: calc(.5rem + 2vw);
     }
 
+    &__button-container {
+        width: 100%;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+
     &__para {
         color: white;
         font-size: font-size(small);
