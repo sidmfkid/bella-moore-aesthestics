@@ -499,6 +499,8 @@ html {
   font-size: calc(1rem + 0.5vw);
 }
 .btn__tertiary, .btn__tertiary--sm, .btn__tertiary--md, .btn__tertiary--lg, .btn__tertiary--fluid {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1148,6 +1150,8 @@ html {
   width: 35rem;
 }
 .hero__subtitle {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1222,6 +1226,8 @@ html {
   max-width: 62.8rem;
 }
 .image-with-text__heading {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1443,6 +1449,8 @@ html {
   width: 100%;
 }
 .text-overlay-image__header {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1672,6 +1680,8 @@ html {
 }
 .quote-text__author-container span {
   font-size: calc(1.2rem + 0.5vw);
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1880,6 +1890,8 @@ html {
   min-height: 20rem;
 }
 .image-with-card__heading {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -1988,6 +2000,8 @@ html {
   width: 100%;
 }
 .content-squares__heading {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2036,6 +2050,8 @@ html {
   }
   .content-squares__button.btn.btn__secondary--md {
     font-size: calc(1.5rem + 1vw);
+    text-decoration: none;
+    text-decoration-color: unset;
     background-color: unset !important;
     background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
     background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2064,6 +2080,8 @@ html {
 }
 .page-header__heading {
   font-size: calc(1.5rem + 2vw);
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2088,6 +2106,8 @@ html {
   font-size: calc(0.7rem + 0.5vw);
   align-self: center;
   justify-self: center;
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2105,6 +2125,8 @@ html {
   font-size: calc(1.2rem + 0.5vw);
   text-decoration: none;
   color: none;
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2250,6 +2272,8 @@ html {
   padding-bottom: 3rem;
 }
 .text-columns__heading {
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
@@ -2444,6 +2468,8 @@ html {
 .footer__nav-link {
   font-size: calc(0.8rem + 1vw);
   text-decoration: none;
+  text-decoration: none;
+  text-decoration-color: unset;
   background-color: unset !important;
   background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
   background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
