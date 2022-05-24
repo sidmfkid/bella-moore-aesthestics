@@ -7,6 +7,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
+
     &__section {
         margin-bottom: 4rem;
         display: flex;
@@ -18,7 +19,7 @@
     }
 }
 
-.btn{
+.btn {
     padding: 0rem 1rem;
     border-width: 0px;
     border-color: transparent;
@@ -30,91 +31,196 @@
     align-items: center;
     cursor: pointer;
     padding: 0;
-    &__primary{
-    color: white;
-    background-color: #000;
-    transition: background-color .4s ease-in-out;
-    span {
-        display: block;
-        margin: auto;
-        line-height: 0;
-        padding: 0rem 1.5rem;
-    }
-    &:active, &:hover {
-        background-color: rgb(30, 30, 30);
+
+    &__primary {
+        color: white;
+        background-color: #000;
+        transition: background-color .4s ease-in-out;
+
+        span {
+            display: block;
+            margin: auto;
+            line-height: 0;
+            padding: 0rem 1.5rem;
         }
-    &--lg{
-        @extend .btn__primary;
-        min-width: 18.7rem;
-        min-height: 4.8rem;
-        font-size: font-size(regular);
-    }
-    &--md{
-        @extend .btn__primary;
-        min-width: 15.8rem;
-        min-height: 4.0rem;
-        font-size: font-size(small);
-    }
-    &--sm{
-        @extend .btn__primary;
-        min-width: 13.4rem;
-        min-height: 3.4rem;
-        font-size: font-size(xsmall);
-    }
-}
-&__secondary{
-    color: white;
-    background-color: transparent;
-    transition: all .4s ease-in-out;
-    position: relative;
-    &::after, &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-color: white;
-    transition: all .2s ease-in-out;
 
-    }
-    &::after{
-        top: 0;
-        left: 0;
-    }
-    &:hover::after{
-        top: -4px;
-    }
-    &::before{
-        bottom: 0;
-        left: 0;
-    }
-    &:hover::before{
-        bottom: -4px;
-    }
-    span {
-        display: block;
-        margin: auto;
-        line-height: 0;
-        padding: 0rem 1.5rem;
+        &:active,
+        &:hover {
+            background-color: rgb(30, 30, 30);
+        }
 
+        &--fluid {
+            @extend .btn__primary;
+            width: 100%;
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--lg {
+            @extend .btn__primary;
+            max-width: calc(18.7rem + 10vw);
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--md {
+            @extend .btn__primary;
+            max-width: calc(15.8rem + 10vw);
+            min-height: 4.0rem;
+            font-size: font-size(small);
+        }
+
+        &--sm {
+            @extend .btn__primary;
+            max-width: calc(13.4rem + 10vw);
+            min-height: 3.4rem;
+            font-size: font-size(xsmall);
+        }
     }
-    &--lg{
-        @extend .btn__secondary;
-        min-width: 18.7rem;
-        min-height: 4.8rem;
-        font-size: font-size(regular);
+
+    &__secondary {
+        color: white;
+        background-color: transparent;
+        transition: all .4s ease-in-out;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &::after {
+            top: 0;
+            left: 0;
+        }
+
+        &:hover::after {
+            top: -4px;
+        }
+
+        &::before {
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover::before {
+            bottom: -4px;
+        }
+
+        span {
+            display: block;
+            margin: auto;
+            line-height: 0;
+            padding: 0rem 1.5rem;
+
+        }
+
+        &--fluid {
+            @extend .btn__secondary;
+            width: 100%;
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--lg {
+            @extend .btn__secondary;
+            max-width: calc(18.7rem + 10vw);
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--md {
+            @extend .btn__secondary;
+            max-width: calc(15.8rem + 10vw);
+            min-height: 4rem;
+            font-size: font-size(small);
+        }
+
+        &--sm {
+            @extend .btn__secondary;
+            max-width: calc(13.4rem + 10vw);
+            min-height: 3.4rem;
+            font-size: font-size(xsmall);
+        }
     }
-    &--md{
-        @extend .btn__secondary;
-        min-width: 15.8rem;
-        min-height: 4rem;
-        font-size: font-size(small);
+
+    &__tertiary {
+        background-color: transparent;
+        @include text-gradient;
+        transition: all .4s ease-in-out;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            @include bg-gradient-primary;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &::after {
+            top: 0;
+            left: 0;
+        }
+
+        &:hover::after {
+            top: -4px;
+        }
+
+        &::before {
+            bottom: 0;
+            left: 0;
+        }
+
+        &:hover::before {
+            bottom: -4px;
+        }
+
+        span {
+            display: block;
+            margin: auto;
+            line-height: 0;
+            padding: 0rem 1.5rem;
+
+        }
+
+        &--fluid {
+            @extend .btn__tertiary;
+            width: 100%;
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--lg {
+            @extend .btn__tertiary;
+            max-width: calc(18.7rem + 10vw);
+            min-height: 4.8rem;
+            font-size: font-size(regular);
+        }
+
+        &--md {
+            @extend .btn__tertiary;
+            max-width: calc(15.8rem + 10vw);
+            min-height: 4rem;
+            font-size: font-size(small);
+        }
+
+        &--sm {
+            @extend .btn__tertiary;
+            max-width: calc(13.4rem + 10vw);
+            min-height: 3.4rem;
+            font-size: font-size(xsmall);
+        }
     }
-    &--sm{
-        @extend .btn__secondary;
-        min-width: 13.4rem;
-        min-height: 3.4rem;
-        font-size: font-size(xsmall);
-    }
-}
 }

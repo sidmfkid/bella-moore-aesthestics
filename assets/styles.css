@@ -409,42 +409,47 @@ html {
   cursor: pointer;
   padding: 0;
 }
-.btn__primary, .btn__primary--sm, .btn__primary--md, .btn__primary--lg {
+.btn__primary, .btn__primary--sm, .btn__primary--md, .btn__primary--lg, .btn__primary--fluid {
   color: white;
   background-color: #000;
   transition: background-color 0.4s ease-in-out;
 }
-.btn__primary span, .btn__primary--sm span, .btn__primary--md span, .btn__primary--lg span {
+.btn__primary span, .btn__primary--sm span, .btn__primary--md span, .btn__primary--lg span, .btn__primary--fluid span {
   display: block;
   margin: auto;
   line-height: 0;
   padding: 0rem 1.5rem;
 }
-.btn__primary:active, .btn__primary--sm:active, .btn__primary--md:active, .btn__primary--lg:active, .btn__primary:hover, .btn__primary--sm:hover, .btn__primary--md:hover, .btn__primary--lg:hover {
+.btn__primary:active, .btn__primary--sm:active, .btn__primary--md:active, .btn__primary--lg:active, .btn__primary--fluid:active, .btn__primary:hover, .btn__primary--sm:hover, .btn__primary--md:hover, .btn__primary--lg:hover, .btn__primary--fluid:hover {
   background-color: rgb(30, 30, 30);
 }
+.btn__primary--fluid {
+  width: 100%;
+  min-height: 4.8rem;
+  font-size: calc(1.5rem + 1vw);
+}
 .btn__primary--lg {
-  min-width: 18.7rem;
+  max-width: calc(18.7rem + 10vw);
   min-height: 4.8rem;
   font-size: calc(1.5rem + 1vw);
 }
 .btn__primary--md {
-  min-width: 15.8rem;
+  max-width: calc(15.8rem + 10vw);
   min-height: 4rem;
   font-size: calc(1.2rem + 0.5vw);
 }
 .btn__primary--sm {
-  min-width: 13.4rem;
+  max-width: calc(13.4rem + 10vw);
   min-height: 3.4rem;
   font-size: calc(1rem + 0.5vw);
 }
-.btn__secondary, .btn__secondary--sm, .btn__secondary--md, .btn__secondary--lg {
+.btn__secondary, .btn__secondary--sm, .btn__secondary--md, .btn__secondary--lg, .btn__secondary--fluid {
   color: white;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
   position: relative;
 }
-.btn__secondary::after, .btn__secondary--sm::after, .btn__secondary--md::after, .btn__secondary--lg::after, .btn__secondary::before, .btn__secondary--sm::before, .btn__secondary--md::before, .btn__secondary--lg::before {
+.btn__secondary::after, .btn__secondary--sm::after, .btn__secondary--md::after, .btn__secondary--lg::after, .btn__secondary--fluid::after, .btn__secondary::before, .btn__secondary--sm::before, .btn__secondary--md::before, .btn__secondary--lg::before, .btn__secondary--fluid::before {
   content: "";
   display: block;
   position: absolute;
@@ -453,38 +458,102 @@ html {
   background-color: white;
   transition: all 0.2s ease-in-out;
 }
-.btn__secondary::after, .btn__secondary--sm::after, .btn__secondary--md::after, .btn__secondary--lg::after {
+.btn__secondary::after, .btn__secondary--sm::after, .btn__secondary--md::after, .btn__secondary--lg::after, .btn__secondary--fluid::after {
   top: 0;
   left: 0;
 }
-.btn__secondary:hover::after, .btn__secondary--sm:hover::after, .btn__secondary--md:hover::after, .btn__secondary--lg:hover::after {
+.btn__secondary:hover::after, .btn__secondary--sm:hover::after, .btn__secondary--md:hover::after, .btn__secondary--lg:hover::after, .btn__secondary--fluid:hover::after {
   top: -4px;
 }
-.btn__secondary::before, .btn__secondary--sm::before, .btn__secondary--md::before, .btn__secondary--lg::before {
+.btn__secondary::before, .btn__secondary--sm::before, .btn__secondary--md::before, .btn__secondary--lg::before, .btn__secondary--fluid::before {
   bottom: 0;
   left: 0;
 }
-.btn__secondary:hover::before, .btn__secondary--sm:hover::before, .btn__secondary--md:hover::before, .btn__secondary--lg:hover::before {
+.btn__secondary:hover::before, .btn__secondary--sm:hover::before, .btn__secondary--md:hover::before, .btn__secondary--lg:hover::before, .btn__secondary--fluid:hover::before {
   bottom: -4px;
 }
-.btn__secondary span, .btn__secondary--sm span, .btn__secondary--md span, .btn__secondary--lg span {
+.btn__secondary span, .btn__secondary--sm span, .btn__secondary--md span, .btn__secondary--lg span, .btn__secondary--fluid span {
   display: block;
   margin: auto;
   line-height: 0;
   padding: 0rem 1.5rem;
 }
+.btn__secondary--fluid {
+  width: 100%;
+  min-height: 4.8rem;
+  font-size: calc(1.5rem + 1vw);
+}
 .btn__secondary--lg {
-  min-width: 18.7rem;
+  max-width: calc(18.7rem + 10vw);
   min-height: 4.8rem;
   font-size: calc(1.5rem + 1vw);
 }
 .btn__secondary--md {
-  min-width: 15.8rem;
+  max-width: calc(15.8rem + 10vw);
   min-height: 4rem;
   font-size: calc(1.2rem + 0.5vw);
 }
 .btn__secondary--sm {
-  min-width: 13.4rem;
+  max-width: calc(13.4rem + 10vw);
+  min-height: 3.4rem;
+  font-size: calc(1rem + 0.5vw);
+}
+.btn__tertiary, .btn__tertiary--sm, .btn__tertiary--md, .btn__tertiary--lg, .btn__tertiary--fluid {
+  background-color: transparent;
+  background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+  background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+.btn__tertiary::after, .btn__tertiary--sm::after, .btn__tertiary--md::after, .btn__tertiary--lg::after, .btn__tertiary--fluid::after, .btn__tertiary::before, .btn__tertiary--sm::before, .btn__tertiary--md::before, .btn__tertiary--lg::before, .btn__tertiary--fluid::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(rgb(226, 206, 156) 0%, rgb(204, 172, 92) 35%, rgb(188, 147, 47) 80%);
+  transition: all 0.2s ease-in-out;
+}
+.btn__tertiary::after, .btn__tertiary--sm::after, .btn__tertiary--md::after, .btn__tertiary--lg::after, .btn__tertiary--fluid::after {
+  top: 0;
+  left: 0;
+}
+.btn__tertiary:hover::after, .btn__tertiary--sm:hover::after, .btn__tertiary--md:hover::after, .btn__tertiary--lg:hover::after, .btn__tertiary--fluid:hover::after {
+  top: -4px;
+}
+.btn__tertiary::before, .btn__tertiary--sm::before, .btn__tertiary--md::before, .btn__tertiary--lg::before, .btn__tertiary--fluid::before {
+  bottom: 0;
+  left: 0;
+}
+.btn__tertiary:hover::before, .btn__tertiary--sm:hover::before, .btn__tertiary--md:hover::before, .btn__tertiary--lg:hover::before, .btn__tertiary--fluid:hover::before {
+  bottom: -4px;
+}
+.btn__tertiary span, .btn__tertiary--sm span, .btn__tertiary--md span, .btn__tertiary--lg span, .btn__tertiary--fluid span {
+  display: block;
+  margin: auto;
+  line-height: 0;
+  padding: 0rem 1.5rem;
+}
+.btn__tertiary--fluid {
+  width: 100%;
+  min-height: 4.8rem;
+  font-size: calc(1.5rem + 1vw);
+}
+.btn__tertiary--lg {
+  max-width: calc(18.7rem + 10vw);
+  min-height: 4.8rem;
+  font-size: calc(1.5rem + 1vw);
+}
+.btn__tertiary--md {
+  max-width: calc(15.8rem + 10vw);
+  min-height: 4rem;
+  font-size: calc(1.2rem + 0.5vw);
+}
+.btn__tertiary--sm {
+  max-width: calc(13.4rem + 10vw);
   min-height: 3.4rem;
   font-size: calc(1rem + 0.5vw);
 }
@@ -2055,9 +2124,10 @@ html {
   height: 100%;
 }
 .page-header__image--svg {
+  position: absolute;
   width: auto;
   height: 100%;
-  background: #f6e7c0;
+  background: #fff8e6;
 }
 @media screen and (max-width: 900px) {
   .page-header {
@@ -2078,6 +2148,9 @@ html {
   .page-header__logo {
     width: calc(3rem + 5vw);
     height: calc(3rem + 5vw);
+  }
+  .page-header__heading {
+    font-size: calc(1.5rem + 2.6vw);
   }
 }
 @media screen and (max-width: 600px) {
@@ -2101,7 +2174,7 @@ html {
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
     background: none;
-    font-size: calc(1.5rem + 5vw);
+    font-size: calc(2.5rem + 5vw);
   }
   .page-header__breadcrumb-link {
     font-size: calc(1.5rem + 1vw);
@@ -2132,14 +2205,103 @@ html {
   .page-header__image--svg {
     width: auto;
     height: 100%;
-    background: #f6e7c0;
     filter: none;
+    position: absolute;
+    z-index: -1;
   }
 }
 @media screen and (max-width: 400px) {
   .page-header__image {
     width: auto;
     height: 100%;
+  }
+}
+
+.text-columns, .text-columns--two-columns {
+  min-height: calc(12.3rem + 15vw);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(3rem + 2vw) 0;
+}
+.text-columns--two-columns {
+  justify-content: space-evenly;
+  padding: calc(3rem + 2vw) calc(5rem + 5vw);
+}
+.text-columns__column {
+  max-width: calc(26.6rem + 20vw);
+}
+.text-columns__column:nth-of-type(2) {
+  margin-left: 4rem;
+}
+.text-columns__heading-container, .text-columns__para-container {
+  padding-bottom: 3rem;
+}
+.text-columns__heading {
+  background: linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+  background: -webkit-linear-gradient(rgb(243, 196, 79), rgb(165, 122, 13));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 100;
+  text-align: center;
+}
+.text-columns__para {
+  font-size: calc(1.2rem + 0.5vw);
+  text-align: center;
+  font-weight: 100;
+}
+.text-columns__button {
+  margin: 0 auto;
+}
+@media screen and (max-width: 900px) {
+  .text-columns, .text-columns--two-columns {
+    flex-wrap: wrap;
+  }
+  .text-columns--two-columns {
+    flex-wrap: wrap;
+    padding: calc(3rem + 2vw) calc(0.5rem + 5vw);
+  }
+  .text-columns--two-columns .text-columns__button-container {
+    margin-bottom: 6rem;
+  }
+  .text-columns__column {
+    max-width: calc(38.6rem + 20vw);
+  }
+  .text-columns__column:nth-of-type(2) {
+    margin-left: 0rem;
+  }
+  .text-columns__heading {
+    font-size: calc(1.5rem + 2vw);
+  }
+  .text-columns__para {
+    font-size: calc(1.5rem + 1vw);
+  }
+  .text-columns__button-container {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .text-columns--two-columns {
+    flex-wrap: wrap;
+    padding: calc(3rem + 2vw) calc(0.5rem + 4vw);
+  }
+  .text-columns--two-columns .text-columns__column {
+    padding: 0 0;
+  }
+  .text-columns--two-columns .text-columns__button-container {
+    margin-bottom: 6rem;
+  }
+  .text-columns__column {
+    max-width: unset;
+    padding: 0 calc(0.8rem + 4vw);
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-columns--two-columns .text-columns__button-container {
+    margin-bottom: 3rem;
   }
 }
 

@@ -6,7 +6,28 @@
     },
     "page-text-columns": {
       "type": "page__text-columns",
-      "settings": {}
+      "settings": {},
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Section Title Here",
+            "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Section Title Here",
+            "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "btn_text": "Learn More"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2"
+      ]
     },
     "page-image-with-text": {
       "type": "page__image-with-text",
