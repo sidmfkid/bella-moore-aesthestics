@@ -35,6 +35,9 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
 }
 
 /**
@@ -401,5 +404,6 @@ template {
 
 main {
   width: 100%;
+  padding-bottom: calc(24rem + 15vw);
   // height: 100vh;
 }

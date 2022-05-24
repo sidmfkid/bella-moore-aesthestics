@@ -24,13 +24,9 @@
 @import 'layout/main__three-columns.scss';
 @import 'layout/main__image-with-card.scss';
 @import 'layout/main__content-squares.scss';
+@import 'layout/page__title-text.scss';
+@import 'layout/page__contact.scss';
+@import 'layout/page__header.scss';
+@import 'layout/page__image-with-text.scss';
+@import 'layout/page__text-columns.scss';
 @import 'layout/_footer.scss';
-
-
-body {
-
-    width: 100%;
-    height: 100vh;
-}
-
-.text-test {}
