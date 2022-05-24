@@ -153,7 +153,7 @@
 
     &__tertiary {
         // background-color: transparent;
-
+        color: black;
         @include text-gradient;
         transition: all .4s ease-in-out;
         position: relative;

@@ -499,6 +499,8 @@ html {
   font-size: calc(1rem + 0.5vw);
 }
 .btn__tertiary, .btn__tertiary--sm, .btn__tertiary--md, .btn__tertiary--lg, .btn__tertiary--fluid {
+  color: black;
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -1150,6 +1152,7 @@ html {
   width: 35rem;
 }
 .hero__subtitle {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -1226,6 +1229,7 @@ html {
   max-width: 62.8rem;
 }
 .image-with-text__heading {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -1449,6 +1453,7 @@ html {
   width: 100%;
 }
 .text-overlay-image__header {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -1680,6 +1685,7 @@ html {
 }
 .quote-text__author-container span {
   font-size: calc(1.2rem + 0.5vw);
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -1890,6 +1896,7 @@ html {
   min-height: 20rem;
 }
 .image-with-card__heading {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2000,6 +2007,7 @@ html {
   width: 100%;
 }
 .content-squares__heading {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2050,6 +2058,7 @@ html {
   }
   .content-squares__button.btn.btn__secondary--md {
     font-size: calc(1.5rem + 1vw);
+    color: black;
     text-decoration: none;
     text-decoration-color: unset;
     background-color: unset !important;
@@ -2080,6 +2089,7 @@ html {
 }
 .page-header__heading {
   font-size: calc(1.5rem + 2vw);
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2106,6 +2116,7 @@ html {
   font-size: calc(0.7rem + 0.5vw);
   align-self: center;
   justify-self: center;
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2125,6 +2136,7 @@ html {
   font-size: calc(1.2rem + 0.5vw);
   text-decoration: none;
   color: none;
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2272,6 +2284,7 @@ html {
   padding-bottom: 3rem;
 }
 .text-columns__heading {
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
@@ -2468,6 +2481,7 @@ html {
 .footer__nav-link {
   font-size: calc(0.8rem + 1vw);
   text-decoration: none;
+  color: black;
   text-decoration: none;
   text-decoration-color: unset;
   background-color: unset !important;
