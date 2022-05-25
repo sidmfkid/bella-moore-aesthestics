@@ -1,6 +1,5 @@
 <input class="header__input" hidden id="menu" name="menu" type="checkbox">
-    
-<header class="header{%-unless template.name == "index" -%}--page{%- endunless -%}">
+<header class="header{%-if template.name == "product" -%}--page{%- endif -%}">
     <div class="header__wrapper">
 
         <div class="header__logo-container">
@@ -58,7 +57,7 @@
 
 {% schema %}
 {
-"name": "header",
+"name": "Header",
 "class": "main__header",
 "settings": [
 {

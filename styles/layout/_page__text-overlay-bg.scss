@@ -1,0 +1,89 @@
+.page-text-overlay-bg {
+    min-height: calc(53.3rem + 10vw);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+
+    &__bg-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__bg {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        display: block;
+        max-width: calc(39.6rem + 20vw);
+        // margin: auto calc(25rem + 10vw);
+    }
+
+    &__heading-container {
+        margin-bottom: 2.4rem;
+    }
+
+    &__heading {
+        font-size: font-size(medium);
+        @include text-gradient;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    &__para {
+        font-size: font-size(small);
+        color: white;
+        line-height: 1.5;
+        margin-bottom: 2.4rem;
+    }
+
+    &__button-container {
+        width: 100%;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+
+    @include media-tablet {
+        &__content {
+            max-width: 100%;
+            padding: 0 calc(3.2rem + 5vw);
+        }
+    }
+
+    @include media-medium {
+        &__content {
+            max-width: 100%;
+            padding: 0 calc(3.2rem + 5vw);
+        }
+
+        &__heading {
+            font-size: font-size(large);
+
+        }
+    }
+
+    @include media-small {
+        &__content {
+            padding: 0 2rem;
+        }
+
+        &__bg-container {}
+
+        &__bg {}
+    }
+}

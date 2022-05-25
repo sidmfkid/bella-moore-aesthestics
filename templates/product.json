@@ -1,7 +1,7 @@
 {
   "sections": {
-    "page-title": {
-      "type": "page__title-text",
+    "page-header": {
+      "type": "page__header",
       "settings": {}
     },
     "page-text-columns": {
@@ -31,7 +31,13 @@
     },
     "page-image-with-text": {
       "type": "page__image-with-text",
-      "settings": {}
+      "settings": {
+        "image": "shopify:\/\/shop_images\/page-img-w-text.jpg",
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "heading": "Section Title Here",
+        "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!",
+        "button_text": "Button Here"
+      }
     },
     "page-text-overlay-bg": {
       "type": "page__text-overlay-bg",
@@ -43,7 +49,7 @@
     }
   },
   "order": [
-    "page-title",
+    "page-header",
     "page-text-columns",
     "page-image-with-text",
     "page-text-overlay-bg",

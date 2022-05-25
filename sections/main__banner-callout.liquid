@@ -1,16 +1,21 @@
 <div class="banner-callout">
     <div class="banner-callout__content">
-    <div class="banner-callout__svg-container">
-        <img height="575" width="1506" src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/banner-bg.png?v=1653001061" alt="" class="banner-callout__bg">
-    </div>
-    
+        <div class="banner-callout__svg-container">
+            <img
+                alt=""
+                class="banner-callout__bg"
+                height="575"
+                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/banner-bg.png?v=1653001061"
+                width="1506">
+        </div>
+
         <h2 class="banner-callout__heading">{{ section.settings.heading }}</h2>
     </div>
 </div>
 
 {% schema %}
 {
-"name": "main__banner-callout",
+"name": "Banner Callout",
 "settings": [
     {
        "type": "text",
@@ -18,5 +23,4 @@
        "label": "Heading"
     }
 ]
-}
-{% endschema %}
+} {% endschema %}

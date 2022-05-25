@@ -32,7 +32,7 @@
             top: 0;
             left: 0;
             animation: stickyNavIn .4s ease-in-out .2s 1 both;
-            background: linear-gradient(to bottom, rgb(13, 13, 13), rgb(13, 13, 13, .1) 85%, rgba(255, 255, 255, 0));
+            background: linear-gradient(to bottom, rgba(219, 219, 219, 0.4), rgb(13, 13, 13, .1) 85%, rgba(255, 255, 255, 0)) !important;
         }
 
         .header {
@@ -59,13 +59,13 @@
                 &:active,
                 &:hover {
                     .header__nav-link {
-                        color: white;
+                        color: $primary-color;
                     }
 
                     .header__icon-container {
                         svg {
                             path {
-                                fill: white;
+                                fill: $primary-color;
                             }
                         }
                     }
@@ -81,6 +81,7 @@
         left: 0;
         animation: stickyNavIn .4s ease-in-out .2s 1 both;
         background: linear-gradient(to bottom, rgb(13, 13, 13), rgb(13, 13, 13, .1) 85%, rgba(255, 255, 255, 0));
+
     }
 
     // padding: 0 2rem;
@@ -169,7 +170,9 @@
         color: white;
         font-size: font-size(small);
         position: relative;
-        z-index: 5;
+        z-index: 10;
+        width: calc(100% + 5rem);
+        display: inline-block;
     }
 
     &__sub-link-item {
@@ -236,37 +239,48 @@
 
         }
 
+        &:active,
+        &:hover {
+            .header__nav-link {
+                color: $primary-color;
+            }
+
+            .header__icon-container {
+                svg {
+                    path {
+                        fill: $primary-color;
+                    }
+                }
+            }
+        }
+
         .header__nav-link {
             width: fit-content;
         }
 
-        &:active::after,
-        &:hover::after {
-            content: "";
-            position: absolute;
-            top: -4px;
-            left: -1rem;
-            width: calc(100% + 2.4rem);
-            height: calc(100% + 1rem);
-            background-color: rgb(13, 13, 13);
-            // padding-top: 100%;
-            border-radius: 3px 3px 0 0;
-            z-index: -1;
+        // &:active::after,
+        // &:hover::after {
+        &.open {
+            &::after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -1rem;
+                width: calc(100% + 2.4rem);
+                height: calc(100% + 1rem);
+                background-color: rgb(13, 13, 13);
+                // padding-top: 100%;
+                border-radius: 3px 3px 0 0;
+                z-index: -1;
+            }
         }
 
-        &:active,
-        &:hover {
-            // .header__nav-link {
-            //     color: white;
-            // }
-
-            // &__icon-container {
-            //     svg {
-            //         path {
-            //             fill: white;
-            //         }
-            //     }
-            // }
+        // &:active,
+        // &:hover
+        &.open {
+            .header__nav-link {
+                color: white;
+            }
 
             .header__nav-link-wrapper {
                 position: relative;
@@ -306,7 +320,9 @@
 
 
 
-    &__menu {}
+    &__menu {
+        visibility: hidden;
+    }
 
     &__button {
         display: flex;
@@ -367,6 +383,10 @@
 
     @include media-tablet {
         overflow: hidden;
+
+        &__menu {
+            visibility: visible;
+        }
 
         &__wrapper {
             justify-content: space-between;
@@ -589,6 +609,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            // z-index: 5;
 
             &::after {
                 content: "";
@@ -617,9 +638,12 @@
 
             }
 
-            &:active::before,
-            &:hover::before {
-                opacity: 1;
+            // &:active::before,
+            // &:hover::before
+            &.open {
+                &::before {
+                    opacity: 1;
+                }
             }
 
             .header__sub-link-list {
@@ -628,8 +652,9 @@
                 &::after {}
             }
 
-            &:active,
-            &:hover {
+            // &:active,
+            // &:hover,
+            &.open {
 
                 // overflow-y: visible;
 
@@ -720,7 +745,7 @@
 
         &__sub-link {
             font-size: font-size(regular);
-
+            width: 100%;
         }
 
     }

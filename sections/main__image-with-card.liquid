@@ -1,17 +1,11 @@
-
-
 <div class="image-with-card">
     <div class="image-with-card__image-container">
-        <img id="{{section.id}}-image"
-            alt=""
-            class="image-with-card__image"
-            height="933"
-            src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/image-with-card.jpg?v=1652923902"
-            width="1500">
+        <img id="{{section.id}}-image" alt="" class="image-with-card__image" height="933" src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/image-with-card.jpg?v=1652923902" width="1500">
     </div>
     <div class="image-with-card__card">
         <h2 id="{{section.id}}-heading" class="image-with-card__heading">Cool Sculpting</h2>
-        <p id="{{section.id}}-para" class="image-with-card__para">CoolSculpting® is non-invasive body contouring at its finest, delivering
+        <p id="{{section.id}}-para"
+        class="image-with-card__para">CoolSculpting® is non-invasive body contouring at its finest, delivering
             beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at
             the best med spa in Henderson, Las Vegas, Nashville, and Greenville.</p>
         <div class="image-with-card__button">
@@ -22,7 +16,10 @@
         {% for block in section.blocks %}
 
             <div {{ block.shopify_attributes }} class="image-with-card__tab-wrapper">
-                <button id="cardTab" class="image-with-card__tab{% if forloop.index == 1 %}--active{% endif %} block_{{ forloop.index }}">{{ block.settings.heading }}</button>
+                <button
+                    class="image-with-card__tab{% if forloop.index == 1 %}--active{% endif %}
+                        block_{{ forloop.index }}"
+                    id="cardTab">{{ block.settings.heading }}</button>
             </div>
         {% endfor %}
 
@@ -77,7 +74,7 @@ function handleTabClick(e) {
 
 {% schema %}
 {
-"name": "main__image-with-card",
+"name": "Image With Card Section",
 "settings": [
 ],
 "max_blocks": 4,

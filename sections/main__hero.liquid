@@ -1,26 +1,67 @@
-<style>
-    .hero__bg{
-        background: url({{ section.settings.image | image_url }});
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+{% assign logo = section.settings.logo %}
+{% assign heading = section.settings.heading %}
+{% assign subheading = section.settings.subheading %}
+{% assign button_type = section.settings.button_type %}
+{% assign button_text = section.settings.button_text %}
+{% assign button_link = section.settings.button_link %}
+{% assign button_size = section.settings.button_size %}
+{% assign margin_top = section.settings.margin_top %}
+{% assign margin_top = section.settings.margin_top %}
+
+{%- capture btn_link -%}
+    {%- if button_link == blank -%}/
+    {%- else -%}
+        {{- button_link -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+{%- capture section_css -%}
+    .hero__bg {
+    background: url({{ section.settings.image | image_url }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+{%- endcapture -%}
+
+{% style %}
+
+#shopify-section-{{section.id}}{
+    padding-top: {{section.settings.padding_top}}px;
+    padding-bottom: {{section.settings.padding_bottom}}px;
+}
+
+@media screen and(max-width: 900px) {
+    #shopify-section-{{section.id}} .hero__content {
+        margin-top: {{margin_top}}rem;
+        margin-bottom: {{margin_bottom}}rem;
     }
-</style>
+}
+
+{% render 'css-loop',
+    css: section_css,
+    id: section.id %}
+
+{% endstyle %}
 
 <div class="hero">
     <div class="hero__bg"></div>
     <div class="hero__overlay"></div>
     <div class="hero__content">
         <div class="hero__logo">
-            <img alt="" height="116" src="{{ section.settings.logo | image_url }}" width="116">
+            <img alt="" height="{{ logo.height }}" src="{{ logo | image_url }}" width="{{ logo.width }}">
         </div>
         <div class="hero__text-box">
-            <h1 class="hero__title">{{ section.settings.heading }}</h1>
-            <span class="hero__subtitle">{{ section.settings.subheading}}</span>
+            <h1 class="hero__title">{{ heading }}</h1>
+            <span class="hero__subtitle">{{ subheading}}</span>
         </div>
     </div>
+
     <div class="hero__cta">
-        <a class="hero__btn {{ section.settings.button__type }}" href="/">{{ section.settings.button__text }}</a>
+        {% unless button_text == blank %}
+            <a class="hero__btn {{ button_type }}{{ button_size }}" href="{{ button_link }}">{{ button_text }}</a>
+        {% endunless %}
     </div>
 </div>
 
@@ -45,6 +86,55 @@
         "label": "Logo",
         "info": "116 x 116px recommended"
      },
+     {
+        "type": "header",
+        "content": "Spacing"
+     },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding Top",
+        "unit": "px",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "default": 0
+    },
+   {
+       "type": "range",
+       "id": "padding_bottom",
+       "label": "Padding Bottom",
+       "unit": "px",
+       "min": 0,
+       "max": 100,
+       "step": 1,
+       "default": 0
+   },
+   {
+    "type": "header",
+    "content": "Content Position",
+    "info": "Position of elements in section"
+},
+{
+   "type": "range",
+   "id": "margin_top",
+   "label": "Text margin top",
+   "unit": "rem",
+   "min": 0,
+   "max": 50,
+   "step": 1,
+   "default": 11
+},
+{
+ "type": "range",
+ "id": "margin_bottom",
+ "label": "Text margin bottom",
+ "unit": "rem",
+ "min": 0,
+ "max": 50,
+ "step": 1,
+ "default": 0
+},
     {
        "type": "header",
        "content": "Text"
@@ -61,26 +151,58 @@
         "label": "Subeading",
        "default": "Subheading Here"
     },
-    {
-        "type": "text",
-        "id": "button__text",
-        "label": "Button text",
-        "default": "Button"
-    },
+  {
+      "type": "header",
+      "content": "Button Settings"
+  },
+  {
+    "type": "text",
+    "id": "button_text",
+    "label": "Button text",
+    "default": "Button"
+},
+{
+    "type": "url",
+    "id": "button_link",
+    "label": "Button Link"
+},
     {
         "type": "select",
-        "id": "button__type",
+        "id": "button_type",
         "label": "Button Style",
         "options": [
             {
-                "value": "btn btn__secondary--lg",
+                "value": "btn btn__secondary",
                 "label": "Secondary button"
             },
             {
-                "value": "btn btn__primary--lg",
+                "value": "btn btn__primary",
                 "label": "Primary button"
+            },
+            {
+                "value": "btn btn__tertiary",
+                "label": "Tertiary button"
             }
         ]
-    }
+    },
+   {
+       "type": "select",
+       "id": "button_size",
+       "label": "Button Size",
+       "options": [
+            {
+               "value": "--sm",
+               "label": "Small"
+            },
+            {
+                "value": "--md",
+                "label": "Medium"
+            },
+            {
+                "value": "--lg",
+                "label": "Large"
+            }
+       ]
+   }
 ]
 } {% endschema %}

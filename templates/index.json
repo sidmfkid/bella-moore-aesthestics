@@ -7,8 +7,9 @@
         "subheading": "Lifestyle Innovation",
         "image": "shopify:\/\/shop_images\/HERO-BG.jpg",
         "logo": "shopify:\/\/shop_images\/logo2.png",
-        "button__text": "Book Now",
-        "button__type": "btn btn__secondary--lg"
+        "button_text": "Book Now",
+        "button_type": "btn btn__secondary",
+        "button_size": "--lg"
       }
     },
     "image-with-text": {
