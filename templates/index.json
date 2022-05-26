@@ -9,7 +9,9 @@
         "logo": "shopify:\/\/shop_images\/logo2.png",
         "button_text": "Book Now",
         "button_type": "btn btn__secondary",
-        "button_size": "--lg"
+        "button_size": "--lg",
+        "margin_top": 11,
+        "margin_bottom": 0
       }
     },
     "image-with-text": {

@@ -677,6 +677,7 @@ html {
   margin: 0.5rem 0;
   overflow-x: hidden;
   z-index: 1;
+  min-width: calc(100% + 2rem);
 }
 .header__sub-link-item::after {
   content: "";
@@ -753,6 +754,7 @@ html {
   padding-bottom: 1rem;
   height: fit-content;
   overflow: visible;
+  width: max-content;
 }
 .header__nav-item--sub.open .header__sub-link-list::after {
   content: "";
@@ -1053,6 +1055,7 @@ html {
     border-bottom: 1px white solid;
     overflow: hidden;
     z-index: 1;
+    min-width: 87%;
   }
   .header__sub-link-item::after {
     content: "";
@@ -1217,7 +1220,6 @@ html {
     min-width: min-content;
   }
 }
-
 .image-with-text {
   height: 46.5rem;
   width: 100%;

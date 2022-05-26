@@ -6,6 +6,34 @@
     justify-content: center;
     align-items: center;
 
+    // &.justify-start {
+    //     justify-content: flex-start;
+    //     padding-left: 8rem;
+    // }
+
+    // &.justify-end {
+    //     justify-content: flex-end;
+    //     padding-right: 8rem;
+    // }
+
+    // &.justify-center {
+    //     justify-content: flex-center;
+    // }
+
+    // &.align-start {
+    //     align-items: flex-start;
+    //     padding-top: 11rem;
+    // }
+
+    // &.align-end {
+    //     align-items: flex-end;
+    //     padding-bottom: 11rem;
+    // }
+
+    // &.align-center {
+    //     align-items: flex-center;
+    // }
+
     &__bg {
         position: absolute;
         top: 0rem;
@@ -141,4 +169,6 @@
 
         }
     }
+
+    @include media-small {}
 }
