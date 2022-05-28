@@ -10,12 +10,22 @@
     <div class="two-columns__col">
 
         <div class="two-columns__bg-container">
-            <img
+            <img srcset="{%- if section.settings.first-column_image.width >= 400 -%}{{ section.settings.first-column_image | image_url: width: 400 }} 400w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 600 -%}{{ section.settings.first-column_image | image_url: width: 600 }} 600w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 900 -%}{{ section.settings.first-column_image | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 1500 -%}{{ section.settings.first-column_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ section.settings.first-column_image | image_url }} {{ section.settings.first-column_image.width }}w"
+            sizes="(max-width: 400px) 500px, (max-width: 600px) calc(35rem + 10vw),(max-width: 900px) 800px,(max-width: 1500px) calc(45rem + 20vw), (min-width: 1500px) calc(45rem + 20vw)"
+            width="{{ section.settings.first-column_image.width }}"
+            height="{{ section.settings.first-column_image.height }}"
+            src="{{ section.settings.first-column_image | image_url: width: 750 }}"
+            class="two-columns__bg"
+            loading="lazy">
+            <!-- <img
                 alt=""
                 width="750"
                 height="817"
-                class="two-columns__bg"
-                src="{{ section.settings.first-column_image | image_url }}">
+                src="{{ section.settings.first-column_image | image_url }}"> -->
         </div>
         <div class="two-columns__content">
 
@@ -34,12 +44,17 @@
     </div>
     <div class="two-columns__col">
         <div class="two-columns__bg-container">
-            <img
-                alt=""
-                class="two-columns__bg"
-                width="750"
-                height="817"
-                src="{{ section.settings.second-column_image | image_url }}">
+            <img srcset="{%- if section.settings.second-column_image.width >= 400 -%}{{ section.settings.second-column_image | image_url: width: 400 }} 400w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 600 -%}{{ section.settings.second-column_image | image_url: width: 600 }} 600w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 900 -%}{{ section.settings.second-column_image | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 1500 -%}{{ section.settings.second-column_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ section.settings.second-column_image | image_url }} {{ section.settings.second-column_image.width }}w"
+            sizes="(max-width: 400px) 500px, (max-width: 600px) calc(35rem + 10vw),(max-width: 900px) 800px,(max-width: 1500px) calc(45rem + 20vw), (min-width: 1500px) calc(45rem + 20vw)"
+            width="{{ section.settings.second-column_image.width }}"1
+            height="{{ section.settings.second-column_image.height }}"
+            src="{{ section.settings.second-column_image | image_url: width: 750 }}"
+            class="two-columns__bg"
+            loading="lazy">
         </div>
         <div class="two-columns__content">
             <div class="two-columns__heading-container">

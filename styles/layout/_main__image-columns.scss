@@ -4,11 +4,36 @@
     grid-template-rows: repeat(auto-fill, 68.5rem);
     // height: auto;
 
+    &__bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+        // margin: 0 auto;
+
+        // overflow-x: ;
+        img {
+            // position: absolute;
+            display: block;
+            margin: auto;
+            // bottom: 0;
+            height: auto;
+            width: calc(45rem + 20vw);
+
+        }
+    }
+
     &__column {
+        position: relative;
         overflow: hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
         display: grid;
         grid-template-columns: 1rem 1fr 1rem;
         grid-template-rows: repeat(7, 1fr);
@@ -90,7 +115,15 @@
     @include media-tablet {
         grid-template-columns: repeat(4, 1fr);
 
-        grid-template-rows: repeat(2, 68.5rem);
+        grid-template-rows: repeat(2, 60.5rem);
+
+        &__bg-image {
+            img {
+                width: auto;
+                height: 100%;
+
+            }
+        }
 
         &__para {
             font-size: calc(1.5rem + .5vw);
@@ -139,6 +172,18 @@
             &:nth-of-type(4) {
                 grid-column: 1 / 5;
 
+            }
+        }
+
+        &__bg-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                margin: auto;
+                width: calc(48rem + 20vw);
+                height: auto;
             }
         }
 

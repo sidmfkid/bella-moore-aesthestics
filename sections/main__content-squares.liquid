@@ -6,7 +6,18 @@
         <div {{block.shopify_attributes }} class="content-squares__square">
             {% case block.type %}
                 {% when 'image' %}
-                    <img alt="" class="content-squares__image" height="{{ image.height }}" src="{{ image | image_url }}" width="{{ image.width }}">
+                <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+            {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+            {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ image | image_url }} {{ image.width }}w"
+            sizes="(max-width: 400px) 400px, (max-width: 600px) 600px,(max-width: 900px) 500px,(max-width: 1500px) 600px"
+            width="{{ image.width }}"
+            height="{{ image.height }}"
+            src="{{ image | image_url: width: 500 }}"
+            class="content-squares__image"
+            loading="lazy">
+                    <!-- <img alt="" class="content-squares__image" height="{{ image.height }}" src="{{ image | image_url }}" width="{{ image.width }}"> -->
                 {% when 'text' %}
                     <div class="content-squares__content-wrapper">
                         <div class="content-squares__heading-container">

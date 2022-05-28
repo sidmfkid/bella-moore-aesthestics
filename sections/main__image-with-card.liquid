@@ -1,31 +1,54 @@
 <div class="image-with-card">
+    {% for block in section.blocks %}
+<input hidden form="tabForm" value="{{forloop.index}}" class="image-with-card__input" {% if forloop.index == 1 %}checked{% endif %} type="radio" name="tab" id="tab-{{ forloop.index }}">
+
+    {% endfor %}
     <div class="image-with-card__image-container">
-        <img id="{{section.id}}-image" alt="" class="image-with-card__image" height="933" src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/image-with-card.jpg?v=1652923902" width="1500">
+    {% for block in section.blocks %}
+    <img {{ block.shopify_attributes }} {% if forloop.index != 1 %}{% endif %}
+            srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+            {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+            sizes="(max-width: 400px)calc(55rem + 20vw), (max-width: 600px) calc(55rem + 20vw),(max-width: 900px) calc(75rem + 20vw),(max-width: 1500px) 1500px"
+             src="{{ block.settings.image | image_url: width: 1500 }}"
+             alt="{{ block.settings.image.alt }}"
+             height="{{ block.settings.image.height }}"
+             width="{{ block.settings.image.width }}"
+             loading="lazy"
+             class="image-with-card__image image_{{ forloop.index }}">
+<!-- <img id="{{section.id}}-image" alt="" class="image-with-card__image" height="933" src="{{ block.settings.image | image_url }}" width="1500"> -->
+{% endfor %}
     </div>
-    <div class="image-with-card__card">
-        <h2 id="{{section.id}}-heading" class="image-with-card__heading">Cool Sculpting</h2>
+    {% for block in section.blocks %}
+    <div {{ block.shopify_attributes }} {% if forloop.index != 1 %}{% endif %} class="image-with-card__card card_{{ forloop.index }}">
+        <h2 id="{{section.id}}-heading" class="image-with-card__heading">{{ block.settings.heading }}</h2>
         <p id="{{section.id}}-para"
-        class="image-with-card__para">CoolSculpting® is non-invasive body contouring at its finest, delivering
-            beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at
-            the best med spa in Henderson, Las Vegas, Nashville, and Greenville.</p>
+        class="image-with-card__para">{{ block.settings.para }}</p>
         <div class="image-with-card__button">
-            <a id="{{section.id}}-link" class="btn btn__primary--md" href="">Get Started</a>
+            <a id="{{section.id}}-link" class="btn btn__primary--md" href="{{ block.settings.button__link }}">{{ block.settings.button__text }}</a>
         </div>
     </div>
-    <div class="image-with-card__tabs">
+{% endfor %}
+
+    <form id="tabForm" class="image-with-card__tabs">
         {% for block in section.blocks %}
 
             <div {{ block.shopify_attributes }} class="image-with-card__tab-wrapper">
-                <button
-                    class="image-with-card__tab{% if forloop.index == 1 %}--active{% endif %}
-                        block_{{ forloop.index }}"
-                    id="cardTab">{{ block.settings.heading }}</button>
+                <label
+                for="tab-{{ forloop.index }}"
+                    class="image-with-card__tab block_{{ forloop.index }}"
+                    id="cardTab"><span>{{ block.settings.heading }}</span></label>
             </div>
         {% endfor %}
 
-    </div>
+        </form>
 </div>
-<script>
+
+
+
+<!-- <script>
 let cards = []
 {% for block in section.blocks %}
   cards.push({
@@ -35,6 +58,7 @@ let cards = []
     buttonText: "{{ block.settings.button__text }}",
     buttonLink: "{{ block.settings.button__link }}",
     image: "{{ block.settings.image | image_url }}"
+
   })
 {% endfor %}
 // console.log(cards)
@@ -69,7 +93,7 @@ function handleTabClick(e) {
 
     // console.log(blockNum, selectedTab)
 }
-</script>
+</script> -->
 
 
 {% schema %}
@@ -107,7 +131,7 @@ function handleTabClick(e) {
              "type": "image_picker",
              "id": "image",
              "label": "Background Image",
-             "info": "1500 x 933px recommended"
+             "info": "1500 x 1000px recommended"
           }
       ]
     }

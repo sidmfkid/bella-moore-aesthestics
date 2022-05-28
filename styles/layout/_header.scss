@@ -8,6 +8,7 @@
     //     left: 0;
     //     height: 0rem;
     // }
+    overflow-x: hidden;
 
 }
 
@@ -82,6 +83,19 @@
         animation: stickyNavIn .4s ease-in-out .2s 1 both;
         background: linear-gradient(to bottom, rgb(13, 13, 13), rgb(13, 13, 13, .1) 85%, rgba(255, 255, 255, 0));
 
+    }
+
+    &__logo-container {
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: -1;
     }
 
     // padding: 0 2rem;

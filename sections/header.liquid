@@ -1,13 +1,13 @@
 <input class="header__input" hidden id="menu" name="menu" type="checkbox">
-<header class="header{%-if template.name == "product" -%}--page{%- endif -%}">
+<header class="header{%-if request.page_type == "product" or request.page_type == "collection" or request.page_type == "list-collections" -%}--page{%- endif -%}">
     <div class="header__wrapper">
 
-        <div class="header__logo-container">
+        <a href="/" class="header__logo-container">
             <img
                 alt=""
                 class="header__logo"
                 src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Logo.png?v=1652389237">
-        </div>
+        </a>
 
         <div class="header__nav">
             <div class="header__overlay"></div>

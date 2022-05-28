@@ -55,12 +55,12 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
     }
 
     &__bg {
         width: auto;
-        height: 120%;
+        // height: 120%;
         filter: grayscale(1) brightness(.65);
 
     }

@@ -26,8 +26,9 @@
 {%- endcapture -%}
 
 {% style %}
-@media screen and (max-width: 900px) {
-    #shopify-section-{{section.id}} .hero__content {
+
+@media screen and(max-width: 900px) {
+    #shopify-section-{{section.id}}.hero__content {
         margin-top: {{margin_top}}rem;
         margin-bottom: {{margin_bottom}}rem;
     }
@@ -39,11 +40,9 @@
 }
 
 
-
 {% render 'css-loop',
     css: section_css,
     id: section.id %}
-
 
 {% endstyle %}
 
@@ -52,7 +51,8 @@
     <div class="hero__overlay"></div>
     <div class="hero__content">
         <div class="hero__logo">
-            <img alt="" height="{{ logo.height }}" src="{{ logo | image_url }}" width="{{ logo.width }}">
+            {{ logo | image_url: width: 116 | image_tag: srcset: nil, alt: 'Logo', preload: true }}
+            <!-- <img alt="" height="{{ logo.height }}" src="{{ logo | image_url }}" width="{{ logo.width }}"> -->
         </div>
         <div class="hero__text-box">
             <h1 class="hero__title">{{ heading }}</h1>

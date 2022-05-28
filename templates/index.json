@@ -30,7 +30,7 @@
           "type": "column",
           "settings": {
             "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg",
             "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
             "button__text": "Learn More"
           }
@@ -39,7 +39,7 @@
           "type": "column",
           "settings": {
             "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "image": "shopify:\/\/shop_images\/750X1000_A-GROUP-OF-WOMEN-TRAINING-IN-THE-GYM.jpg",
             "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
             "button__text": "Learn More"
           }
@@ -48,7 +48,7 @@
           "type": "column",
           "settings": {
             "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "image": "shopify:\/\/shop_images\/750X1000_YOUNG-FEMALE-SWIMMER-SWIMMING-IN-POOL.jpg",
             "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
             "button__text": "Learn More"
           }
@@ -57,7 +57,7 @@
           "type": "column",
           "settings": {
             "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/image-colum-1.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg",
             "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
             "button__text": "Learn More"
           }
@@ -80,23 +80,23 @@
             "heading": "Cool Sculpting",
             "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
             "button__text": "Get Started",
-            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+            "image": "shopify:\/\/shop_images\/1500X1000_SPORTS-WOMEN-IN-FACE-MASKS-TALK-IN-THE-GYM.jpg"
           }
         },
         "tab-2": {
           "type": "tab",
           "settings": {
             "heading": "Laser Hair Removal",
-            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "para": "2CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
+            "image": "shopify:\/\/shop_images\/1500x1000_woman-with-dark-short-hair-sitting-and-pulling-her.jpg"
           }
         },
         "tab-3": {
           "type": "tab",
           "settings": {
             "heading": "Injectables",
-            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "para": "3CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
           }
@@ -105,7 +105,7 @@
           "type": "tab",
           "settings": {
             "heading": "Skincare",
-            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "para": "4CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
             "button__text": "See Treatments",
             "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
           }
@@ -209,7 +209,8 @@
     "image-banner-callout": {
       "type": "main__banner-callout",
       "settings": {
-        "heading": "Begin Your Health Revolution Today"
+        "heading": "Begin Your Health Revolution Today",
+        "image": "shopify:\/\/shop_images\/banner-bg.png"
       }
     },
     "text-overlay-image": {
@@ -225,7 +226,7 @@
     "gallery-offset": {
       "type": "main__gallery-offset",
       "settings": {
-        "image__main": "shopify:\/\/shop_images\/gallery-long-color.jpg",
+        "image": "shopify:\/\/shop_images\/gallery-long-color.jpg",
         "heading": "GALLERY"
       }
     },
@@ -241,11 +242,11 @@
       "type": "main__two-columns",
       "settings": {
         "logo": "shopify:\/\/shop_images\/logo__box.jpg",
-        "first-column_image": "shopify:\/\/shop_images\/col-1.jpg",
+        "first-column_image": "shopify:\/\/shop_images\/750X1000_TWO-WOMEN-EXERCISING.jpg",
         "first-column_heading": "Hormone Therapy",
         "first-column_para": "The hormonal changes that occur during middle age can make you feel like you’re losing yourself. This is why we offer effective hormone replacement therapy to restore your body back into balance.",
         "first-column_button-text": "Learn More",
-        "second-column_image": "shopify:\/\/shop_images\/col-2.jpg",
+        "second-column_image": "shopify:\/\/shop_images\/750x1000_two-laughing-women-sitting-in-a-gym-after-working.jpg",
         "second-column_heading": "Joint Pain",
         "second-column_button-text": "Learn More",
         "second-column_para": "Joint pain and other uncomfortable conditions can have a disheartening effect on your day-to-day life — but with our joint pain therapy, you can welcome back the functionality of your body.",

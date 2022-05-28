@@ -1,12 +1,34 @@
 <div class="gallery-offset">
     <div class="gallery-offset__center-image">
-        <img alt="" class="gallery-offset__image" height="615" src="{{ section.settings.image__main | image_url }}" width="1200">
+        <img srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+        {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
+        {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+        sizes="(max-width: 400px) 320px, (max-width: 600px) 480px,(max-width: 900px) 720px,(max-width: 1500px) 1200px"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        class="gallery-offset__image"
+        alt="{{section.settings.image.alt}}">
+        <!-- <img alt="" class="gallery-offset__image" height="615" src="{{ section.settings.image | image_url }}" width="1200"> -->
         <div class="gallery-offset__heading-container">
-            <h2 class="gallery-offset__heading">{{ section.settings.heading }}</h2>
+            <h2 class="gallery-offset__heading">{{ section.settings.heading | escape }}</h2>
         </div>
 
         <div class="gallery-offset__offset-image-container">
-            <img alt="" class="gallery-offset__offset-image" height="615" src="{{ section.settings.image__main | image_url }}" width="1200">
+            <img srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+        {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
+        {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+        sizes="(max-width: 400px) 312px, (max-width: 600px) 351px,(max-width: 900px) 478px,(max-width: 1500px) 780px"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        src="{{ section.settings.image | image_url: width: 1500 }}"
+        class="gallery-offset__offset-image"
+        alt="{{section.settings.image.alt}}">
+            <!-- <img alt="" class="gallery-offset__offset-image" height="615" src="{{ section.settings.image | image_url }}" width="1200"> -->
         </div>
     </div>
 </div>
@@ -17,7 +39,7 @@
 "settings": [
 {
    "type": "image_picker",
-   "id": "image__main",
+   "id": "image",
    "label": "Main Image"
 },
 {
