@@ -1,9 +1,10 @@
 .image-with-text {
-    height: 46.5rem;
+    min-height: 46.5rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 
     &__image {
         height: calc(20rem + 5vw);

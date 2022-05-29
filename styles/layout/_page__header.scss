@@ -85,8 +85,8 @@
 
     &__image {
         position: absolute;
-        width: auto;
-        height: 100%;
+        width: calc(100% + 2rem);
+        height: auto;
 
         // left: 0;
         &--svg {
@@ -207,8 +207,10 @@
 
     @include media-small {
         &__image {
-            width: auto;
-            height: 100%;
+            // width: calc(100% + 4rem);
+
+            // width: auto;
+            // height: 100%;
         }
     }
 }

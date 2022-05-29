@@ -8,7 +8,7 @@
     //     left: 0;
     //     height: 0rem;
     // }
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
 }
 
@@ -19,6 +19,7 @@
     position: absolute;
     transition: all .4s ease-in-out;
     top: 0;
+
 
     // animation: stickyNavOut .4s ease-in-out .2s 1 backwards;
     &--page {
@@ -124,6 +125,8 @@
     &__nav-list {
         display: flex;
         justify-content: space-evenly;
+        position: relative;
+        z-index: 10;
     }
 
 

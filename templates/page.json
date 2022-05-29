@@ -1,14 +1,13 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "page-header": {
+      "type": "page__header",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "image": "shopify:\/\/shop_images\/1200X1200_WOMAN-WITH-BACKPACK-AND-RAISED-UP-ARMS-VINTAGE.jpg"
       }
     }
   },
   "order": [
-    "main"
+    "page-header"
   ]
 }

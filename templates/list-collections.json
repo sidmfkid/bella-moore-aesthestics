@@ -1,15 +1,18 @@
 {
   "sections": {
-    "main": {
-      "type": "main-list-collections",
+    "page-header": {
+      "type": "page__header",
       "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square"
+        "image": "shopify:\/\/shop_images\/1200X1200_WOMAN-WITH-BACKPACK-AND-RAISED-UP-ARMS-VINTAGE.jpg"
       }
+    },
+    "main-list-collections": {
+      "type": "main__list-collections",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "page-header",
+    "main-list-collections"
   ]
 }

@@ -16,10 +16,22 @@
     <div class="page-image-with-text__image-container">
 
         {% unless image == blank %}
+        <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+        {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+        {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+        {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ image | image_url }} {{ image.width }}w"
+        sizes="(max-width: 400px) 374.5px, (max-width: 600px) 428.1px,(max-width: 900px) 508.7px,(max-width: 1500px) 750px"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        src="{{ image | image_url: width: 1000 }}"
+        class="page-image-with-text__image"
+        loading="lazy">
+<!-- 
             <img
                 alt=""
                 class="page-image-with-text__image"
-                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/page-img-w-text.jpg?v=1653411560">
+                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/page-img-w-text.jpg?v=1653411560"> -->
 
         {% else %}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'page-image-with-text__image--svg'}}

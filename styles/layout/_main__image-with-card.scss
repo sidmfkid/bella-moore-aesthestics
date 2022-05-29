@@ -17,7 +17,6 @@
         position: absolute;
         // width: 100%;
         width: auto;
-        height: 100%;
     }
 
     &__card {
@@ -136,6 +135,10 @@
 
         &__card {
             top: 10%;
+        }
+
+        &__image {
+            height: 100%;
         }
     }
 

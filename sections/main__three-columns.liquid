@@ -1,18 +1,26 @@
 <div class="three-columns">
 
     {% for block in section.blocks %}
-        
-    <div {{ block.shopify_attributes }} class="three-columns__col">
-        <div class="three-columns__image-container">
-            <img
-                alt=""
+        {% assign image = block.settings.image %}
+        <div {{ block.shopify_attributes }} class="three-columns__col">
+            <div class="three-columns__image-container">
+                <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+                {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+                {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+                {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ image | image_url }} {{ image.width }}w"
+                sizes="(max-width: 400px) 400px, (max-width: 600px) 600px,(max-width: 900px) 454.2px,(max-width: 1500px) 500px"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                src="{{ image | image_url: width: 500 }}"
                 class="three-columns__image"
-                src="{{ block.settings.image | image_url }}">
+                loading="lazy">
+                <!-- <img alt="" class="three-columns__image" src="{{ image | image_url }}"> -->
+            </div>
+            <a class="three-columns__content" href="{{ block.settings.link }}">
+                <h3 class="three-columns__heading">{{ block.settings.heading }}</h3>
+            </a>
         </div>
-        <a class="three-columns__content" href="{{ block.settings.link }}">
-            <h3 class="three-columns__heading">{{ block.settings.heading }}</h3>
-        </a>
-    </div>
     {% endfor %}
 
 </div>

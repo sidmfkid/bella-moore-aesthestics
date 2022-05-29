@@ -1,3 +1,30 @@
+<div class="page-contact-us">
+    {% form 'contact', id: 'contactForm', class: 'page-contact-us__form' %}
+    {%- if form.posted_successfully? -%}
+    <div class="page-contact-us__success-wrapper"></div>
+    {%- elsif form.errors -%}
+    <div class="page-contact-us__error-wrapper"></div>
+    {%- endif -%}
+
+    <div class="page-contact-us__fields">
+        <div class="page-contact-us__field-container">
+            <input autocomplete="name" id="contactFormName" name="contact[name]" type="text" class="page-contact-us__input" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            <label for="contactFormName"  class="page-contact-us__label">Name</label>
+        </div>
+        <div class="page-contact-us__field-container">
+            <input autocomplete="email" id="contactFormEmail" name="contact[email]" type="text" class="page-contact-us__input" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+            <label for="contactFormEmail"  class="page-contact-us__label">Email Address</label>
+        </div>
+        <div class="page-contact-us__field-container">
+            <input autocomplete="phone" id="contactFormPhone" name="contact[phone]" type="text" class="page-contact-us__input" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+            <label for="contactFormPhone"  class="page-contact-us__label">Phone Number</label>
+        </div>
+    </div>
+
+{% endform %}
+
+</div>
+
 {% schema %}
 {
 "name": "page__contact-us",

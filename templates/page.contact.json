@@ -1,25 +1,18 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "page-header": {
+      "type": "page__header",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image": "shopify:\/\/shop_images\/1200X1200_WOMAN-WITH-BACKPACK-AND-RAISED-UP-ARMS-VINTAGE.jpg"
       }
     },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+    "contact": {
+      "type": "page__contact",
+      "settings": {}
     }
   },
   "order": [
-    "main",
-    "form"
+    "page-header",
+    "contact"
   ]
 }
