@@ -2317,6 +2317,87 @@ html {
   transition: all 0.3s ease-in-out;
 }
 
+.page-contact-us {
+  width: 100%;
+  padding: 4.8rem 2.4rem;
+  background: #fff8e6;
+}
+.page-contact-us__fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, calc(35rem + 10vw));
+  grid-template-rows: auto;
+  grid-gap: 1.3rem;
+  place-content: center;
+}
+.page-contact-us__field-container {
+  width: 100%;
+}
+.page-contact-us__field-container:nth-of-type(4) {
+  grid-column: 1/3;
+}
+.page-contact-us__field-container:nth-of-type(5) {
+  grid-column: 1/3;
+}
+.page-contact-us__heading-container {
+  grid-column: 1/3;
+  margin-bottom: 2.4rem;
+}
+.page-contact-us__heading {
+  font-size: calc(1.5rem + 1vw);
+  font-weight: 100;
+}
+.page-contact-us__input {
+  width: 100%;
+  height: 2.6rem;
+  font-size: calc(1.2rem + 0.5vw);
+  font-family: var(--font-body-family);
+  background-color: #fff8e6;
+  border: 2px solid hsl(0deg, 0%, 0%);
+}
+.page-contact-us__button-container {
+  grid-column: 2/3;
+}
+.page-contact-us__button {
+  display: block;
+  width: 100%;
+  margin: 0 0 0 auto;
+  font-family: var(--font-body-family);
+}
+.page-contact-us__textarea {
+  width: 100%;
+  background-color: #fff8e6;
+  border: 2px solid hsl(0deg, 0%, 0%);
+  font-size: calc(1.2rem + 0.5vw);
+  font-family: var(--font-body-family);
+}
+.page-contact-us__label {
+  font-size: calc(1.5rem + 1vw);
+  font-family: var(--font-body-family);
+  font-weight: 100;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+@media screen and (max-width: 600px) {
+  .page-contact-us__fields {
+    grid-template-columns: repeat(auto-fill, calc(33rem + 10vw));
+  }
+  .page-contact-us__heading-container {
+    padding: 0 1rem;
+  }
+  .page-contact-us__field-container {
+    padding: 0 1rem;
+    grid-column: 1/3;
+  }
+  .page-contact-us__field-container:nth-of-type(4), .page-contact-us__field-container:nth-of-type(5) {
+    grid-column: 1/3;
+  }
+  .page-contact-us__button-container {
+    grid-column: 1/3;
+    padding: 0 1rem;
+  }
+}
+
 .page-header {
   width: 100%;
   height: calc(27.5rem + 10vw);
@@ -2398,7 +2479,6 @@ html {
   grid-row: 1/4;
   place-self: center;
   position: relative;
-  z-index: 1;
 }
 .page-header__image-container {
   grid-column: 7/13;
@@ -2408,6 +2488,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 .page-header__image {
   position: absolute;

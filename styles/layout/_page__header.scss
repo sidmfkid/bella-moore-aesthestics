@@ -70,7 +70,6 @@
         grid-row: 1/4;
         place-self: center;
         position: relative;
-        z-index: 1;
     }
 
     &__image-container {
@@ -81,6 +80,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: -1;
+
     }
 
     &__image {
@@ -146,6 +147,7 @@
             background: transparent !important;
             padding: 0 0 0 2rem;
             justify-content: flex-start;
+
         }
 
         &__info-wrapper {
