@@ -43,8 +43,8 @@ console.log(e.target)
 
 let options = {
     root: null,
-    rootMargin: '150px',
-    threshold: .1
+    rootMargin: '0px',
+    threshold: .6
 }
 
 let observer = new IntersectionObserver(toggleStickyNav, options);
