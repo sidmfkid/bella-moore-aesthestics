@@ -589,6 +589,9 @@ html {
 .header--page .header__nav::after {
   background-color: black;
 }
+.header--page .header__nav-item--sub .header__nav-link {
+  color: black;
+}
 .header--page .header__nav-item--sub:active .header__nav-link, .header--page .header__nav-item--sub:hover .header__nav-link {
   color: var(--primary-color);
 }

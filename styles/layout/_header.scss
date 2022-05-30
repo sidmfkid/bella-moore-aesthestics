@@ -63,7 +63,12 @@
                 }
             }
 
+
+
             &__nav-item--sub {
+                .header__nav-link {
+                    color: black;
+                }
 
                 &:active,
                 &:hover {
