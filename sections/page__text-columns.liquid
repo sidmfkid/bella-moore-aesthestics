@@ -6,6 +6,10 @@
     {% for block in blocks %}
         
 {% assign heading = block.settings.heading %}
+
+
+
+
 {% assign para = block.settings.para %}
 {% assign btn_link = block.settings.btn_link %}
 {% assign btn_text = block.settings.btn_text %}
@@ -18,10 +22,19 @@
             <h2 class="text-columns__heading">{{ heading }}</h2>
         </div>
         {% endunless %}
+        
 
-        {% unless para == blank %}
+        {% unless para == blank and product.metafields.my_fields.product_info_2.value == blank and product.metafields.my_fields.product_info_1.value == blank %}
         <div class="text-columns__para-container">
-            <p class="text-columns__para">{{ para }}</p>
+            <p class="text-columns__para">
+                
+                {% if forloop.index == 1 %}
+                {{ product.metafields.my_fields.product_info_1.value }}
+                {% elsif forloop.index == 2 %}
+                {{ product.metafields.my_fields.product_info_2.value }}
+
+                {% endif %}
+            </p>
         </div>
         {% endunless %}
 

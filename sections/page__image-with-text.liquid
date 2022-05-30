@@ -54,7 +54,13 @@
             <h2 class="page-image-with-text__heading">{{ heading }}</h2>
         </div>
         <div class="page-image-with-text__para-container">
-            <p class="page-image-with-text__para">{{ para }}</p>
+            <p class="page-image-with-text__para">
+                {% if para == blank %}
+                {{ product.metafields.my_fields.product_info_2.value }}
+                    {% else %}
+                    {{ para }}
+                {% endif %}
+                </p>
         </div>
         <div class="page-image-with-text__button-container">
             <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>

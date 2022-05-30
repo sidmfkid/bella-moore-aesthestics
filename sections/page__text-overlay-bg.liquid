@@ -5,17 +5,20 @@
 
     <div class="page-text-overlay-bg__content">
         <div class="page-text-overlay-bg__heading-container">
-            <h2 class="page-text-overlay-bg__heading">Section Title Here</h2>
+            <h2 class="page-text-overlay-bg__heading">
+                {{ section.settings.para }}
+            </h2>
         </div>
         <div class="page-text-overlay-bg__para-container">
             <p class="page-text-overlay-bg__para">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, rem iste maiores dignissimos voluptatem aut exercitationem, temporibus nam, officiis ab voluptate vel accusamus porro nostrum laborum dolorem eveniet eius dolorum?
-                Excepturi praesentium dolor ab aspernatur quod pariatur perferendis, provident modi, autem nam nostrum perspiciatis impedit ratione soluta omnis mollitia consectetur voluptatibus commodi itaque sunt animi sapiente quae sint sequi.Deserunt?
-                Corporis quae nam deserunt voluptatem delectus dicta totam possimus? Neque soluta officiis eum? Doloribus fugit, eaque cum veritatis veniam nihil sed error, cumque voluptatibus dicta possimus tempore exercitationem quam nostrum!
-            </p>
+                {% if section.settings.para == blank %}
+                {{ product.metafields.my_fields.product_info_3.value }}
+                {% else %}
+                    {{ section.settings.para }}
+                {% endif %}</p>
         </div>
         <div class="page-text-overlay-bg__button-container">
-            <a class="page-text-overlay-bg__button btn btn__secondary--md" href="">Button</a>
+            <a class="page-text-overlay-bg__button btn btn__secondary--md" href="{{section.settings.button_link}}">{{ section.settings.button_text}}</a>
         </div>
     </div>
 </div>
