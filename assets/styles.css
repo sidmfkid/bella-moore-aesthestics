@@ -888,47 +888,56 @@ html {
   .header__input:checked {
     transition: all 0.3s ease-in-out;
   }
-  .header__input:checked ~ .header, .header__input:checked ~ .header--page {
+  .header__input:checked ~ .header,
+.header__input:checked ~ .header--page {
     transition: all 0.3s ease-in-out;
     height: 100%;
     overflow-y: hidden;
   }
-  .header__input:checked ~ .header .header__logo-container, .header__input:checked ~ .header--page .header__logo-container,
+  .header__input:checked ~ .header .header__logo-container,
 .header__input:checked ~ .header .header__menu,
+.header__input:checked ~ .header--page .header__logo-container,
 .header__input:checked ~ .header--page .header__menu {
     position: fixed;
     top: 3rem;
     z-index: 4;
   }
-  .header__input:checked ~ .header .header__logo-container, .header__input:checked ~ .header--page .header__logo-container {
+  .header__input:checked ~ .header .header__logo-container,
+.header__input:checked ~ .header--page .header__logo-container {
     left: 2rem;
   }
-  .header__input:checked ~ .header .header__menu, .header__input:checked ~ .header--page .header__menu {
+  .header__input:checked ~ .header .header__menu,
+.header__input:checked ~ .header--page .header__menu {
     right: 2rem;
   }
-  .header__input:checked ~ .header .header__button-line, .header__input:checked ~ .header--page .header__button-line,
+  .header__input:checked ~ .header .header__button-line,
 .header__input:checked ~ .header .header__button-line::after,
-.header__input:checked ~ .header--page .header__button-line::after,
 .header__input:checked ~ .header .header__button-line::before,
+.header__input:checked ~ .header--page .header__button-line,
+.header__input:checked ~ .header--page .header__button-line::after,
 .header__input:checked ~ .header--page .header__button-line::before {
     transition: all 0.3s ease-in-out;
     z-index: 4;
     filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.495));
   }
-  .header__input:checked ~ .header .header__button-line::after, .header__input:checked ~ .header--page .header__button-line::after {
+  .header__input:checked ~ .header .header__button-line::after,
+.header__input:checked ~ .header--page .header__button-line::after {
     transform: rotate(45deg);
     top: 0;
     bottom: 0;
   }
-  .header__input:checked ~ .header .header__button-line, .header__input:checked ~ .header--page .header__button-line {
+  .header__input:checked ~ .header .header__button-line,
+.header__input:checked ~ .header--page .header__button-line {
     height: 0;
   }
-  .header__input:checked ~ .header .header__button-line::before, .header__input:checked ~ .header--page .header__button-line::before {
+  .header__input:checked ~ .header .header__button-line::before,
+.header__input:checked ~ .header--page .header__button-line::before {
     transform: rotate(-45deg);
     top: 0;
     bottom: 0;
   }
-  .header__input:checked ~ .header .header__nav, .header__input:checked ~ .header--page .header__nav {
+  .header__input:checked ~ .header .header__nav,
+.header__input:checked ~ .header--page .header__nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -937,7 +946,8 @@ html {
     height: 100%;
     overflow-y: hidden;
   }
-  .header__input:checked ~ .header .header__nav-list, .header__input:checked ~ .header--page .header__nav-list {
+  .header__input:checked ~ .header .header__nav-list,
+.header__input:checked ~ .header--page .header__nav-list {
     width: 100%;
     top: 20rem;
     z-index: 3;
@@ -948,7 +958,8 @@ html {
     justify-content: flex-start;
     align-items: center;
   }
-  .header__input:checked ~ .header .header__overlay, .header__input:checked ~ .header--page .header__overlay {
+  .header__input:checked ~ .header .header__overlay,
+.header__input:checked ~ .header--page .header__overlay {
     transition: transform 0.5s ease-in-out;
     position: fixed;
     transform: translateY(0);

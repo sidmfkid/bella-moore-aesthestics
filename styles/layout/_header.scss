@@ -476,7 +476,8 @@
             &:checked {
                 transition: all .3s ease-in-out;
 
-                ~.header {
+                ~.header,
+                ~.header--page {
                     transition: all .3s ease-in-out;
 
                     height: 100%;
