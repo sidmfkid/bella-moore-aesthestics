@@ -303,9 +303,21 @@
         // &:active,
         // &:hover
         &.open {
+
+            &:active,
+            &:hover {
+                color: black;
+            }
+
             .header__nav-link {
                 color: white;
+
+                &:active,
+                &:hover {
+                    color: white;
+                }
             }
+
 
             .header__nav-link-wrapper {
                 position: relative;
@@ -522,7 +534,7 @@
                         top: 20rem;
                         z-index: 3;
                         margin-top: 2rem;
-                        padding: 0 calc(2rem + 5vw);
+                        padding: 0 calc(.5rem + 3vw);
                         height: 3rem;
                         display: flex;
                         justify-content: flex-start;
@@ -771,6 +783,24 @@
         &__sub-link {
             font-size: font-size(regular);
             width: 100%;
+        }
+
+        &__nav-item--sub {
+
+            &:active,
+            &:hover {
+                .header__nav-link {
+                    color: rgb(205, 205, 205);
+                }
+
+                .header__icon-container {
+                    svg {
+                        path {
+                            fill: rgb(205, 205, 205);
+                        }
+                    }
+                }
+            }
         }
 
     }

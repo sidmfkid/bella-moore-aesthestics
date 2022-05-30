@@ -762,7 +762,13 @@ html {
   border-radius: 3px 3px 0 0;
   z-index: -1;
 }
+.header__nav-item--sub.open:active, .header__nav-item--sub.open:hover {
+  color: black;
+}
 .header__nav-item--sub.open .header__nav-link {
+  color: white;
+}
+.header__nav-item--sub.open .header__nav-link:active, .header__nav-item--sub.open .header__nav-link:hover {
   color: white;
 }
 .header__nav-item--sub.open .header__nav-link-wrapper {
@@ -933,7 +939,7 @@ html {
     top: 20rem;
     z-index: 3;
     margin-top: 2rem;
-    padding: 0 calc(2rem + 5vw);
+    padding: 0 calc(0.5rem + 3vw);
     height: 3rem;
     display: flex;
     justify-content: flex-start;
@@ -1095,6 +1101,12 @@ html {
   .header__sub-link {
     font-size: calc(1.5rem + 1vw);
     width: 100%;
+  }
+  .header__nav-item--sub:active .header__nav-link, .header__nav-item--sub:hover .header__nav-link {
+    color: rgb(205, 205, 205);
+  }
+  .header__nav-item--sub:active .header__icon-container svg path, .header__nav-item--sub:hover .header__icon-container svg path {
+    fill: rgb(205, 205, 205);
   }
 }
 
