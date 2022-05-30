@@ -553,6 +553,10 @@ html {
   font-size: calc(1rem + 0.5vw);
 }
 
+.shopify-section.main__header.sticky {
+  height: 10.2rem;
+}
+
 .header, .header--page {
   width: 100%;
   height: 10.2rem;
@@ -571,7 +575,7 @@ html {
   top: 0;
   left: 0;
   animation: stickyNavIn 0.4s ease-in-out 0.2s 1 both;
-  background: linear-gradient(to bottom, rgba(219, 219, 219, 0.4), rgba(13, 13, 13, 0.1) 85%, rgba(255, 255, 255, 0)) !important;
+  background: linear-gradient(to bottom, rgb(255, 252, 252), rgba(158, 158, 158, 0.61) 85%, rgba(255, 255, 255, 0)) !important;
 }
 .header--page .header__nav-link {
   color: black;

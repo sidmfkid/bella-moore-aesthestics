@@ -3,15 +3,15 @@
     "hero": {
       "type": "main__hero",
       "settings": {
-        "heading": "BELLA MOORE AESTHETICS",
-        "subheading": "Lifestyle Innovation",
         "image": "shopify:\/\/shop_images\/HERO-BG.jpg",
         "logo": "shopify:\/\/shop_images\/logo2.png",
+        "margin_top": 11,
+        "margin_bottom": 0,
+        "heading": "BELLA MOORE AESTHESTICS",
+        "subheading": "Lifestyle Innovation",
         "button_text": "Book Now",
         "button_type": "btn btn__secondary",
-        "button_size": "--lg",
-        "margin_top": 11,
-        "margin_bottom": 0
+        "button_size": "--lg"
       }
     },
     "image-with-text": {
@@ -24,42 +24,41 @@
     },
     "image-columns": {
       "type": "main__image-columns",
-      "settings": {},
       "blocks": {
         "column-1": {
           "type": "column",
           "settings": {
-            "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg",
-            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
-            "button__text": "Learn More"
+            "heading": "Mesotherapy",
+            "para": "If you're looking for a safe and effective way to reduce fat, booking a Mesotherapy session at Bella Moore is the perfect solution. With this cutting-edge injection technique, you can target specific areas of your body to help sculpt and contour your figure.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg"
           }
         },
         "column-2": {
           "type": "column",
           "settings": {
-            "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/750X1000_A-GROUP-OF-WOMEN-TRAINING-IN-THE-GYM.jpg",
-            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
-            "button__text": "Learn More"
+            "heading": "Kybella",
+            "para": "Looking to get rid of your double chin without going under the knife? Kybella is your answer! Kybella is a non-surgical injection that helps break down fats so they can be more easily digested. It’s a great option for those who want to avoid surgery or have a lower recovery time. And because it’s non-surgical, it has fewer risks than surgery. So why wait?",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750X1000_A-GROUP-OF-WOMEN-TRAINING-IN-THE-GYM.jpg"
           }
         },
         "column-3": {
           "type": "column",
           "settings": {
-            "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/750X1000_YOUNG-FEMALE-SWIMMER-SWIMMING-IN-POOL.jpg",
-            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
-            "button__text": "Learn More"
+            "heading": "Laser Hair Removal",
+            "para": "Bella Moore's unique laser technology targets the pigment in your hair follicles, damaging them enough to discourage further growth. The best part is that it works on all skin types and colors, so anyone can benefit from it! Whether you're looking to get rid of hair on your legs, face, bikini area, or anywhere else, Bella Moore has you covered.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750X1000_YOUNG-FEMALE-SWIMMER-SWIMMING-IN-POOL.jpg"
           }
         },
         "column-4": {
           "type": "column",
           "settings": {
-            "heading": "Medical Weight Loss",
-            "image": "shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg",
-            "para": "We take the appropriate time to assess your personal goals and take a scientific, data-driven approach to aide you in reaching, as well as maintaining your desired physique. You can be confident that every step you take is in the right direction and feel secure that we will be there for every one.",
-            "button__text": "Learn More"
+            "heading": "Fillers",
+            "para": "If you're looking for a way to restore volume and fullness to your skin, Bella Moore Filler treatments are the perfect solution. Our fillers are specifically indicated for the correction of facial lines, wrinkles, and folds, providing you with a more youthful appearance.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg"
           }
         }
       },
@@ -68,17 +67,17 @@
         "column-2",
         "column-3",
         "column-4"
-      ]
+      ],
+      "settings": {}
     },
     "image-with-card": {
       "type": "main__image-with-card",
-      "settings": {},
       "blocks": {
         "tab-1": {
           "type": "tab",
           "settings": {
-            "heading": "Cool Sculpting",
-            "para": "CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "heading": "Chemical Peel",
+            "para": "If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.",
             "button__text": "Get Started",
             "image": "shopify:\/\/shop_images\/1500X1000_SPORTS-WOMEN-IN-FACE-MASKS-TALK-IN-THE-GYM.jpg"
           }
@@ -86,8 +85,8 @@
         "tab-2": {
           "type": "tab",
           "settings": {
-            "heading": "Laser Hair Removal",
-            "para": "2CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "heading": "Fatona Lasers",
+            "para": "This exciting new laser treatment can help you achieve tighter, more youthful-looking skin without the need for injectables. Fatona Lasers work by stimulating collagen production to promote full-thickness contraction of the skin. This results in a noticeable reduction in wrinkles and sagging skin.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/1500x1000_woman-with-dark-short-hair-sitting-and-pulling-her.jpg"
           }
@@ -95,8 +94,8 @@
         "tab-3": {
           "type": "tab",
           "settings": {
-            "heading": "Injectables",
-            "para": "3CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "heading": "HydraFacial",
+            "para": "The HydraFacial is perfect for anyone who wants to improve the appearance of their skin. Whether you are concerned about wrinkles, fine lines, dark spots, or dryness, the HydraFacial can help. The treatment is gentle and non-invasive, and it works for all skin types. Impurities in the skin are removed and the skin is infused with different solutions. This helps to exfoliate, hydrate, cleanse, and brighten the skin.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
           }
@@ -104,8 +103,8 @@
         "tab-4": {
           "type": "tab",
           "settings": {
-            "heading": "Skincare",
-            "para": "4CoolSculpting® is non-invasive body contouring at its finest, delivering beautiful results by harnessing advanced cryolipolysis technique. Experience this incredible treatment at the best med spa in Henderson, Las Vegas, Nashville, and Greenville.",
+            "heading": "Onabotulinum A",
+            "para": "Our Onabotulinum A/Botox injections are the perfect way to reduce the appearance of facial wrinkles and give you a more youthful look. In addition to reducing wrinkles, our Botox injections can also help treat conditions such as neck spasms, excessive sweating, an overactive bladder, and lazy eye. If you suffer from chronic migraines, our Botox injections may also help prevent them.",
             "button__text": "See Treatments",
             "image": "shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"
           }
@@ -116,31 +115,31 @@
         "tab-2",
         "tab-3",
         "tab-4"
-      ]
+      ],
+      "settings": {}
     },
     "three-columns": {
       "type": "main__three-columns",
-      "settings": {},
       "blocks": {
         "column-1": {
           "type": "column",
           "settings": {
-            "heading": "Botox",
-            "image": "shopify:\/\/shop_images\/3Col-1.jpg"
+            "image": "shopify:\/\/shop_images\/3Col-1.jpg",
+            "heading": "Botox"
           }
         },
         "column-2": {
           "type": "column",
           "settings": {
-            "heading": "Fillers",
-            "image": "shopify:\/\/shop_images\/3Col-2.jpg"
+            "image": "shopify:\/\/shop_images\/3Col-2.jpg",
+            "heading": "Fillers"
           }
         },
         "column-3": {
           "type": "column",
           "settings": {
-            "heading": "Skin Care",
-            "image": "shopify:\/\/shop_images\/3Col-3.jpg"
+            "image": "shopify:\/\/shop_images\/3Col-3.jpg",
+            "heading": "Skin Care"
           }
         }
       },
@@ -148,11 +147,11 @@
         "column-1",
         "column-2",
         "column-3"
-      ]
+      ],
+      "settings": {}
     },
     "content-squares": {
       "type": "main__content-squares",
-      "settings": {},
       "blocks": {
         "square-1": {
           "type": "image",
@@ -164,7 +163,7 @@
           "type": "text",
           "settings": {
             "heading": "Service",
-            "para": "At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals. We are proud to offer the absolute highest level of patient-centric care at our Henderson, Las Vegas, Nashville, Greenville, and Indianapolis clinics.",
+            "para": "At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals.",
             "button_text": "Learn More"
           }
         },
@@ -178,7 +177,7 @@
           "type": "text",
           "settings": {
             "heading": "About Us",
-            "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet maecenas in nisl imperdiet. Euismod adipiscing amet eu lacinia. Ac vel malesuada sem mauris. Venenatis, sed sapien elementum laoreet. Diam porttitor amet, amet eget maecenas facilisis nunc sagittis. Quam tellus, aliquet pellentesque ultrices lacus. Condimentum et praesent netus sit odio in nibh.",
+            "para": "We understand that everyone is unique and deserves personalized treatment. That's why our team of highly skilled and experienced aesthetic professionals will work with you to develop a custom treatment plan that meets your individual needs and goals.",
             "button_text": "Learn More"
           }
         },
@@ -192,7 +191,7 @@
           "type": "text",
           "settings": {
             "heading": "Experience",
-            "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet maecenas in nisl imperdiet. Euismod adipiscing amet eu lacinia. Ac vel malesuada sem mauris. Venenatis, sed sapien elementum laoreet. Diam porttitor amet, amet eget maecenas facilisis nunc sagittis. Quam tellus, aliquet pellentesque ultrices lacus. Condimentum et praesent netus sit odio in nibh.",
+            "para": "Our staff is highly experienced in a range of medical treatments. From Botox to fillers, we are dedicated to helping our patients achieve their desired results. Whether you are looking to reduce the appearance of wrinkles or enhance your features, we will work with you to create a treatment plan that is tailored to your needs.",
             "button_text": "Learn More"
           }
         }
@@ -204,12 +203,13 @@
         "square-4",
         "square-5",
         "square-6"
-      ]
+      ],
+      "settings": {}
     },
     "image-banner-callout": {
       "type": "main__banner-callout",
       "settings": {
-        "heading": "Begin Your Health Revolution Today",
+        "heading": "Begin Your Health Revolution",
         "image": "shopify:\/\/shop_images\/banner-bg.png"
       }
     },
@@ -242,15 +242,15 @@
       "type": "main__two-columns",
       "settings": {
         "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "logo_display": "",
         "first-column_image": "shopify:\/\/shop_images\/750X1000_TWO-WOMEN-EXERCISING.jpg",
-        "first-column_heading": "Hormone Therapy",
-        "first-column_para": "The hormonal changes that occur during middle age can make you feel like you’re losing yourself. This is why we offer effective hormone replacement therapy to restore your body back into balance.",
+        "first-column_heading": "Body Sculpting",
+        "first-column_para": "Whether you've recently lost weight or had a baby, we can help you get the body you've always wanted. With our experienced team of surgeons, you can trust us to give you the best possible results. Contact us today to learn more about our body contouring procedures.",
         "first-column_button-text": "Learn More",
         "second-column_image": "shopify:\/\/shop_images\/750x1000_two-laughing-women-sitting-in-a-gym-after-working.jpg",
-        "second-column_heading": "Joint Pain",
-        "second-column_button-text": "Learn More",
-        "second-column_para": "Joint pain and other uncomfortable conditions can have a disheartening effect on your day-to-day life — but with our joint pain therapy, you can welcome back the functionality of your body.",
-        "logo_display": ""
+        "second-column_heading": "Microdermaabrasion",
+        "second-column_para": "Microdermaabrasion is the latest in revolutionary skincare technology. This non-invasive procedure uses tiny abrasive crystals to sweep away dead skin cells, dirt, and debris that can dull your complexion. Microdermabrasion treatments can help you achieve the smooth, even texture you want without resorting to surgery or other invasive procedures.",
+        "second-column_button-text": "Learn More"
       }
     }
   },

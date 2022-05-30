@@ -9,7 +9,11 @@
     //     height: 0rem;
     // }
     // overflow-x: hidden;
+    &.sticky {
+        height: 10.2rem;
+    }
 
+    // background: transparent;
 }
 
 .header {
@@ -34,7 +38,7 @@
             top: 0;
             left: 0;
             animation: stickyNavIn .4s ease-in-out .2s 1 both;
-            background: linear-gradient(to bottom, rgba(219, 219, 219, 0.4), rgb(13, 13, 13, .1) 85%, rgba(255, 255, 255, 0)) !important;
+            background: linear-gradient(to bottom, rgb(255, 252, 252), rgba(158, 158, 158, 0.61) 85%, rgba(255, 255, 255, 0)) !important;
         }
 
         .header {

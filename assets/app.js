@@ -1,6 +1,8 @@
 const menuButton = document.getElementById("menuButton");
 const navList = document.querySelector(".nav__list");
-
+const navShop = document.querySelector('.shopify-section.main__header');
+const nav = document.querySelector('header');
+const heros = document.querySelectorAll('.shopify-section');
 const subLinks = document.querySelectorAll("#subLinkList");
 
 subLinks.forEach(subLink => {
@@ -37,9 +39,7 @@ console.log(e.target)
 
 }
 
-const navShop = document.querySelector('.shopify-section.main__header');
-const nav = document.querySelector('header');
-const heros = document.querySelectorAll('.shopify-section');
+
 
 let options = {
     root: null,
@@ -56,8 +56,10 @@ function toggleStickyNav(entries, observer) {
 console.log(entries)
 if (!entries[0].isIntersecting) {
     nav.classList.add('sticky');
+    navShop.classList.add('sticky');
 } else {
     nav.classList.remove('sticky');
+    navShop.classList.remove('sticky');
 }
 }
 

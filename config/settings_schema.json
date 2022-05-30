@@ -11,6 +11,11 @@
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Header logo"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },

@@ -4,9 +4,11 @@
 
         <a href="/" class="header__logo-container">
             <img
-                alt=""
+                alt="{{ settings.header_logo.alt }}"
+                width="{{ settings.header_logo.width }}"
+                height="{{ settings.header_logo.height }}"
                 class="header__logo"
-                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/Logo.png?v=1652389237">
+                src="{{ settings.header_logo | image_url }}">
         </a>
 
         <div class="header__nav">
