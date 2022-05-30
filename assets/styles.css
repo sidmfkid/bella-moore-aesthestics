@@ -553,8 +553,11 @@ html {
   font-size: calc(1rem + 0.5vw);
 }
 
+.shopify-section.main__header {
+  height: 0;
+}
 .shopify-section.main__header.sticky {
-  height: 10.2rem;
+  height: 0;
 }
 
 .header, .header--page {

@@ -1,6 +1,7 @@
 .shopify-section.main__header {
 
     // z-index: 3;
+    height: 0;
 
     // &.sticky {
     //     position: relative;
@@ -9,8 +10,10 @@
     //     height: 0rem;
     // }
     // overflow-x: hidden;
+    // transition: all .4s ease-in-out;
+
     &.sticky {
-        height: 10.2rem;
+        height: 0;
     }
 
     // background: transparent;
