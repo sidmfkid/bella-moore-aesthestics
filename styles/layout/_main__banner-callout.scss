@@ -1,0 +1,101 @@
+.banner-callout {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    z-index: 1;
+
+
+    &__svg-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        z-index: -1;
+        overflow-x: hidden;
+        height: calc(50rem + 5vw);
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+
+    }
+
+    &__bg {
+        height: auto;
+        width: 100vw;
+    }
+
+    &__content {
+        width: 100%;
+        height: calc(40rem + 5vw);
+        top: 0;
+        left: 0;
+        // position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    &__heading {
+        font-size: calc(4rem + 1.5vw);
+        color: white;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    @include media-tablet {
+        &__content {
+            padding: 0 4rem;
+            height: calc(25rem + 5vw);
+
+        }
+
+        &__heading {
+            font-size: calc(3rem + 1vw);
+
+        }
+
+        &__bg {
+            height: 75%;
+            width: auto;
+        }
+    }
+
+    @include media-medium {
+        &__bg {
+            height: 100%;
+
+            width: auto;
+        }
+
+        &__content {
+            padding: 0 4rem;
+            height: calc(20rem + 5vw);
+
+        }
+
+        &__svg-container {
+            height: calc(30rem + 5vw);
+            top: 0;
+
+        }
+    }
+
+    @include media-small {
+        padding-top: 2rem;
+
+        &__bg {
+            // height: calc(100% - 20vw);
+            width: auto;
+        }
+
+        &__svg-container {
+            top: unset;
+            bottom: unset;
+        }
+    }
+}

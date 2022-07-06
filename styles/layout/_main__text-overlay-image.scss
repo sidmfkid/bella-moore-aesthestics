@@ -1,0 +1,126 @@
+.text-overlay-image {
+    position: relative;
+    width: 100%;
+    // height: 80.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__bg-image-container {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(57rem + 10vw);
+        overflow-x: hidden;
+        overflow-y: visible;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__bg-image {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        z-index: 3;
+    }
+
+    &__logo-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__content {
+        margin-top: 14rem;
+        max-width: 40rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__header-container {
+        display: block;
+        width: 100%;
+    }
+
+    &__header {
+        @include text-gradient;
+        font-size: font-size(medium);
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__para {
+        margin-top: 2rem;
+        font-size: font-size(small);
+        font-family: var(--font-body-family);
+    }
+
+    &__btn {
+        // display: block;
+        min-width: calc(10.8rem + 10vw);
+        margin-top: 2rem;
+    }
+
+    @include media-tablet {
+        &__bg-image-container {}
+
+        &__bg-image {
+            // height: 50rem;
+            width: auto;
+        }
+
+        &__content {
+            max-width: calc(35rem + 13vw);
+
+            padding: 2rem 2rem;
+        }
+    }
+
+    @include media-medium {
+        &__bg-image {
+            // height: calc(100% - 10vw);
+            width: auto;
+        }
+    }
+
+    @include media-small {
+        &__logo {
+            width: calc(4.5rem + 10vw);
+            height: auto;
+        }
+
+        &__bg-image {
+            // height: 100%;
+            width: auto;
+        }
+
+        &__content {
+            margin-top: 12rem;
+            padding: 2rem 4rem;
+        }
+
+        &__para {
+            font-size: font-size(regular);
+
+        }
+
+        &__header {
+            font-size: font-size(large);
+        }
+    }
+}

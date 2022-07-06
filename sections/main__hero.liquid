@@ -9,202 +9,197 @@
 {% assign margin_bottom = section.settings.margin_bottom %}
 
 {%- capture btn_link -%}
-    {%- if button_link == blank -%}/
-    {%- else -%}
-        {{- button_link -}}
-    {%- endif -%}
+  {%- if button_link == blank -%}
+    /
+  {%- else -%}
+    {{- button_link -}}
+  {%- endif -%}
 {%- endcapture -%}
 
 {%- capture section_css -%}
-    .hero__bg {
-    background: url({{ section.settings.image | image_url }});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
+  .hero__bg { background: url({{ section.settings.image | image_url }}); background-position: center; background-repeat:
+  no-repeat; background-size: cover; }
 {%- endcapture -%}
 
 {% style %}
+  @media screen and(max-width: 900px) {
+      #shopify-section-{{section.id}}.hero__content {
+          margin-top: {{margin_top}}rem;
+          margin-bottom: {{margin_bottom}}rem;
+      }
+  }
 
-@media screen and(max-width: 900px) {
-    #shopify-section-{{section.id}}.hero__content {
-        margin-top: {{margin_top}}rem;
-        margin-bottom: {{margin_bottom}}rem;
-    }
-}
-
-#shopify-section-{{section.id}}{
-    padding-top: {{section.settings.padding_top}}px;
-    padding-bottom: {{section.settings.padding_bottom}}px;
-}
+  #shopify-section-{{section.id}}{
+      padding-top: {{section.settings.padding_top}}px;
+      padding-bottom: {{section.settings.padding_bottom}}px;
+  }
 
 
-{% render 'css-loop',
-    css: section_css,
-    id: section.id %}
-
+  {% render 'css-loop',
+      css: section_css,
+      id: section.id %}
 {% endstyle %}
 
-<div class="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-        <div class="hero__logo">
-            {{ logo | image_url: width: 116 | image_tag: srcset: nil, alt: 'Logo', preload: true }}
-            <!-- <img alt="" height="{{ logo.height }}" src="{{ logo | image_url }}" width="{{ logo.width }}"> -->
-        </div>
-        <div class="hero__text-box">
-            <h1 class="hero__title">{{ heading }}</h1>
-            <span class="hero__subtitle">{{ subheading}}</span>
-        </div>
+<div class="hero" data-animate="fadeIn">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="hero__logo">
+      {{ logo | image_url: width: 116 | image_tag: srcset: nil, alt: 'Logo', preload: true }}
+      <!-- <img alt="" height="{{ logo.height }}" src="{{ logo | image_url }}" width="{{ logo.width }}"> -->
     </div>
+    <div class="hero__text-box">
+      <h1 class="hero__title">{{ heading }}</h1>
+      <span class="hero__subtitle">{{ subheading }}</span>
+    </div>
+  </div>
 
-    <div class="hero__cta">
-        {% unless button_text == blank %}
-            <a class="hero__btn {{ button_type }}{{ button_size }}" href="{{ button_link }}">{{ button_text }}</a>
-        {% endunless %}
-    </div>
+  <div class="hero__cta">
+    {% unless button_text == blank %}
+      <a class="hero__btn {{ button_type }}{{ button_size }}" href="{{ button_link }}">{{ button_text }}</a>
+    {% endunless %}
+  </div>
 </div>
 
 {% schema %}
 {
-"name": "Hero",
-"class": "main__hero",
-"settings": [
-   {
-    "type": "header",
-    "content": "Image"
+  "name": "Hero",
+  "class": "main__hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
     },
     {
-       "type": "image_picker",
-       "id": "image",
-       "label": "Image",
-       "info": "1500 x 1000px recommended"
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "1500 x 1000px recommended"
     },
     {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "Logo",
-        "info": "116 x 116px recommended"
-     },
-     {
-        "type": "header",
-        "content": "Spacing"
-     },
-    {
-        "type": "range",
-        "id": "padding_top",
-        "label": "Padding Top",
-        "unit": "px",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "default": 0
-    },
-   {
-       "type": "range",
-       "id": "padding_bottom",
-       "label": "Padding Bottom",
-       "unit": "px",
-       "min": 0,
-       "max": 100,
-       "step": 1,
-       "default": 0
-   },
-   {
-    "type": "header",
-    "content": "Content Position",
-    "info": "Position of elements in section"
-},
-{
-   "type": "range",
-   "id": "margin_top",
-   "label": "Text margin top",
-   "unit": "rem",
-   "min": 0,
-   "max": 50,
-   "step": 1,
-   "default": 11
-},
-{
- "type": "range",
- "id": "margin_bottom",
- "label": "Text margin bottom",
- "unit": "rem",
- "min": 0,
- "max": 50,
- "step": 1,
- "default": 0
-},
-    {
-       "type": "header",
-       "content": "Text"
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "116 x 116px recommended"
     },
     {
-       "type": "text",
-       "id": "heading",
-       "label": "Heading",
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "unit": "px",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "unit": "px",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content Position",
+      "info": "Position of elements in section"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Text margin top",
+      "unit": "rem",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 11
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Text margin bottom",
+      "unit": "rem",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
       "default": "Heading Here"
     },
     {
-        "type": "text",
-        "id": "subheading",
-        "label": "Subeading",
-       "default": "Subheading Here"
+      "type": "text",
+      "id": "subheading",
+      "label": "Subeading",
+      "default": "Subheading Here"
     },
-  {
+    {
       "type": "header",
       "content": "Button Settings"
-  },
-  {
-    "type": "text",
-    "id": "button_text",
-    "label": "Button text",
-    "default": "Button"
-},
-{
-    "type": "url",
-    "id": "button_link",
-    "label": "Button Link"
-},
-    {
-        "type": "select",
-        "id": "button_type",
-        "label": "Button Style",
-        "options": [
-            {
-                "value": "btn btn__secondary",
-                "label": "Secondary button"
-            },
-            {
-                "value": "btn btn__primary",
-                "label": "Primary button"
-            },
-            {
-                "value": "btn btn__tertiary",
-                "label": "Tertiary button"
-            }
-        ]
     },
-   {
-       "type": "select",
-       "id": "button_size",
-       "label": "Button Size",
-       "options": [
-            {
-               "value": "--sm",
-               "label": "Small"
-            },
-            {
-                "value": "--md",
-                "label": "Medium"
-            },
-            {
-                "value": "--lg",
-                "label": "Large"
-            }
-       ]
-   }
-]
-} {% endschema %}
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "select",
+      "id": "button_type",
+      "label": "Button Style",
+      "options": [
+        {
+          "value": "btn btn__secondary",
+          "label": "Secondary button"
+        },
+        {
+          "value": "btn btn__primary",
+          "label": "Primary button"
+        },
+        {
+          "value": "btn btn__tertiary",
+          "label": "Tertiary button"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "button_size",
+      "label": "Button Size",
+      "options": [
+        {
+          "value": "--sm",
+          "label": "Small"
+        },
+        {
+          "value": "--md",
+          "label": "Medium"
+        },
+        {
+          "value": "--lg",
+          "label": "Large"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

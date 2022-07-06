@@ -1,0 +1,115 @@
+.text-columns {
+    min-height: calc(12.3rem + 15vw);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(3rem + 2vw) 0;
+
+    &--two-columns {
+        @extend .text-columns;
+        justify-content: space-evenly;
+        padding: calc(3rem + 2vw) calc(5rem + 5vw);
+    }
+
+    &__column {
+        max-width: calc(26.6rem + 20vw);
+
+        &:nth-of-type(2) {
+            margin-left: 4rem;
+        }
+    }
+
+    &__heading-container,
+    &__para-container {
+        padding-bottom: 3rem
+    }
+
+    &__heading {
+        @include text-gradient;
+        font-size: font-size(medium);
+        font-weight: 100;
+        text-align: center;
+    }
+
+    &__para {
+        font-size: font-size(small);
+        text-align: center;
+        font-weight: 100;
+
+    }
+
+
+
+    &__button {
+        margin: 0 auto;
+
+    }
+
+    @include media-tablet {
+        flex-wrap: wrap;
+
+        &--two-columns {
+            flex-wrap: wrap;
+
+            padding: calc(3rem + 2vw) calc(.5rem + 5vw);
+
+            .text-columns__button-container {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &__column {
+            max-width: calc(38.6rem + 20vw);
+
+            &:nth-of-type(2) {
+                margin-left: 0rem;
+            }
+        }
+
+
+        &__heading {
+            font-size: font-size(medium);
+        }
+
+        &__para {
+            font-size: font-size(regular);
+        }
+
+        &__button-container {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include media-medium {
+
+        &--two-columns {
+            flex-wrap: wrap;
+
+            padding: calc(3rem + 2vw) calc(.5rem + 4vw);
+
+            .text-columns__column {
+                padding: 0 0;
+            }
+
+            .text-columns__button-container {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &__column {
+            max-width: unset;
+            padding: 0 calc(.8rem + 4vw);
+        }
+
+        &__heading {}
+    }
+
+    @include media-small {
+        &--two-columns {
+            .text-columns__button-container {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.page-image-with-text {
+    min-height: calc(40.9rem + 10vw);
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(1rem, calc(3.2rem + 5vw)) 1fr 1fr minmax(1rem, calc(3.2rem + 5vw));
+
+    &__image-container {
+        grid-column: 2 / 3;
+        position: relative;
+        width: calc(34.3rem + 20vw);
+        height: calc(25.9rem + 20vw);
+        overflow: hidden;
+        place-self: center;
+
+    }
+
+    &__image {
+        clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+        display: block;
+        right: 0;
+        position: absolute;
+        // height: 100%;
+        width: 100%;
+        height: auto;
+
+        &--svg {
+            @extend .page-image-with-text__image;
+            clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+            background-color: #fff8e6;
+        }
+    }
+
+    &__svg-background {
+        position: absolute;
+        top: 0;
+        right: -2.6rem;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        transform: rotate(180deg) rotateY(180deg);
+
+    }
+
+    &__logo-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: calc(1.5rem + 5vw);
+        height: calc(1.5rem + 5vw);
+
+    }
+
+    &__logo {
+        width: 100%;
+        height: 100%;
+
+        &--svg {
+            @extend .page-image-with-text__logo;
+            background-color: $primary-color;
+        }
+    }
+
+    &__text-container {
+        place-self: center;
+        margin: 0 0 0 calc(1.8rem + 2vw);
+        grid-column: 3 / 4;
+        min-width: calc(18.5rem + 10vw);
+    }
+
+    &__heading {
+        font-size: font-size(medium);
+        font-weight: 100;
+        @include text-gradient;
+    }
+
+    &__para {
+        font-size: font-size(small);
+        font-weight: 100;
+        margin: 2.4rem 0rem;
+    }
+
+    &__button-container {
+        width: 100%;
+    }
+
+    &__button {
+        margin: 0 auto;
+    }
+
+    @include media-tablet {
+        grid-template-rows: auto;
+        row-gap: 2.4rem;
+
+        &__text-container {
+            grid-column: 2/4;
+            grid-row: 2/3;
+            margin: 0;
+            padding-bottom: 2.4rem;
+
+        }
+
+        &__image-container {
+            grid-column: 2/4;
+            width: calc(28.3rem + 20vw);
+            height: calc(19.9rem + 20vw);
+        }
+    }
+
+    @include media-medium {
+        padding: 0;
+
+        &__heading {
+            font-size: font-size(large);
+        }
+    }
+
+    @include media-small {
+        &__text-container {
+            grid-column: 1 / 5;
+            padding: 0 2rem 2.4rem 2rem;
+        }
+
+    }
+}

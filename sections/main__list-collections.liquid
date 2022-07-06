@@ -1,70 +1,71 @@
 {% case request.page_type %}
-    {% when 'list-collections' %}
+  {% when 'list-collections' %}
     {%- capture list -%}
-    {% for collection in collections %}
-        {% assign image = collection.image %}    
+      {% for collection in collections %}
+        {% assign image = collection.image %}
 
         <a href="{{ collection.url }}" class="list-collections__collection-container">
-            <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
-            {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
-            {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
-            {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ image | image_url }} {{ image.width }}w"
+          <img
+            srcset="
+              {%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+              {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+              {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w
+            "
             sizes="(max-width: 400px) 400px, (max-width: 600px) 600px,(max-width: 900px) 450px,(max-width: 1500px) 500px"
             width="{{ image.width }}"
             height="{{ image.height }}"
             src="{{ image | image_url: width: 750 }}"
             class="list-collections__bg-image"
-            loading="lazy">
-            <!-- <img class="list-collections__bg-image"> -->
-            <div class="list-collections__title-container">
-                <span class="list-collections__title">{{ collection.title }}</span>
-            </div>
+            loading="lazy"
+          >
+          <!-- <img class="list-collections__bg-image"> -->
+          <div class="list-collections__title-container">
+            <span class="list-collections__title">{{ collection.title }}</span>
+          </div>
         </a>
-        {% endfor %}
-
-    
+      {% endfor %}
     {%- endcapture -%}
-    {% when 'collection' %}
+  {% when 'collection' %}
     {%- capture list -%}
-    {% for product in collection.products %}
-        {% assign image = product.featured_image %}    
+      {% for product in collection.products %}
+        {% assign image = product.featured_image %}
 
         <a href="{{ product.url }}" class="list-collections__collection-container">
-            <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
-            {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
-            {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
-            {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ image | image_url }} {{ image.width }}w"
+          <img
+            srcset="
+              {%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+              {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+              {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w
+            "
             sizes="(max-width: 400px) 360px, (max-width: 600px) 380px,(max-width: 900px) 410px,(max-width: 1500px) 470px"
             width="{{ image.width }}"
             height="{{ image.height }}"
             src="{{ image | image_url: width: 1200 }}"
             class="list-collections__bg-image"
-            loading="lazy">
-            <!-- <img class="list-collections__bg-image"> -->
-            <div class="list-collections__title-container">
-                <span class="list-collections__title">{{ product.title }}</span>
-            </div>
+            loading="lazy"
+          >
+          <!-- <img class="list-collections__bg-image"> -->
+          <div class="list-collections__title-container">
+            <span class="list-collections__title">{{ product.title }}</span>
+          </div>
         </a>
-        {% endfor %}
+      {% endfor %}
     {%- endcapture -%}
-        
 {% endcase %}
 
-
-<div class="list-collections">
-    <div class="list-collections__collection-list">
-        {{ list }}
-    </div>
+<div data-animate="fadeIn" class="list-collections">
+  <div class="list-collections__collection-list">
+    {{ list }}
+  </div>
 </div>
-
 
 {% schema %}
 {
-   "name": "Collection List",
-  "settings": [
-      
-  ]
+  "name": "Collection List",
+  "settings": []
 }
 {% endschema %}

@@ -366,6 +366,52 @@ main {
   padding-bottom: calc(24rem + 15vw);
 }
 
+[data-animate=fadeIn],
+[data-animate=fadeUp],
+[data-animate=fadeDown],
+[data-animate=fadeRight],
+[data-animate=fadeLeft] {
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0.2s;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0.2s;
+}
+
+[data-animate=fadeUp] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+[data-animate=fadeDown] {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+[data-animate=fadeRight] {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+[data-animate=fadeLeft] {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.fade-up, .fade-down {
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0.2s;
+  transform: translateY(0px);
+}
+
+.fade-right, .fade-left {
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+  transform: translateY(0px);
+}
+
 html {
   --color-primary: #CDB16C;
   --xxsmall: 1rem;
@@ -569,7 +615,7 @@ html {
   top: 0;
 }
 .header--page {
-  position: relative;
+  position: absolute;
   background: white;
   box-shadow: 0 5px 15px black;
 }
@@ -949,7 +995,7 @@ html {
   .header__input:checked ~ .header .header__nav-list,
 .header__input:checked ~ .header--page .header__nav-list {
     width: 100%;
-    top: 20rem;
+    top: 10rem;
     z-index: 3;
     margin-top: 2rem;
     padding: 0 calc(0.5rem + 3vw);
@@ -1636,6 +1682,7 @@ html {
   width: 100%;
   height: auto;
   padding-top: 5rem;
+  z-index: 1;
 }
 .banner-callout__svg-container {
   position: absolute;
@@ -1710,6 +1757,7 @@ html {
 .gallery-offset {
   position: relative;
   width: 100%;
+  z-index: 2;
 }
 .gallery-offset__center-image {
   position: relative;

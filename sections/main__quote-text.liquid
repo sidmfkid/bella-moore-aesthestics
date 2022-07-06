@@ -1,42 +1,41 @@
-<div class="quote-text">
-    <div class="quote-text__quote-container">
-        <span class="quote-text__quote">“{{ section.settings.quote__text }}”</span>
+<div data-animate="fadeIn" class="quote-text">
+  <div class="quote-text__quote-container">
+    <span class="quote-text__quote">“{{ section.settings.quote__text }}”</span>
 
-        <div class="quote-text__author-container">
-            <span class="quote-text__author-name">{{ section.settings.quote__author }}</span>
-            <span class="quote-text__divider">
-                |
-            </span>
-            <span class="quote-text__author-info">{{ section.settings.quote__info }}</span>
-        </div>
+    <div class="quote-text__author-container">
+      <span class="quote-text__author-name">{{ section.settings.quote__author }}</span>
+      <span class="quote-text__divider"> | </span>
+      <span class="quote-text__author-info">{{ section.settings.quote__info }}</span>
     </div>
+  </div>
 </div>
 
 {% schema %}
 {
-    "name": "Quote",
-    "settings": [
-        {
-            "type": "header",
-            "content": "Text"
-        },
-        {
-            "type": "textarea",
-            "id": "quote__text",
-            "label": "Quote",
-            "default": "Write a quote about your business here"
-        },
-        {
-            "type": "text",
-            "id": "quote__author",
-            "label": "Author Name",
-            "default": "Alex Minos"
-        },
-        {
-            "type": "text",
-            "id": "quote__info",
-            "label": "Info",
-            "default": "Somewhere"
-        }
-]
-} {% endschema %}
+  "name": "Quote",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "textarea",
+      "id": "quote__text",
+      "label": "Quote",
+      "default": "Write a quote about your business here"
+    },
+    {
+      "type": "text",
+      "id": "quote__author",
+      "label": "Author Name",
+      "default": "Alex Minos"
+    },
+    {
+      "type": "text",
+      "id": "quote__info",
+      "label": "Info",
+      "default": "Somewhere"
+    }
+  ]
+}
+{% endschema %}

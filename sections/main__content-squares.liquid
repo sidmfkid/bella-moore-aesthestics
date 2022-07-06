@@ -1,93 +1,101 @@
-<div class="content-squares">
+<div data-animate="fadeIn" class="content-squares">
+  {% for block in section.blocks %}
+    {%- assign image = block.settings.image -%}
 
-    {% for block in section.blocks %}
-        {%- assign image = block.settings.image -%}
-
-        <div {{block.shopify_attributes }} class="content-squares__square">
-            {% case block.type %}
-                {% when 'image' %}
-                <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
-            {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
-            {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
-            {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ image | image_url }} {{ image.width }}w"
+    <div {{ block.shopify_attributes }} class="content-squares__square">
+      {% case block.type %}
+        {% when 'image' %}
+          <img
+            srcset="
+              {%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+              {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+              {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+              {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ image | image_url }} {{ image.width }}w
+            "
             sizes="(max-width: 400px) 400px, (max-width: 600px) 600px,(max-width: 900px) 500px,(max-width: 1500px) 600px"
             width="{{ image.width }}"
             height="{{ image.height }}"
             src="{{ image | image_url: width: 500 }}"
             class="content-squares__image"
-            loading="lazy">
-                    <!-- <img alt="" class="content-squares__image" height="{{ image.height }}" src="{{ image | image_url }}" width="{{ image.width }}"> -->
-                {% when 'text' %}
-                    <div class="content-squares__content-wrapper">
-                        <div class="content-squares__heading-container">
-                            <h4 class="content-squares__heading">{{ block.settings.heading }}</h4>
-                        </div>
-                        <div class="content-squares__para-container">
-                            <p class="content-squares__para">
-                                {{ block.settings.para}}
-                            </p>
-                        </div>
-                        <div class="content-squares__button-container">
-                            <a class="content-squares__button btn btn__tertiary--sm" href="{{ block.settings.button_link }}">{{ block.settings.button_text}}</a>
-                        </div>
-                    </div>
-            {% endcase %}
+            loading="lazy"
+          >
+          <!--
+            <img alt="" class="content-squares__image" height="{{ image.height }}" src="{{ image | image_url }}" width="{{ image.width }}">
+          -->
+        {% when 'text' %}
+          <div class="content-squares__content-wrapper">
+            <div class="content-squares__heading-container">
+              <h4 class="content-squares__heading">{{ block.settings.heading }}</h4>
+            </div>
+            <div class="content-squares__para-container">
+              <p class="content-squares__para">
+                {{ block.settings.para }}
+              </p>
+            </div>
+            <div class="content-squares__button-container">
+              <a class="content-squares__button btn btn__tertiary--sm" href="{{ block.settings.button_link }}">
+                {{- block.settings.button_text -}}
+              </a>
+            </div>
+          </div>
+      {% endcase %}
+    </div>
+  {% endfor %}
 
-        </div>
-    {% endfor %}
-
-    <!-- <div class="content-squares__square">
-</div>
-<div class="content-squares__square">
-</div>
-<div class="content-squares__square">
-</div> -->
+  <!--
+    <div class="content-squares__square">
+    </div>
+    <div class="content-squares__square">
+    </div>
+    <div class="content-squares__square">
+    </div>
+  -->
 </div>
 
 {% schema %}
 {
-"name": "Content Squares",
-"settings": [
-],
-"max_blocks": 6,
-"blocks": [
+  "name": "Content Squares",
+  "settings": [],
+  "max_blocks": 6,
+  "blocks": [
     {
-       "name": "Square Image",
-       "type": "image",
+      "name": "Square Image",
+      "type": "image",
       "settings": [
-          {
-             "type": "image_picker",
-             "id": "image",
-             "label": "Image"
-          }
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
       ]
     },
     {
-        "name": "Square text",
-        "type": "text",
-       "settings": [
-            {
-                "type": "text",
-                "id": "heading",
-                "label": "Heading"
-            },
-            {
-               "type": "textarea",
-               "id": "para",
-               "label": "Paragraph"
-            },
-            {
-               "type": "text",
-               "id": "button_text",
-               "label": "Button text"
-            },
-            {
-                "type": "url",
-                "id": "button_link",
-                "label": "Button link"
-             }
-       ]
-     }
-]
-} {% endschema %}
+      "name": "Square text",
+      "type": "text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "para",
+          "label": "Paragraph"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

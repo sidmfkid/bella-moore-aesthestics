@@ -1,104 +1,108 @@
-<div class="image-columns">
+<div data-animate="fadeUp" class="image-columns">
+  {% for block in section.blocks %}
+    <!--
+      <style>
 
-    {% for block in section.blocks %}
+          .image-columns__column--{{ forloop.index }}{
+              background: url({{ block.settings.image | image_url }});
+              background-position: center;
+              background-size: cover;
+              background-repeat: no-repeat;
+          }
+      </style>
+    -->
 
-        <!-- <style>
-
-    .image-columns__column--{{ forloop.index }}{
-        background: url({{ block.settings.image | image_url }});
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-</style> -->
-
-        <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
-            <div class="image-columns__bg-image">
-            <img srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+    <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
+      <div class="image-columns__bg-image">
+        <img
+          srcset="
+            {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
             {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
             {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
             {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-            sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px"
-             src="{{ block.settings.image | image_url: width: 375 }}"
-             alt="{{ block.settings.image.alt }}"
-             height="{{ block.settings.image.height }}"
-             width="{{ block.settings.image.width }}"
-             loading="lazy">
+            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+          "
+          sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px"
+          src="{{ block.settings.image | image_url: width: 375 }}"
+          alt="{{ block.settings.image.alt }}"
+          height="{{ block.settings.image.height }}"
+          width="{{ block.settings.image.width }}"
+          loading="lazy"
+        >
+      </div>
+      <div class="image-columns__heading">
+        <span>{{ block.settings.heading | escape }}</span>
+      </div>
+      <div class="image-columns__content">
+        <p class="image-columns__para">
+          {{ block.settings.para }}
+        </p>
+        <div class="image-columns__btn-container">
+          <a class="image-columns__btn btn btn__secondary--md" href="{{ block.settings.button__link }}">
+            {{- block.settings.button__text -}}
+          </a>
         </div>
-            <div class="image-columns__heading">
-                <span>{{ block.settings.heading | escape }}</span>
-            </div>
-            <div class="image-columns__content">
-                <p class="image-columns__para">
-                    {{ block.settings.para }}
-                </p>
-                <div class="image-columns__btn-container">
-                    <a class="image-columns__btn btn btn__secondary--md" href="{{ block.settings.button__link }}">{{ block.settings.button__text }}</a>
-                </div>
-            </div>
-        </div>
-
-    {% endfor %}
-
+      </div>
+    </div>
+  {% endfor %}
 </div>
 
 {% schema %}
 {
-    "name": "Image Columns",
-    "settings": [
-    ],
-    "max_blocks": 5,
-    "blocks": [
+  "name": "Image Columns",
+  "settings": [],
+  "max_blocks": 5,
+  "blocks": [
+    {
+      "name": "Column",
+      "type": "column",
+      "settings": [
         {
-            "name": "Column",
-            "type": "column",
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "heading",
-                    "label": "Heading"
-                },
-                {
-                    "type": "textarea",
-                    "id": "para",
-                    "label": "Paragraph"
-                },
-                {
-                    "type": "text",
-                    "id": "button__text",
-                    "label": "Button Text"
-                },
-                {
-                   "type": "image_picker",
-                   "id": "image",
-                   "label": "Background Image"
-                },
-                {
-                    "type": "url",
-                    "id": "button__link",
-                    "label": "Heading"
-                }
-            ]
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "para",
+          "label": "Paragraph"
+        },
+        {
+          "type": "text",
+          "id": "button__text",
+          "label": "Button Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background Image"
+        },
+        {
+          "type": "url",
+          "id": "button__link",
+          "label": "Heading"
         }
-    ],
-    "presets": [
-    {
-    "name":"Image Columns",
-    "blocks": [
-    {
-    "type": "column"
-    },
-    {
-    "type": "column"
-    },
-    {
-    "type": "column"
-    },
-    {
-    "type": "column"
+      ]
     }
-    ]
+  ],
+  "presets": [
+    {
+      "name": "Image Columns",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
     }
-    ]
-} {% endschema %}
+  ]
+}
+{% endschema %}

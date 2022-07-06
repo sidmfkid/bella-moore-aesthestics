@@ -1,0 +1,258 @@
+#shopify-section-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    @include media-tablet {
+        padding-bottom: 60.2rem;
+    }
+
+    @include media-medium {
+        padding-bottom: 70.4rem;
+    }
+}
+
+.footer {
+    width: 100%;
+    min-height: calc(24rem + 15vw);
+    background-color: rgb(13, 13, 13);
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    padding: 2rem;
+
+
+
+    &__brand {
+        width: calc(30rem + 10vw);
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            content: "";
+            position: absolute;
+            width: calc(100% + 2rem);
+            height: calc(100% + 4rem);
+            top: -2rem;
+            left: -2rem;
+            background: $primary-color;
+            mix-blend-mode: luminosity;
+            z-index: -1;
+        }
+    }
+
+    &__brand-content {
+        width: 100%;
+    }
+
+    &__logo-container {
+        display: block;
+        height: 9rem;
+        width: 9rem;
+        margin: 0 auto;
+    }
+
+    &__heading-container {
+        display: block;
+        height: 100%;
+        width: fit-content;
+        margin: 0 auto;
+
+    }
+
+    &__heading {
+        font-size: font-size(regular);
+        color: white;
+        font-weight: 100;
+        text-transform: uppercase;
+        width: fit-content;
+        text-align: center;
+        margin-top: .5rem;
+
+        // letter-spacing: 3px;
+    }
+
+    &__nav {
+        width: calc(80rem + 20vw);
+    }
+
+    &__logo {
+        width: 100%;
+        height: auto;
+    }
+
+    &__info {
+        margin-top: 1rem;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: -.5rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 1rem);
+            z-index: -1;
+            background: rgb(13, 13, 13);
+        }
+    }
+
+    &__address,
+    &__phone,
+    &__hours {
+        font-size: font-size(small);
+        color: white;
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__nav {
+        padding: 0 0 0 calc(.5rem + 1vw);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__nav-item {
+        width: 20%;
+    }
+
+    &__nav-link-container {
+        position: relative;
+        z-index: 1;
+        overflow-x: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 2px;
+            left: -90%;
+            background-color: white;
+            transition: left .2s ease-in-out;
+        }
+
+        &:active::before,
+        &:hover::before {
+            left: -70%;
+        }
+    }
+
+    &__nav-link {
+        font-size: calc(.8rem + 1vw);
+        text-decoration: none;
+        @include text-gradient;
+        font-weight: 100;
+        padding-bottom: 1rem;
+        display: block;
+    }
+
+    &__sub-link {
+        display: block;
+        margin-bottom: .3rem;
+        font-size: font-size(small);
+        font-weight: 100;
+        color: white;
+        text-decoration: none;
+        transition: color .2s ease-in-out;
+
+        &:active,
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .copyright {
+        font-size: font-size(xxsmall);
+        color: grey;
+        margin: 2rem auto 1rem auto;
+        align-self: flex-end;
+    }
+
+    @include media-tablet {
+        flex-wrap: wrap;
+        height: 60.2rem;
+
+        &__brand {
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: none;
+                // @include bg-gradient-primary;
+            }
+        }
+
+        &__info {
+            &::after {
+                background: none;
+            }
+        }
+
+        &__nav-item {
+            width: 30%;
+            margin-top: 2rem;
+        }
+    }
+
+    @include media-medium {
+        justify-content: flex-start;
+        height: 70.4rem;
+
+        &__brand {
+            width: 100%;
+        }
+
+        &__brand-content {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo-container {
+            margin: 0 0 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__heading {
+            font-size: font-size(large);
+            text-align: left;
+        }
+
+        &__nav-item {
+            width: 50%;
+        }
+
+        &__nav-link {
+            font-size: font-size(medium);
+        }
+
+        &__sub-link {
+            font-size: font-size(small);
+        }
+
+        &__address,
+        &__phone,
+        &__hours {
+            text-align: left;
+        }
+    }
+
+
+
+
+}

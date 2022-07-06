@@ -1,0 +1,218 @@
+.page-header {
+    width: 100%;
+    height: calc(27.5rem + 10vw);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    &__title-container {
+        grid-column: 1 / 7;
+        grid-row: 1/4;
+        position: relative;
+        display: flex;
+        padding: 0 7rem 0 0;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__info-wrapper {}
+
+    &__heading-container {}
+
+    &__heading {
+        font-size: font-size(medium);
+        @include text-gradient;
+        font-weight: 100;
+    }
+
+    &__breadcrumb-container {}
+
+    &__breadcrumb-ul {
+        display: flex;
+
+    }
+
+    &__breadcrumb-item {
+        list-style: none;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: "\2605";
+            padding: 0 1rem;
+            font-size: font-size(xxsmall);
+            align-self: center;
+            justify-self: center;
+            @include text-gradient;
+
+            display: inline-block;
+            // height: 1rem;
+        }
+
+        &:last-of-type::after {
+            content: "";
+            padding: 0 1rem;
+        }
+    }
+
+    &__breadcrumb-link {
+        font-size: font-size(small);
+        text-decoration: none;
+        color: none;
+        @include text-gradient;
+    }
+
+
+
+    &__logo-container {
+        grid-column: 6 / 8;
+        grid-row: 1/4;
+        place-self: center;
+        position: relative;
+    }
+
+    &__image-container {
+        grid-column: 7/13;
+        grid-row: 1/4;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+
+    }
+
+    &__image {
+        position: absolute;
+        width: calc(100% + 2rem);
+        height: auto;
+
+        // left: 0;
+        &--svg {
+            position: absolute;
+
+            // @extend .page-header__image;
+            width: auto;
+            // height: calc(27.5rem + 10vw);
+            height: 100%;
+            background: #fff8e6;
+            // align-self: ;
+        }
+    }
+
+    @include media-tablet {
+        height: calc(20.5rem + 10vw);
+
+
+        &__info-wrapper {
+            margin-left: 3rem;
+        }
+
+        &__breadcrumb-ul {
+            flex-wrap: wrap;
+        }
+
+        &__breadcrumb-item {
+            &::after {
+                padding: 0 .3rem;
+
+            }
+
+            &:last-of-type::after {
+                padding: 0;
+            }
+        }
+
+        &__logo {
+            width: calc(3rem + 5vw);
+            height: calc(3rem + 5vw);
+        }
+
+        &__heading {
+            font-size: calc(1.5rem + 2.6vw);
+        }
+
+    }
+
+    @include media-medium {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+
+        &__title-container {
+            grid-column: 1 / 7;
+            grid-row: 1/5;
+            position: relative;
+            background: transparent !important;
+            padding: 0 0 0 2rem;
+            justify-content: flex-start;
+
+        }
+
+        &__info-wrapper {
+            margin-left: 0;
+
+        }
+
+        &__heading {
+            color: black;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background: none;
+            font-size: font-size(xlarge);
+        }
+
+        &__breadcrumb-link {
+            font-size: font-size(regular);
+        }
+
+        &__logo-container {
+            grid-column: 5 / 7;
+            grid-row: 5/7;
+            place-self: end end;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__logo {
+            width: calc(5rem + 5vw);
+            height: calc(5rem + 5vw);
+            margin-bottom: -3px;
+        }
+
+        &__image-container {
+            grid-row: 1/7;
+            grid-column: 1 / 7;
+        }
+
+        &__image {
+            filter: contrast(.65) brightness(1.25) sepia(.4);
+            position: relative;
+            z-index: -1;
+            width: 115vw;
+            height: auto;
+
+            &--svg {
+                // @extend .page-header__image;
+                width: auto;
+                height: 100%;
+                // background: #f6e7c0;
+                filter: none;
+                position: absolute;
+                z-index: -1;
+
+                // align-self: ;
+            }
+        }
+    }
+
+    @include media-small {
+        &__image {
+            // width: calc(100% + 4rem);
+
+            // width: auto;
+            // height: 100%;
+        }
+    }
+}
