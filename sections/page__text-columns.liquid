@@ -1,0 +1,104 @@
+
+{% assign blocks = section.blocks %}
+
+<div class="text-columns{%- if blocks.size > 1 -%}--two-columns{%- endif -%}">
+
+    {% for block in blocks %}
+        
+{% assign heading = block.settings.heading %}
+
+
+
+
+{% assign para = block.settings.para %}
+{% assign btn_link = block.settings.btn_link %}
+{% assign btn_text = block.settings.btn_text %}
+
+
+    <div class="text-columns__column">
+
+        {% unless heading == blank %}
+        <div class="text-columns__heading-container">
+            <h2 class="text-columns__heading">{{ heading }}</h2>
+        </div>
+        {% endunless %}
+        
+
+        {% unless para == blank and product.metafields.my_fields.product_info_2.value == blank and product.metafields.my_fields.product_info_1.value == blank %}
+        <div class="text-columns__para-container">
+            <p class="text-columns__para">
+                
+                {% if forloop.index == 1 %}
+                {{ product.metafields.my_fields.product_info_1.value }}
+                {% elsif forloop.index == 2 %}
+                {{ product.metafields.my_fields.product_info_2.value }}
+
+                {% endif %}
+            </p>
+        </div>
+        {% endunless %}
+
+        {% unless btn_text == blank and btn_link == blank %}
+        <div class="text-columns__button-container">
+            <a class="text-columns__button btn btn__tertiary--md" href="{%- if btn_link != blank -%}
+            {{ btn_link }}{%- else -%}/{%- endif -%}">{{ btn_text }}</a>
+        </div>
+        {% endunless %}
+
+
+    </div>
+    {% endfor %}
+
+
+    <!-- <div class="text-columns__column">
+        <div class="text-columns__heading-container">
+            <h2 class="text-columns__heading">Section Title Here</h2>
+        </div>
+        <div class="text-columns__para-container">
+            <p class="text-columns__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia!
+            Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!</p>
+        </div>
+        <div class="text-columns__button-container">
+            <a class="text-columns__button btn btn__tertiary--md" href="">Button</a>
+        </div>
+    </div> -->
+
+</div>
+
+{% schema %}
+{
+    "name": "Text Columns",
+    "settings": [
+    ],
+   "max_blocks": 2,
+    "blocks": [
+        {
+           "name": "Column",
+           "type": "column",
+          "settings": [
+              {
+                 "type": "text",
+                 "id": "heading",
+                 "label": "Heading",
+                "default": "Section Title Here"
+              },
+              {
+                 "type": "textarea",
+                 "id": "para",
+                 "label": "Paragraph",
+                 "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!"
+              },
+              {
+                 "type": "url",
+                 "id": "btn_link",
+                 "label": "Button Link"
+              },
+              {
+                 "type": "text",
+                 "id": "btn_text",
+                 "label": "Button Text"
+              }
+          ]
+        }
+    ]
+} {% endschema %}

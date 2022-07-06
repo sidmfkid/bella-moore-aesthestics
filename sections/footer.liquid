@@ -1,0 +1,57 @@
+<footer class="footer">
+    <div class="footer__brand">
+        <div class="footer__brand-content">
+
+            <div class="footer__logo-container">
+                <img class="footer__logo"
+                    alt=""
+                    src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/logo2.png?v=1652986117">
+            </div>
+
+            <div class="footer__heading-container">
+                <h3 class="footer__heading">Bella Moore Aesthestics</h3>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="footer__address">123 Made Up St. Barbonas, IL 12345</div>
+            <div class="footer__phone">(123)-456-7890</div>
+            <div class="footer__hours">
+                <span>
+                    Mon - Sat | 9am - 6pm
+                </span>
+                <span>
+                    Sun | Closed
+                </span>
+            </div>
+        </div>
+    </div>
+    <nav class="footer__nav">
+        {% for link in linklists.main-menu.links %}
+            <div class="footer__nav-item">
+                <div class="footer__nav-link-container">
+                    <a href="{{ link.url }}" class="footer__nav-link">{{ link.title }}</a>
+                </div>
+                {% for sub_link in link.links %}
+                    <div class="footer__sub-link-container">
+                        <a href="{{ sub_link.url }}" class="footer__sub-link">{{ sub_link.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </nav>
+    <small class="copyright">All Rights Reserved {{ shop.name | upcase }} &copy;</small>
+</footer>
+
+{% schema %}
+{
+"name": "Footer",
+"settings": [
+{
+"type": "link_list",
+"id": "new-menu",
+"label": "Navigation Menu",
+"default": "main-menu",
+"info": "Select Menu"
+}
+]
+} {% endschema %}

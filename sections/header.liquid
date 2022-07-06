@@ -1,0 +1,74 @@
+
+<input class="header__input" hidden id="menu" name="menu" type="checkbox">
+<header class="header{%-if request.page_type == "product" or request.page_type == "collection" or request.page_type == "list-collections" or request.page_type == "page" -%}--page{%- endif -%}">
+    <div class="header__wrapper">
+
+        <a href="/" class="header__logo-container">
+            <img
+                alt="{{ settings.header_logo.alt }}"
+                width="{{ settings.header_logo.width }}"
+                height="{{ settings.header_logo.height }}"
+                class="header__logo"
+                src="{{ settings.header_logo | image_url }}">
+        </a>
+
+        <div class="header__nav">
+            <div class="header__overlay"></div>
+
+            <ul class="header__nav-list">
+                {% for link in linklists.main-menu.links %}
+                    <!-- If link has sublinks -->
+                    {% if link.levels > 0 %}
+                        <li class="header__nav-item--sub" id="subLinkList">
+                            <div class="header__nav-link-wrapper">
+                                <a class="header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                                <div class="header__icon-container">
+                                    {% render 'icon-caret'%}
+                                </div>
+                            </div>
+                            <ul class="header__sub-link-list">
+                                {% for sub_link in link.links %}
+                                    <li class="header__sub-link-item">
+                                        <a href="{{ sub_link.url }}" class="header__sub-link">
+                                            {{ sub_link.title }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+
+                        <!-- If link has doesn't have sublinks -->
+
+                        {% if link.levels == 0 %}
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                            <!-- if sub menu add this -->
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        </div>
+        <div class="header__menu">
+            <label class="header__button" for="menu" id="menuButton">
+                <div class="header__button-line"></div>
+            </label>
+        </div>
+    </div>
+</header>
+
+{% schema %}
+{
+"name": "Header",
+"class": "main__header",
+"settings": [
+{
+"type": "link_list",
+"id": "new-menu",
+"label": "Navigation Menu",
+"default": "main-menu",
+"info": "Select Menu"
+}
+]
+} {% endschema %}

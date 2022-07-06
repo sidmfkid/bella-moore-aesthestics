@@ -1,0 +1,33 @@
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* The 1300px Mark Desktop Break Point  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+@mixin media-desktop {
+  @media screen and (min-width: break-point(break-point-desktop)) {
+    @content;
+  }
+}
+
+@mixin media-desktop-max {
+  @media screen and (max-width: break-point(break-point-desktop)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* The 800px Mark Tablet Break Point  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+@mixin media-tablet {
+  @media screen and (max-width: break-point(break-point-tablet)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* The 600px Mark Tablet Break Point  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-medium)) {
+    @content;
+  }
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* The 400px Mark Tablet Break Point  *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}

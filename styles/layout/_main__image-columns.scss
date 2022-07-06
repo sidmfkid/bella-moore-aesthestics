@@ -1,0 +1,21 @@
+.image-columns{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+    &__column{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &--1{
+            columns: 1 / 2;
+        }
+        &--2{
+            columns: 2/3;
+        }
+        &--3{
+            columns: 3/4;
+        }
+        &--4{
+            columns: 4/5;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+<div class="image-with-card">
+    {% for block in section.blocks %}
+<input hidden form="tabForm" value="{{forloop.index}}" class="image-with-card__input" {% if forloop.index == 1 %}checked{% endif %} type="radio" name="tab" id="tab-{{ forloop.index }}">
+
+    {% endfor %}
+    <div class="image-with-card__image-container">
+    {% for block in section.blocks %}
+    <img {{ block.shopify_attributes }} {% if forloop.index != 1 %}{% endif %}
+            srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+            {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+            sizes="(max-width: 400px)calc(55rem + 20vw), (max-width: 600px) calc(55rem + 20vw),(max-width: 900px) calc(75rem + 20vw),(max-width: 1500px) 1500px"
+             src="{{ block.settings.image | image_url: width: 1500 }}"
+             alt="{{ block.settings.image.alt }}"
+             height="{{ block.settings.image.height }}"
+             width="{{ block.settings.image.width }}"
+             loading="lazy"
+             class="image-with-card__image image_{{ forloop.index }}">
+<!-- <img id="{{section.id}}-image" alt="" class="image-with-card__image" height="933" src="{{ block.settings.image | image_url }}" width="1500"> -->
+{% endfor %}
+    </div>
+    {% for block in section.blocks %}
+    <div {{ block.shopify_attributes }} {% if forloop.index != 1 %}{% endif %} class="image-with-card__card card_{{ forloop.index }}">
+        <h2 id="{{section.id}}-heading" class="image-with-card__heading">{{ block.settings.heading }}</h2>
+        <p id="{{section.id}}-para"
+        class="image-with-card__para">{{ block.settings.para }}</p>
+        <div class="image-with-card__button">
+            <a id="{{section.id}}-link" class="btn btn__primary--md" href="{{ block.settings.button__link }}">{{ block.settings.button__text }}</a>
+        </div>
+    </div>
+{% endfor %}
+
+    <form id="tabForm" class="image-with-card__tabs">
+        {% for block in section.blocks %}
+
+            <div {{ block.shopify_attributes }} class="image-with-card__tab-wrapper">
+                <label
+                for="tab-{{ forloop.index }}"
+                    class="image-with-card__tab block_{{ forloop.index }}"
+                    id="cardTab"><span>{{ block.settings.heading }}</span></label>
+            </div>
+        {% endfor %}
+
+        </form>
+</div>
+
+
+
+<!-- <script>
+let cards = []
+{% for block in section.blocks %}
+  cards.push({
+    id: "block_{{- forloop.index -}}",
+    heading: "{{ block.settings.heading }}",
+    para: "{{ block.settings.para }}",
+    buttonText: "{{ block.settings.button__text }}",
+    buttonLink: "{{ block.settings.button__link }}",
+    image: "{{ block.settings.image | image_url }}"
+
+  })
+{% endfor %}
+// console.log(cards)
+
+const tabButtons = document.querySelectorAll('#cardTab');
+
+tabButtons.forEach(btn => {
+    btn.addEventListener("click", handleTabClick.bind(this))
+});
+
+function handleTabClick(e) {
+    const headingEl = document.getElementById('{{section.id}}-heading');
+    const paraEl = document.getElementById('{{section.id}}-para');
+    const imageEl = document.getElementById('{{section.id}}-image');
+    const linkEl = document.getElementById('{{section.id}}-link');
+    const blockNum = e.target.classList[1]
+    e.preventDefault();
+    if (!e.target.classList.contains("image-with-card__tab--active")) {
+        tabButtons.forEach(btn => {
+            btn.classList.contains("image-with-card__tab--active") ? btn.classList.replace("image-with-card__tab--active", "image-with-card__tab") : btn.classList.replace("image-with-card__tab", "image-with-card__tab");
+        });
+        e.target.classList.replace("image-with-card__tab", "image-with-card__tab--active")
+    }
+    const selectedTab = cards.filter(card => card.id === blockNum)
+
+    headingEl.textContent = selectedTab[0].heading;
+    paraEl.textContent = selectedTab[0].para;
+    imageEl.src = selectedTab[0].image;
+    linkEl.textContent = selectedTab[0].buttonText;
+    linkEl.href = selectedTab[0].buttonLink;
+
+
+    // console.log(blockNum, selectedTab)
+}
+</script> -->
+
+
+{% schema %}
+{
+"name": "Image With Card Section",
+"settings": [
+],
+"max_blocks": 4,
+"blocks": [
+    {
+       "name": "Tab",
+       "type": "tab",
+      "settings": [
+          {
+             "type": "text",
+             "id": "heading",
+             "label": "Heading"
+          },
+          {
+             "type": "textarea",
+             "id": "para",
+             "label": "Paragraph"
+          },
+          {
+            "type": "text",
+            "id": "button__text",
+            "label": "Button Text"
+         },
+         {
+            "type": "url",
+            "id": "button__link",
+            "label": "Button Link"
+         },
+          {
+             "type": "image_picker",
+             "id": "image",
+             "label": "Background Image",
+             "info": "1500 x 1000px recommended"
+          }
+      ]
+    }
+]
+} {% endschema %}

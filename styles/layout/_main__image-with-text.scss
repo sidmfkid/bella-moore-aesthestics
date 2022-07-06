@@ -1,0 +1,53 @@
+.image-with-text{
+    height: 46.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__image{
+        height: calc(20rem + 5vw);
+        width: calc(20rem + 5vw);
+        img{}
+    }
+    &__text-box{
+        margin-left: 2rem;
+
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 62.8rem;
+    }
+    &__heading{
+        @include text-gradient;
+        font-size: font-size(large);
+        font-weight: 100;
+        letter-spacing: -4.5px;
+    }
+    &__para{
+        font-size: font-size(small);
+        font-weight: bold;
+    }
+    @include media-tablet {
+        &__content{
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        }
+        &__image{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__text-box{
+            margin-top: 2rem;
+        margin-left: 0rem;
+        padding: 0 5rem;
+        }
+        &__heading {
+            letter-spacing: normal;
+        }
+    }
+}

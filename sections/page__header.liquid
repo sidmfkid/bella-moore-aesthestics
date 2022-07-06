@@ -1,0 +1,141 @@
+{% case request.page_type %}
+    {% when 'product' %}
+        {% assign title = product.title %}
+        {% assign image = product.featured_image %}
+        {%- capture breadcrumbs -%}
+        <li class="page-header__breadcrumb-item">
+            <a class="page-header__breadcrumb-link" href="/">Home</a>
+        </li>
+        <li class="page-header__breadcrumb-item">
+        {% for collection in product.collections %}
+                        {% if forloop.index0 > 0 %}{% break %}
+                        {% else %}
+                        
+                            <a class="page-header__breadcrumb-link" href="{{ collection.url }}">{{collection.title}}
+                            </a>
+                            {% endif %}
+
+                        {% endfor %}
+                    </li>
+                    <li class="page-header__breadcrumb-item">
+                        <a class="page-header__breadcrumb-link" href="{{product.url}}">{{product.title}}</a>
+                    </li>
+        {%- endcapture -%}
+    {% when 'collection' %}
+    {%- capture breadcrumbs -%}
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="/">Home</a>
+    </li>
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="{{collection.url}}">{{collection.title}}</a>
+    </li>
+                    {% endcapture %}
+    {% assign title = collection.title %}
+    {% if collection.image == blank %}
+    {% assign image = section.settings.image %}
+        {% else %}
+    {% assign image = collection.image %}
+    {% endif %}
+    {% when 'list-collections' %}
+    {% assign title = "All Services" %}
+    {%- capture breadcrumbs -%}
+
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="/">Home</a>
+    </li>
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="">All Services</a>å
+    </li>
+    {% endcapture %}
+    {% assign image = section.settings.image %}
+    {% when 'page' %}
+    {% assign image = section.settings.image %}
+    {% assign title = page.title %}
+    {%- capture breadcrumbs -%}
+
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="/">Home</a>
+    </li>
+    <li class="page-header__breadcrumb-item">
+        <a class="page-header__breadcrumb-link" href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+    {% endcapture %}
+{% endcase %}
+
+
+<div class="page-header">
+    <div class="page-header__title-container">
+        <div class="page-header__info-wrapper">
+            <div class="page-header__heading-container">
+                <h1 class="page-header__heading">{{ title }}</h1>
+            </div>
+            <nav aria-label="Breadcrumb" class="page-header__breadcrumb-container">
+                <ul class="page-header__breadcrumb-ul">
+
+                        {{ breadcrumbs }}
+                    
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="page-header__logo-container">
+        <img
+            alt=""
+            class="page-header__logo"
+            src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/logo__box.jpg?v=1652567130">
+    </div>
+    <div class="page-header__image-container">
+        {% unless image == blank %}
+        <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+                {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+                {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+                {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {{ image | image_url }} {{ image.width }}w"
+                sizes="(max-width: 400px) 400px, (max-width: 600px) 600px,(max-width: 900px) 450px,(max-width: 1500px) 750px"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                src="{{ image | image_url: width: 750 }}"
+                class="page-header__image"
+                loading="lazy">
+        <!-- <img
+        height="{{ product.featured_image.height }}"
+        width="{{ product.featured_image.width }}"
+        alt=""
+        class="page-header__image"
+        src="{{ product.featured_image | image_url }}"> -->
+        {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'page-header__image--svg'}}
+        {% endunless %}
+    </div>
+</div>
+
+<style>
+    .page-header__title-container{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: url({{ "bg-pattern-1.2.svg" | asset_url }});
+    }
+</style>
+
+{% schema %} {
+    "name": "Page Header",
+    "settings": [
+        {
+           "type": "header",
+           "content": "Content"
+        },
+        {
+           "type": "image_picker",
+           "id": "logo",
+           "label": "Logo",
+           "info": "115 x 115px recommended"
+        },
+       {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Banner Image"
+       }
+    ]
+} {% endschema %}

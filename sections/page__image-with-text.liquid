@@ -1,0 +1,114 @@
+{% assign image = section.settings.image %}
+{% assign logo = section.settings.logo %}
+{% assign heading = section.settings.heading %}
+{% assign para = section.settings.para %}
+{% assign button_link = section.settings.button_link %}
+{% assign button_text = section.settings.button_text %}
+
+{%- capture btn_link -%}
+    {%- if button_link == blank -%}/
+    {%- else -%}
+        {{- button_link -}}
+    {%- endif -%}
+{%- endcapture -%}
+
+<div class="page-image-with-text">
+    <div class="page-image-with-text__image-container">
+
+        {% unless image == blank %}
+        <img srcset="{%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+        {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+        {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+        {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+        {{ image | image_url }} {{ image.width }}w"
+        sizes="(max-width: 400px) 374.5px, (max-width: 600px) 428.1px,(max-width: 900px) 508.7px,(max-width: 1500px) 750px"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        src="{{ image | image_url: width: 1000 }}"
+        class="page-image-with-text__image"
+        loading="lazy">
+<!-- 
+            <img
+                alt=""
+                class="page-image-with-text__image"
+                src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/page-img-w-text.jpg?v=1653411560"> -->
+
+        {% else %}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'page-image-with-text__image--svg'}}
+        {% endunless %}
+        <img src="{{ 'rect-svg-bg.svg' | asset_url }}" alt="" class="page-image-with-text__svg-background">
+        <div class="page-image-with-text__logo-container">
+            {% unless logo == blank %}
+                <img
+                    alt=""
+                    class="page-image-with-text__logo"
+                    src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/logo__box.jpg?v=1652567130">
+                {% else %}
+
+            {% endunless %}
+        </div>
+    </div>
+
+    <div class="page-image-with-text__text-container">
+        <div class="page-image-with-text__heading-container">
+            <h2 class="page-image-with-text__heading">{{ heading }}</h2>
+        </div>
+        <div class="page-image-with-text__para-container">
+            <p class="page-image-with-text__para">
+                {% if para == blank %}
+                {{ product.metafields.my_fields.product_info_2.value }}
+                    {% else %}
+                    {{ para }}
+                {% endif %}
+                </p>
+        </div>
+        <div class="page-image-with-text__button-container">
+            <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Image With Text 2",
+    "settings": [
+        {
+           "type": "header",
+           "content": "Images"
+        },
+        {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+        },
+        {
+           "type": "image_picker",
+           "id": "logo",
+           "label": "Logo"
+        },
+        {
+            "type": "header",
+            "content": "Text"
+        },
+        {
+           "type": "text",
+           "id": "heading",
+           "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "para",
+            "label": "Paragraph"
+        },
+        {
+           "type": "text",
+           "id": "button_text",
+           "label": "Button Text"
+        },
+       {
+           "type": "url",
+           "id": "button_link",
+           "label": "Button Link"
+       }
+]
+} {% endschema %}

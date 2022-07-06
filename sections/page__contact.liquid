@@ -1,0 +1,51 @@
+<div class="page-contact-us">
+    {% form 'contact', id: 'contactForm', class: 'page-contact-us__form' %}
+    {%- if form.posted_successfully? -%}
+    <div class="page-contact-us__success-wrapper">
+        <div class="page-contact-us__success-message">
+            <span class="page-contact-us__message">Your message was sent successfully! Thank you for reaching out! We will get back to you at our earliest convienence!</span>
+        </div>
+    </div>
+    {%- elsif form.errors -%}
+    <div class="page-contact-us__error-wrapper">
+        <div class="page-contact-us__error-message">
+            <span class="page-contact-us__message">Your message was not sent successfully! Please correct all errors and try again.</span>
+        </div>
+    </div>
+    {%- endif -%}
+    <div class="page-contact-us__fields">
+        <div class="page-contact-us__heading-container"><h2 class="page-contact-us__heading">Fill out the form below with any questions, concerns, compliments, or just to say thank you to our staff.</h2></div>
+        <div class="page-contact-us__field-container">
+            <label for="contactFormName"  class="page-contact-us__label">Name</label>
+            <input autocomplete="name" id="contactFormName" name="contact[Name]" type="text" class="page-contact-us__input" value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}">
+        </div>
+        <div class="page-contact-us__field-container">
+            <label for="contactFormEmail"  class="page-contact-us__label">Email Address</label>
+            <input autocomplete="email" id="contactFormEmail" name="contact[Email]" type="text" class="page-contact-us__input" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+        </div>
+        <div class="page-contact-us__field-container">
+            <label for="contactFormPhone"  class="page-contact-us__label">Phone Number</label>
+            <input autocomplete="tel" id="contactFormPhone" name="contact[Phone]" type="text" class="page-contact-us__input" pattern="[0-9\-]*" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+        </div>
+        <div class="page-contact-us__field-container">
+            <label for="contactFormComment"  class="page-contact-us__label">Message</label>
+
+            <textarea rows="10" autocomplete="phone" id="contactFormComment" name="contact[Comment]" class="page-contact-us__textarea"></textarea>
+        </div>
+        <div class="page-contact-us__button-container">
+            <button class="page-contact-us__button btn btn__primary--md" type="submit">Submit</button>
+</div>
+    </div>
+    
+{% endform %}
+
+</div>
+
+{% schema %}
+{
+"name": "page__contact-us",
+"settings": [
+
+]
+}
+{% endschema %}

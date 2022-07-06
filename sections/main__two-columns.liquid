@@ -1,0 +1,163 @@
+<div class="two-columns">
+    <div class="two-columns__logo-container{{- section.settings.logo_display -}}">
+        <img
+            alt=""
+            class="two-columns__logo"
+            height="100"
+            src="{{ section.settings.logo | image_url }}"
+            width="100">
+    </div>
+    <div class="two-columns__col">
+
+        <div class="two-columns__bg-container">
+            <img srcset="{%- if section.settings.first-column_image.width >= 400 -%}{{ section.settings.first-column_image | image_url: width: 400 }} 400w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 600 -%}{{ section.settings.first-column_image | image_url: width: 600 }} 600w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 900 -%}{{ section.settings.first-column_image | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.first-column_image.width >= 1500 -%}{{ section.settings.first-column_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ section.settings.first-column_image | image_url }} {{ section.settings.first-column_image.width }}w"
+            sizes="(max-width: 400px) 500px, (max-width: 600px) calc(35rem + 10vw),(max-width: 900px) 800px,(max-width: 1500px) calc(45rem + 20vw), (min-width: 1500px) calc(45rem + 20vw)"
+            width="{{ section.settings.first-column_image.width }}"
+            height="{{ section.settings.first-column_image.height }}"
+            src="{{ section.settings.first-column_image | image_url: width: 750 }}"
+            class="two-columns__bg"
+            loading="lazy">
+            <!-- <img
+                alt=""
+                width="750"
+                height="817"
+                src="{{ section.settings.first-column_image | image_url }}"> -->
+        </div>
+        <div class="two-columns__content">
+
+            <div class="two-columns__heading-container">
+                <h2 class="two-columns__heading">
+                    {{ section.settings.first-column_heading}}
+                </h2>
+            </div>
+            <div class="two-columns__para-container">
+                <p class="two-columns__para">{{ section.settings.first-column_para }}</p>
+            </div>
+            <div class="two-columns__button-container">
+                <a class="two-columns__button btn btn__secondary--md" href="{{ section.settings.first-column_button-link }}">{{ section.settings.second-column_button-text }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="two-columns__col">
+        <div class="two-columns__bg-container">
+            <img srcset="{%- if section.settings.second-column_image.width >= 400 -%}{{ section.settings.second-column_image | image_url: width: 400 }} 400w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 600 -%}{{ section.settings.second-column_image | image_url: width: 600 }} 600w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 900 -%}{{ section.settings.second-column_image | image_url: width: 900 }} 900w,{%- endif -%}
+            {%- if section.settings.second-column_image.width >= 1500 -%}{{ section.settings.second-column_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ section.settings.second-column_image | image_url }} {{ section.settings.second-column_image.width }}w"
+            sizes="(max-width: 400px) 500px, (max-width: 600px) calc(35rem + 10vw),(max-width: 900px) 800px,(max-width: 1500px) calc(45rem + 20vw), (min-width: 1500px) calc(45rem + 20vw)"
+            width="{{ section.settings.second-column_image.width }}"1
+            height="{{ section.settings.second-column_image.height }}"
+            src="{{ section.settings.second-column_image | image_url: width: 750 }}"
+            class="two-columns__bg"
+            loading="lazy">
+        </div>
+        <div class="two-columns__content">
+            <div class="two-columns__heading-container">
+                <h2 class="two-columns__heading">
+                    {{ section.settings.second-column_heading}}
+                </h2>
+            </div>
+            <div class="two-columns__para-container">
+                <p class="two-columns__para">{{ section.settings.second-column_para }}</p>
+            </div>
+            <div class="two-columns__button-container">
+                <a class="two-columns__button btn btn__secondary--md" href="{{ section.settings.second-column_button-link }}">{{ section.settings.second-column_button-text }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Two Columns",
+"settings": [
+    {
+       "type": "header",
+       "content": "Logo"
+    },
+    {
+       "type": "image_picker",
+       "id": "logo",
+       "label": "Logo",
+       "info": "100 x 100px recommended"
+    },
+    {
+        "type": "select",
+        "id": "logo_display",
+        "label": "Show or hide logo",
+        "options": [
+            {
+                "value": "--hidden",
+                "label": "Hide"
+            },
+            {
+                "value": "",
+                "label": "Visible"
+            }
+        ]
+    },
+    {
+       "type": "header",
+       "content": "First Column"
+    },
+    {
+       "type": "image_picker",
+       "id": "first-column_image",
+       "label": "Background Image"
+    },
+    {
+       "type": "text",
+       "id": "first-column_heading",
+       "label": "Heading"
+    },
+    {
+       "type": "textarea",
+       "id": "first-column_para",
+       "label": "Paragraph"
+    },
+    {
+       "type": "text",
+        "id": "first-column_button-text",
+        "label": "Button Text"
+    },
+    {
+       "type": "url",
+       "id": "first-column_button-link",
+       "label": "Button Link"
+    },
+    {
+        "type": "header",
+        "content": "Second Column"
+     },
+     {
+        "type": "image_picker",
+        "id": "second-column_image",
+        "label": "Background Image"
+     },
+     {
+        "type": "text",
+        "id": "second-column_heading",
+        "label": "Heading"
+     },
+     {
+        "type": "textarea",
+        "id": "second-column_para",
+        "label": "Paragraph"
+     },
+     {
+        "type": "text",
+         "id": "second-column_button-text",
+         "label": "Button Text"
+     },
+     {
+        "type": "url",
+        "id": "second-column_button-link",
+        "label": "Button Link"
+     }
+]
+} {% endschema %}
