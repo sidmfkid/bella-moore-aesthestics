@@ -1,20 +1,20 @@
 {% assign image = section.settings.image %}
 
-<div data-animate="fadeIn" class="image-with-text">
+<div data-animate="{{ section.settings.animation }}" class="image-with-text">
   <div class="image-with-text__content">
     <div class="image-with-text__image">
       {%- if image != blank -%}
         <img
           srcset="
-            {%- if image.width >= 165 -%}{{image |image_url: width: 165}} 165w,{%- endif -%}
-            {%- if image.width >= 360 -%}{{image |image_url: width: 360}} 360w,{%- endif -%}
-            {%- if image.width >= 535 -%}{{image |image_url: width: 535}} 535w,{%- endif -%}
-            {%- if image.width >= 750 -%}{{image |image_url: width: 750}} 750w,{%- endif -%}
-            {%- if image.width >= 1070 -%}{{image |image_url: width: 1070}} 1070w,{%- endif -%}
-            {%- if image.width >= 1500 -%}{{image |image_url: width: 1500}} 1500w,{%- endif -%}
+            {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if image.width >= 535 -%}{{ image | image_url: width: 535 }} 535w,{%- endif -%}
+            {%- if image.width >= 750 -%}{{ image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if image.width >= 1070 -%}{{ image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
             {{ image | image_url }} {{ image.width }}w
           "
-          src="{{ image | img_url: width: 1200 }}"
+          src="{{ image | image_url: width: 1200 }}"
           sizes="(max-width: 1500px) calc(20rem+5vw), (max-width: 900px) calc(20rem+5vw)"
           loading="lazy"
           width="{{ image.width }}"
@@ -66,6 +66,40 @@
       "type": "image_picker",
       "id": "image",
       "label": "Select An Image"
+    },
+    {
+      "type": "header",
+      "content": "Animation",
+      "info": "Entrance & Exit Animations"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "options": [
+        {
+          "value": "fadeIn",
+          "label": "Fade In"
+        },
+        {
+          "value": "fadeDown",
+          "label": "Fade Down"
+        },
+        {
+          "value": "fadeUp",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fadeRight",
+          "label": "Fade Right"
+        },
+        {
+          "value": "fadeLeft",
+          "label": "Fade Left"
+        }
+      ],
+      "default": "fadeIn",
+      "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
     },
     {
       "type": "header",

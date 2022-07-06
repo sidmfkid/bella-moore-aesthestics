@@ -392,12 +392,12 @@ main {
 
 [data-animate=fadeRight] {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-200px);
 }
 
 [data-animate=fadeLeft] {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(200px);
 }
 
 .fade-up, .fade-down {
@@ -408,7 +408,7 @@ main {
 
 .fade-right, .fade-left {
   opacity: 1;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+  transition: all 0.7s ease-in-out;
   transform: translateY(0px);
 }
 
@@ -2213,7 +2213,7 @@ html {
     bottom: 19.5rem;
   }
   .image-with-card__card {
-    top: 10%;
+    top: 3.5%;
   }
   .image-with-card__image {
     height: 100%;

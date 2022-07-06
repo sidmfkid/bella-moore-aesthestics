@@ -1,1 +1,308 @@
-{"sections":{"hero":{"type":"main__hero","settings":{"image":"shopify:\/\/shop_images\/HERO-BG.jpg","logo":"shopify:\/\/shop_images\/logo2.png","margin_top":11,"margin_bottom":0,"heading":"BELLA MOORE AESTHESTICS","subheading":"Lifestyle Innovation","button_text":"Book Now","button_type":"btn btn__secondary","button_size":"--lg"}},"image-with-text":{"type":"main__image-with-text","settings":{"title":"Health Is Happiness","para":"Bella Moore Medicine believes in restoring your mind and body; by fufilling the needs that it requires to continue working properly","image":"shopify:\/\/shop_images\/imafe-with-text.jpg"}},"image-columns":{"type":"main__image-columns","blocks":{"column-1":{"type":"column","settings":{"heading":"Mesotherapy","para":"If you're looking for a safe and effective way to reduce fat, booking a Mesotherapy session at Bella Moore is the perfect solution. With this cutting-edge injection technique, you can target specific areas of your body to help sculpt and contour your figure.","button__text":"Learn More","image":"shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg"}},"column-2":{"type":"column","settings":{"heading":"Kybella","para":"Looking to get rid of your double chin without going under the knife? Kybella is your answer! Kybella is a non-surgical injection that helps break down fats so they can be more easily digested. It’s a great option for those who want to avoid surgery or have a lower recovery time. And because it’s non-surgical, it has fewer risks than surgery. So why wait?","button__text":"Learn More","image":"shopify:\/\/shop_images\/750X1000_A-GROUP-OF-WOMEN-TRAINING-IN-THE-GYM.jpg"}},"column-3":{"type":"column","settings":{"heading":"Laser Hair Removal","para":"Bella Moore's unique laser technology targets the pigment in your hair follicles, damaging them enough to discourage further growth. The best part is that it works on all skin types and colors, so anyone can benefit from it! Whether you're looking to get rid of hair on your legs, face, bikini area, or anywhere else, Bella Moore has you covered.","button__text":"Learn More","image":"shopify:\/\/shop_images\/750X1000_YOUNG-FEMALE-SWIMMER-SWIMMING-IN-POOL.jpg"}},"column-4":{"type":"column","settings":{"heading":"Fillers","para":"If you're looking for a way to restore volume and fullness to your skin, Bella Moore Filler treatments are the perfect solution. Our fillers are specifically indicated for the correction of facial lines, wrinkles, and folds, providing you with a more youthful appearance.","button__text":"Learn More","image":"shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg"}}},"block_order":["column-1","column-2","column-3","column-4"],"settings":{}},"image-with-card":{"type":"main__image-with-card","blocks":{"tab-1":{"type":"tab","settings":{"heading":"Chemical Peel","para":"If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.","button__text":"Get Started","image":"shopify:\/\/shop_images\/1500X1000_SPORTS-WOMEN-IN-FACE-MASKS-TALK-IN-THE-GYM.jpg"}},"tab-2":{"type":"tab","settings":{"heading":"Fatona Lasers","para":"This exciting new laser treatment can help you achieve tighter, more youthful-looking skin without the need for injectables. Fatona Lasers work by stimulating collagen production to promote full-thickness contraction of the skin. This results in a noticeable reduction in wrinkles and sagging skin.","button__text":"Learn More","image":"shopify:\/\/shop_images\/1500x1000_woman-with-dark-short-hair-sitting-and-pulling-her.jpg"}},"tab-3":{"type":"tab","settings":{"heading":"HydraFacial","para":"The HydraFacial is perfect for anyone who wants to improve the appearance of their skin. Whether you are concerned about wrinkles, fine lines, dark spots, or dryness, the HydraFacial can help. The treatment is gentle and non-invasive, and it works for all skin types. Impurities in the skin are removed and the skin is infused with different solutions. This helps to exfoliate, hydrate, cleanse, and brighten the skin.","button__text":"Learn More","image":"shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"}},"tab-4":{"type":"tab","settings":{"heading":"Onabotulinum A","para":"Our Onabotulinum A\/Botox injections are the perfect way to reduce the appearance of facial wrinkles and give you a more youthful look. In addition to reducing wrinkles, our Botox injections can also help treat conditions such as neck spasms, excessive sweating, an overactive bladder, and lazy eye. If you suffer from chronic migraines, our Botox injections may also help prevent them.","button__text":"See Treatments","image":"shopify:\/\/shop_images\/IMAGE-WITH-CARD.jpg"}}},"block_order":["tab-1","tab-2","tab-3","tab-4"],"settings":{}},"three-columns":{"type":"main__three-columns","blocks":{"column-1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/3Col-1.jpg","heading":"Botox"}},"column-2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/3Col-2.jpg","heading":"Fillers"}},"column-3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/3Col-3.jpg","heading":"Skin Care"}}},"block_order":["column-1","column-2","column-3"],"settings":{}},"content-squares":{"type":"main__content-squares","blocks":{"square-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/square-1.jpg"}},"square-2":{"type":"text","settings":{"heading":"Service","para":"At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals.","button_text":"Learn More"}},"square-3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/square-2.jpg"}},"square-4":{"type":"text","settings":{"heading":"About Us","para":"We understand that everyone is unique and deserves personalized treatment. That's why our team of highly skilled and experienced aesthetic professionals will work with you to develop a custom treatment plan that meets your individual needs and goals.","button_text":"Learn More"}},"square-5":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/square-3.jpg"}},"square-6":{"type":"text","settings":{"heading":"Experience","para":"Our staff is highly experienced in a range of medical treatments. From Botox to fillers, we are dedicated to helping our patients achieve their desired results. Whether you are looking to reduce the appearance of wrinkles or enhance your features, we will work with you to create a treatment plan that is tailored to your needs.","button_text":"Learn More"}}},"block_order":["square-1","square-2","square-3","square-4","square-5","square-6"],"settings":{}},"image-banner-callout":{"type":"main__banner-callout","settings":{"heading":"Begin Your Health Revolution","image":"shopify:\/\/shop_images\/banner-bg.png"}},"text-overlay-image":{"type":"main__text-overlay-image","settings":{"logo":"shopify:\/\/shop_images\/logo__box.jpg","image":"shopify:\/\/shop_images\/bg-image-overlay.jpg","heading":"Begin Your Welness journey Today","para":"You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step.","button__text":"GET STARTED"}},"gallery-offset":{"type":"main__gallery-offset","settings":{"image":"shopify:\/\/shop_images\/gallery-long-color.jpg","heading":"GALLERY"}},"quote-text":{"type":"main__quote-text","settings":{"quote__text":"Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise","quote__author":"Sheila P.","quote__info":"Medical Grade HCG"}},"two-columns":{"type":"main__two-columns","settings":{"logo":"shopify:\/\/shop_images\/logo__box.jpg","logo_display":"","first-column_image":"shopify:\/\/shop_images\/750X1000_TWO-WOMEN-EXERCISING.jpg","first-column_heading":"Body Sculpting","first-column_para":"Whether you've recently lost weight or had a baby, we can help you get the body you've always wanted. With our experienced team of surgeons, you can trust us to give you the best possible results. Contact us today to learn more about our body contouring procedures.","first-column_button-text":"Learn More","second-column_image":"shopify:\/\/shop_images\/750x1000_two-laughing-women-sitting-in-a-gym-after-working.jpg","second-column_heading":"Microdermaabrasion","second-column_para":"Microdermaabrasion is the latest in revolutionary skincare technology. This non-invasive procedure uses tiny abrasive crystals to sweep away dead skin cells, dirt, and debris that can dull your complexion. Microdermabrasion treatments can help you achieve the smooth, even texture you want without resorting to surgery or other invasive procedures.","second-column_button-text":"Learn More"}}},"order":["hero","image-with-text","image-columns","text-overlay-image","image-banner-callout","gallery-offset","quote-text","image-with-card","two-columns","three-columns","content-squares"]}
+{
+  "sections": {
+    "hero": {
+      "type": "main__hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Hero-BG.jpg",
+        "logo": "shopify:\/\/shop_images\/logo2.png",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "fadeDown",
+        "margin_top": 11,
+        "margin_bottom": 0,
+        "heading": "BELLA MOORE AESTHESTICS",
+        "subheading": "Lifestyle Innovation",
+        "button_text": "Book Now",
+        "button_link": "",
+        "button_type": "btn btn__secondary",
+        "button_size": "--lg"
+      }
+    },
+    "image-with-text": {
+      "type": "main__image-with-text",
+      "settings": {
+        "title": "Health Is Happiness",
+        "para": "Bella Moore Medicine believes in restoring your mind and body; by fufilling the needs that it requires to continue working properly",
+        "image_position": "row",
+        "image": "shopify:\/\/shop_images\/imafe-with-text.jpg",
+        "animation": "fadeIn",
+        "button_link": "",
+        "button_text": ""
+      }
+    },
+    "image-columns": {
+      "type": "main__image-columns",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Mesotherapy",
+            "para": "If you're looking for a safe and effective way to reduce fat, booking a Mesotherapy session at Bella Moore is the perfect solution. With this cutting-edge injection technique, you can target specific areas of your body to help sculpt and contour your figure.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg",
+            "button__link": ""
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Kybella",
+            "para": "Looking to get rid of your double chin without going under the knife? Kybella is your answer! Kybella is a non-surgical injection that helps break down fats so they can be more easily digested. It’s a great option for those who want to avoid surgery or have a lower recovery time. And because it’s non-surgical, it has fewer risks than surgery. So why wait?",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_a-group-of-women-training-in-the-gym.jpg",
+            "button__link": ""
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "heading": "Laser Hair Removal",
+            "para": "Bella Moore's unique laser technology targets the pigment in your hair follicles, damaging them enough to discourage further growth. The best part is that it works on all skin types and colors, so anyone can benefit from it! Whether you're looking to get rid of hair on your legs, face, bikini area, or anywhere else, Bella Moore has you covered.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_young-female-swimmer-swimming-in-pool.jpg",
+            "button__link": ""
+          }
+        },
+        "column-4": {
+          "type": "column",
+          "settings": {
+            "heading": "Fillers",
+            "para": "If you're looking for a way to restore volume and fullness to your skin, Bella Moore Filler treatments are the perfect solution. Our fillers are specifically indicated for the correction of facial lines, wrinkles, and folds, providing you with a more youthful appearance.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg",
+            "button__link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3",
+        "column-4"
+      ],
+      "settings": {
+        "animation": "fadeRight"
+      }
+    },
+    "text-overlay-image": {
+      "type": "main__text-overlay-image",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "image": "shopify:\/\/shop_images\/bg-image-overlay.jpg",
+        "animation": "fadeIn",
+        "heading": "Begin Your Welness journey Today",
+        "para": "You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step.",
+        "button__text": "GET STARTED",
+        "button__link": ""
+      }
+    },
+    "image-banner-callout": {
+      "type": "main__banner-callout",
+      "settings": {
+        "heading": "Begin Your Health Revolution",
+        "image": "shopify:\/\/shop_images\/banner-bg.png",
+        "animation": "fadeUp"
+      }
+    },
+    "gallery-offset": {
+      "type": "main__gallery-offset",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gallery-long-color.jpg",
+        "heading": "GALLERY",
+        "animation": "fadeIn"
+      }
+    },
+    "quote-text": {
+      "type": "main__quote-text",
+      "settings": {
+        "quote__text": "Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise",
+        "quote__author": "Sheila P.",
+        "quote__info": "Medical Grade HCG",
+        "animation": "fadeIn"
+      }
+    },
+    "image-with-card": {
+      "type": "main__image-with-card",
+      "blocks": {
+        "tab-1": {
+          "type": "tab",
+          "settings": {
+            "heading": "Chemical Peel",
+            "para": "If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.",
+            "button__text": "Get Started",
+            "button__link": "",
+            "image": "shopify:\/\/shop_images\/1500x1000_sports-women-in-face-masks-talk-in-the-gym.jpg"
+          }
+        },
+        "tab-2": {
+          "type": "tab",
+          "settings": {
+            "heading": "Fatona Lasers",
+            "para": "This exciting new laser treatment can help you achieve tighter, more youthful-looking skin without the need for injectables. Fatona Lasers work by stimulating collagen production to promote full-thickness contraction of the skin. This results in a noticeable reduction in wrinkles and sagging skin.",
+            "button__text": "Learn More",
+            "button__link": "",
+            "image": "shopify:\/\/shop_images\/1500x1000_woman-with-dark-short-hair-sitting-and-pulling-her.jpg"
+          }
+        },
+        "tab-3": {
+          "type": "tab",
+          "settings": {
+            "heading": "HydraFacial",
+            "para": "The HydraFacial is perfect for anyone who wants to improve the appearance of their skin. Whether you are concerned about wrinkles, fine lines, dark spots, or dryness, the HydraFacial can help. The treatment is gentle and non-invasive, and it works for all skin types. Impurities in the skin are removed and the skin is infused with different solutions. This helps to exfoliate, hydrate, cleanse, and brighten the skin.",
+            "button__text": "Learn More",
+            "button__link": "",
+            "image": "shopify:\/\/shop_images\/image-with-card.jpg"
+          }
+        },
+        "tab-4": {
+          "type": "tab",
+          "settings": {
+            "heading": "Onabotulinum A",
+            "para": "Our Onabotulinum A\/Botox injections are the perfect way to reduce the appearance of facial wrinkles and give you a more youthful look. In addition to reducing wrinkles, our Botox injections can also help treat conditions such as neck spasms, excessive sweating, an overactive bladder, and lazy eye. If you suffer from chronic migraines, our Botox injections may also help prevent them.",
+            "button__text": "See Treatments",
+            "button__link": "",
+            "image": "shopify:\/\/shop_images\/image-with-card.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "tab-1",
+        "tab-2",
+        "tab-3",
+        "tab-4"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
+    "two-columns": {
+      "type": "main__two-columns",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "logo_display": "",
+        "animation": "fadeIn",
+        "first-column_image": "shopify:\/\/shop_images\/750x1000_two-women-exercising.jpg",
+        "first-column_heading": "Body Sculpting",
+        "first-column_para": "Whether you've recently lost weight or had a baby, we can help you get the body you've always wanted. With our experienced team of surgeons, you can trust us to give you the best possible results. Contact us today to learn more about our body contouring procedures.",
+        "first-column_button-text": "Learn More",
+        "first-column_button-link": "",
+        "second-column_image": "shopify:\/\/shop_images\/750x1000_two-laughing-women-sitting-in-a-gym-after-working.jpg",
+        "second-column_heading": "Microdermaabrasion",
+        "second-column_para": "Microdermaabrasion is the latest in revolutionary skincare technology. This non-invasive procedure uses tiny abrasive crystals to sweep away dead skin cells, dirt, and debris that can dull your complexion. Microdermabrasion treatments can help you achieve the smooth, even texture you want without resorting to surgery or other invasive procedures.",
+        "second-column_button-text": "Learn More",
+        "second-column_button-link": ""
+      }
+    },
+    "three-columns": {
+      "type": "main__three-columns",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-1.jpg",
+            "heading": "Botox",
+            "link": ""
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-2.jpg",
+            "heading": "Fillers",
+            "link": ""
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-3.jpg",
+            "heading": "Skin Care",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
+    "content-squares": {
+      "type": "main__content-squares",
+      "blocks": {
+        "square-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-1.jpg"
+          }
+        },
+        "square-2": {
+          "type": "text",
+          "settings": {
+            "heading": "Service",
+            "para": "At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals.",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        },
+        "square-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-2.jpg"
+          }
+        },
+        "square-4": {
+          "type": "text",
+          "settings": {
+            "heading": "About Us",
+            "para": "We understand that everyone is unique and deserves personalized treatment. That's why our team of highly skilled and experienced aesthetic professionals will work with you to develop a custom treatment plan that meets your individual needs and goals.",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        },
+        "square-5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/square-3.jpg"
+          }
+        },
+        "square-6": {
+          "type": "text",
+          "settings": {
+            "heading": "Experience",
+            "para": "Our staff is highly experienced in a range of medical treatments. From Botox to fillers, we are dedicated to helping our patients achieve their desired results. Whether you are looking to reduce the appearance of wrinkles or enhance your features, we will work with you to create a treatment plan that is tailored to your needs.",
+            "button_text": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "square-1",
+        "square-2",
+        "square-3",
+        "square-4",
+        "square-5",
+        "square-6"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "image-with-text",
+    "image-columns",
+    "text-overlay-image",
+    "image-banner-callout",
+    "gallery-offset",
+    "quote-text",
+    "image-with-card",
+    "two-columns",
+    "three-columns",
+    "content-squares"
+  ]
+}

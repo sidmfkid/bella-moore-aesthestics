@@ -84,7 +84,7 @@ stickyNavObserver.observe(navShop);
 let animatedOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.1,
+  threshold: 0.15,
 };
 
 let sectionsObserver = new IntersectionObserver(
@@ -93,13 +93,39 @@ let sectionsObserver = new IntersectionObserver(
 );
 
 function handleAnimations(entries, observer) {
-  console.log(...entries);
+  // console.log(...entries);
   for (let i = 0; i < entries.length; i++) {
     entries[i].isIntersecting &&
     entries[i].target.classList.contains("hero") === false
       ? animateFadeIn(entries[i].target.children[0], entries[i])
       : console.log("not intersecting");
   }
+  // if (Shopify.designMode) {
+  //   console.log(...entries, "Design Mode");
+
+  //   for (let i = 0; i < entries.length; i++) {
+  //     const section =
+  //       entries[i].target.children[1] || entries[i].target.children[0];
+  //     const sectionClass = section.classList[0];
+  //     console.log(sectionClass);
+  //     if (section.dataset.animate === "fadeIn") {
+  //       animateDesignModeFadeIn(sectionClass, entries[i]);
+  //     }
+  //     if (section.dataset.animate === "fadeRight") {
+  //       animateDesignModeFadeRight(sectionClass, entries[i]);
+  //     }
+  //     if (section.dataset.animate === "fadeLeft") {
+  //       animateDesignModeFadeLeft(sectionClass, entries[i]);
+  //     }
+  //     if (section.dataset.animate === "fadeUp") {
+  //       animateDesignModeFadeUp(sectionClass, entries[i]);
+  //     }
+  //     if (section.dataset.animate === "fadeDown") {
+  //       animateDesignModeFadeDown(sectionClass, entries[i]);
+  //     }
+  //   }
+  // }
+
   checkData(...entries, [...entries]);
 }
 allSections.forEach((section) => {
@@ -132,6 +158,41 @@ function checkData(entry, entries) {
     animateFadeDown(section, entry);
   }
 }
+
+// function animateDesignModeFadeIn(section, entry) {
+//   const el = document.querySelector("." + section);
+//   if (el.classList.contains("fade-in") === false) {
+//     el.classList.toggle("fade-in");
+//   }
+// }
+// function animateDesignModeFadeRight(section, entry) {
+//   const el = document.querySelector("." + section);
+//   if (el.classList.contains("fade-right") === false) {
+//     el.classList.toggle("fade-right");
+//   }
+// }
+
+// function animateDesignModeFadeLeft(section, entry) {
+//   const el = document.querySelector("." + section);
+//   if (el.classList.contains("fade-left") === false) {
+//     el.classList.toggle("fade-left");
+//   }
+// }
+
+// function animateDesignModeFadeUp(section, entry) {
+//   const el = document.querySelector("." + section);
+//   if (el.classList.contains("fade-up") === false) {
+//     el.classList.toggle("fade-up");
+//   }
+// }
+
+// function animateDesignModeFadeDown(section, entry) {
+//   console.log("fadeDown");
+//   const el = document.querySelector("." + section);
+//   if (el.classList.contains("fade-down") === false) {
+//     el.classList.toggle("fade-down");
+//   }
+// }
 
 function animateFadeIn(section, entry) {
   if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {

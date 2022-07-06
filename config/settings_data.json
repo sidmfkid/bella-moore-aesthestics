@@ -1,5 +1,6 @@
 {
   "current": {
+    "header_logo": "shopify:\/\/shop_images\/LOGO.png",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -95,8 +96,7 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true,
-    "header_logo": "shopify:\/\/shop_images\/LOGO.png"
+    "currency_code_enabled": true
   },
   "presets": {
     "Default": {
@@ -199,7 +199,8 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {}
+          "settings": {
+          }
         }
       }
     }

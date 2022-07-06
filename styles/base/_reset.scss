@@ -433,12 +433,12 @@ transition: all .5s ease-in-out .2s;
 
 [data-animate='fadeRight']{
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-200px);
 }
 
 [data-animate='fadeLeft']{
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(200px);
 }
 
 
@@ -451,6 +451,6 @@ transform: translateY(0px);
 .fade-right, .fade-left{
 
   opacity: 1;
-transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1) .2s;
+transition: all .7s ease-in-out;
 transform: translateY(0px);
 }

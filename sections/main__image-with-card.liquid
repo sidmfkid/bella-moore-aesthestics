@@ -1,4 +1,4 @@
-<div data-animate="fadeIn" class="image-with-card">
+<div data-animate="{{ section.settings.animation }}" class="image-with-card">
   {% for block in section.blocks %}
     <input
       hidden
@@ -127,7 +127,42 @@
 {% schema %}
 {
   "name": "Image With Card Section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Animation",
+      "info": "Entrance & Exit Animations"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "options": [
+        {
+          "value": "fadeIn",
+          "label": "Fade In"
+        },
+        {
+          "value": "fadeDown",
+          "label": "Fade Down"
+        },
+        {
+          "value": "fadeUp",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fadeRight",
+          "label": "Fade Right"
+        },
+        {
+          "value": "fadeLeft",
+          "label": "Fade Left"
+        }
+      ],
+      "default": "fadeIn",
+      "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
+    }
+  ],
   "max_blocks": 4,
   "blocks": [
     {
