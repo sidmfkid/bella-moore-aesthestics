@@ -290,6 +290,20 @@
       "settings": {
         "animation": "fadeIn"
       }
+    },
+    "165721241341fc60b1": {
+      "type": "page__image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/mary-apiafi-moore-725.jpg",
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "animation": "fadeIn",
+        "padding-top": 30,
+        "padding-bottom": 20,
+        "heading": "About The Founder",
+        "para": "Dr. Apiafi Moore received her doctor of medicine at Saint George's University School of Medicine in Grenada, West Indies. She then completed an internal medicine internship at Mount Sinai School of Medicine in Queens, New York, and a residency in physical medicine and rehabilitation at Albert Einstein College of Medicine, Montefiore Medical Center in Bronx, New York. Dr. Apiafi Moore then completed a sports medicine fellowship at Cleveland Clinic in Cleveland, Ohio.",
+        "button_text": "",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -303,6 +317,7 @@
     "image-with-card",
     "two-columns",
     "three-columns",
-    "content-squares"
+    "content-squares",
+    "165721241341fc60b1"
   ]
 }

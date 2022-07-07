@@ -13,7 +13,16 @@
   {%- endif -%}
 {%- endcapture -%}
 
-<div data-animate="{{ section.settings.animation }}" class="page-image-with-text">
+<style>
+  .page-image-with-text{
+    padding-top: {{ section.settings.padding-top }}px; padding-bottom: {{ section.settings.padding-bottom }}px
+  }
+</style>
+
+<div
+  data-animate="{{ section.settings.animation }}"
+  class="page-image-with-text"
+>
   <div class="page-image-with-text__image-container">
     {% unless image == blank %}
       <img
@@ -68,7 +77,9 @@
       </p>
     </div>
     <div class="page-image-with-text__button-container">
-      <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>
+      {% if button_text != blank %}
+        <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -127,6 +138,30 @@
     },
     {
       "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding-top",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-bottom",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
       "content": "Text"
     },
     {
@@ -148,6 +183,11 @@
       "type": "url",
       "id": "button_link",
       "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Image With Text"
     }
   ]
 }

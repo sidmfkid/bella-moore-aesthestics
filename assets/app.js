@@ -81,154 +81,103 @@ stickyNavObserver.observe(navShop);
 
 //* ********************************** SECTION ANIMATIONS *********************** *//
 
-let animatedOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.15,
-};
+if (!Shopify.designMode) {
+  let animatedOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15,
+  };
 
-let sectionsObserver = new IntersectionObserver(
-  handleAnimations,
-  animatedOptions
-);
+  let sectionsObserver = new IntersectionObserver(
+    handleAnimations,
+    animatedOptions
+  );
 
-function handleAnimations(entries, observer) {
-  // console.log(...entries);
-  for (let i = 0; i < entries.length; i++) {
-    entries[i].isIntersecting &&
-    entries[i].target.classList.contains("hero") === false
-      ? animateFadeIn(entries[i].target.children[0], entries[i])
-      : console.log("not intersecting");
+  function handleAnimations(entries, observer) {
+    // console.log(...entries);
+    for (let i = 0; i < entries.length; i++) {
+      entries[i].isIntersecting &&
+      entries[i].target.classList.contains("hero") === false
+        ? animateFadeIn(entries[i].target.children[0], entries[i])
+        : console.log("not intersecting");
+    }
+
+    checkData(...entries, [...entries]);
   }
-  // if (Shopify.designMode) {
-  //   console.log(...entries, "Design Mode");
+  allSections.forEach((section) => {
+    if (
+      section.id === "shopify-section-header" ||
+      section.id === "shopify-section-footer"
+    ) {
+      return;
+    } else {
+      sectionsObserver.observe(section);
+    }
+  });
 
-  //   for (let i = 0; i < entries.length; i++) {
-  //     const section =
-  //       entries[i].target.children[1] || entries[i].target.children[0];
-  //     const sectionClass = section.classList[0];
-  //     console.log(sectionClass);
-  //     if (section.dataset.animate === "fadeIn") {
-  //       animateDesignModeFadeIn(sectionClass, entries[i]);
-  //     }
-  //     if (section.dataset.animate === "fadeRight") {
-  //       animateDesignModeFadeRight(sectionClass, entries[i]);
-  //     }
-  //     if (section.dataset.animate === "fadeLeft") {
-  //       animateDesignModeFadeLeft(sectionClass, entries[i]);
-  //     }
-  //     if (section.dataset.animate === "fadeUp") {
-  //       animateDesignModeFadeUp(sectionClass, entries[i]);
-  //     }
-  //     if (section.dataset.animate === "fadeDown") {
-  //       animateDesignModeFadeDown(sectionClass, entries[i]);
-  //     }
-  //   }
-  // }
+  function checkData(entry, entries) {
+    const section = entry.target.children[1] || entry.target.children[0];
 
-  checkData(...entries, [...entries]);
-}
-allSections.forEach((section) => {
-  if (
-    section.id === "shopify-section-header" ||
-    section.id === "shopify-section-footer"
-  ) {
-    return;
-  } else {
-    sectionsObserver.observe(section);
+    if (section.dataset.animate === "fadeIn") {
+      animateFadeIn(section, entry);
+    }
+    if (section.dataset.animate === "fadeRight") {
+      animateFadeRight(section, entry);
+    }
+    if (section.dataset.animate === "fadeLeft") {
+      animateFadeLeft(section, entry);
+    }
+    if (section.dataset.animate === "fadeUp") {
+      animateFadeUp(section, entry);
+    }
+    if (section.dataset.animate === "fadeDown") {
+      animateFadeDown(section, entry);
+    }
   }
-});
 
-function checkData(entry, entries) {
-  const section = entry.target.children[1] || entry.target.children[0];
+  function animateFadeIn(section, entry) {
+    if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
+      section.classList.add("fade-in");
+    } else {
+      section.classList.remove("fade-in");
+    }
+  }
+  function animateFadeRight(section, entry) {
+    if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
+      section.classList.add("fade-right");
+    } else {
+      section.classList.remove("fade-right");
+    }
+  }
 
-  if (section.dataset.animate === "fadeIn") {
-    animateFadeIn(section, entry);
+  function animateFadeLeft(section, entry) {
+    if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
+      section.classList.add("fade-left");
+    } else {
+      section.classList.remove("fade-left");
+    }
   }
-  if (section.dataset.animate === "fadeRight") {
-    animateFadeRight(section, entry);
-  }
-  if (section.dataset.animate === "fadeLeft") {
-    animateFadeLeft(section, entry);
-  }
-  if (section.dataset.animate === "fadeUp") {
-    animateFadeUp(section, entry);
-  }
-  if (section.dataset.animate === "fadeDown") {
-    animateFadeDown(section, entry);
-  }
-}
 
-// function animateDesignModeFadeIn(section, entry) {
-//   const el = document.querySelector("." + section);
-//   if (el.classList.contains("fade-in") === false) {
-//     el.classList.toggle("fade-in");
-//   }
-// }
-// function animateDesignModeFadeRight(section, entry) {
-//   const el = document.querySelector("." + section);
-//   if (el.classList.contains("fade-right") === false) {
-//     el.classList.toggle("fade-right");
-//   }
-// }
-
-// function animateDesignModeFadeLeft(section, entry) {
-//   const el = document.querySelector("." + section);
-//   if (el.classList.contains("fade-left") === false) {
-//     el.classList.toggle("fade-left");
-//   }
-// }
-
-// function animateDesignModeFadeUp(section, entry) {
-//   const el = document.querySelector("." + section);
-//   if (el.classList.contains("fade-up") === false) {
-//     el.classList.toggle("fade-up");
-//   }
-// }
-
-// function animateDesignModeFadeDown(section, entry) {
-//   console.log("fadeDown");
-//   const el = document.querySelector("." + section);
-//   if (el.classList.contains("fade-down") === false) {
-//     el.classList.toggle("fade-down");
-//   }
-// }
-
-function animateFadeIn(section, entry) {
-  if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
-    section.classList.add("fade-in");
-  } else {
-    section.classList.remove("fade-in");
+  function animateFadeUp(section, entry) {
+    if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
+      section.classList.add("fade-up");
+    } else {
+      section.classList.remove("fade-up");
+    }
   }
-}
-function animateFadeRight(section, entry) {
-  if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
-    section.classList.add("fade-right");
-  } else {
-    section.classList.remove("fade-right");
-  }
-}
 
-function animateFadeLeft(section, entry) {
-  if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
-    section.classList.add("fade-left");
-  } else {
-    section.classList.remove("fade-left");
+  function animateFadeDown(section, entry) {
+    if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
+      section.classList.add("fade-down");
+    } else {
+      section.classList.remove("fade-down");
+    }
   }
-}
+} else {
+  const allAnimatedSections = document.querySelectorAll("[data-animate]");
 
-function animateFadeUp(section, entry) {
-  if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
-    section.classList.add("fade-up");
-  } else {
-    section.classList.remove("fade-up");
-  }
-}
-
-function animateFadeDown(section, entry) {
-  if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
-    section.classList.add("fade-down");
-  } else {
-    section.classList.remove("fade-down");
-  }
+  console.log(allAnimatedSections);
+  allAnimatedSections.forEach((section) => {
+    section.style = "opacity: 1; transform: translateX(0px) translateY(0px)";
+  });
 }
