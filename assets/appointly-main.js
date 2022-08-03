@@ -1321,7 +1321,7 @@ form #apntly-book-button ~ .shopify-payment-button {
     },
     floatWidgetSettings: {"text":"BOOK APPOINTMENT","isEnabled":false,"textColor":"#ffffff","onClickAction":1,"backgroundColor":"#AF4B4B"},
     bookingInfoSettings: {"dateText":"Date","timeText":"Time","teamMemberText":"Employee","bookingTimeText":"Booking"},
-    depositPaymentSettings: {"createdAtTimeStamp":1659553581845,"shouldDelete":false,"isEnabled":false,"options":[],"uniqueId":"WXR28QBXTM43IB7MK2IUGRT2","depositPaymentScreenInfoSettings":{"headingText":"Payment Options (Pay Deposit amount now, and remaining after the appointment): "},"checkoutInfoText":{"titleText":"Deposit for Service","remainingAmountText":"Remaining Balance before Tax and Shipping"}},
+    depositPaymentSettings: {"createdAtTimeStamp":"1659553588779","shouldDelete":false,"isEnabled":false,"options":[],"uniqueId":"F3XMUQ3G4UYBCPHNJHH1Z91L","depositPaymentScreenInfoSettings":{"headingText":"Payment Options (Pay Deposit amount now, and remaining after the appointment): "},"checkoutInfoText":{"titleText":"Deposit for Service","remainingAmountText":"Remaining Balance before Tax and Shipping"},"id":2662,"createdAt":"2022-08-03T19:06:29.097Z","updatedAt":"2022-08-03T19:06:29.097Z","clientId":4100},
     productId: '',
     bookingId: '',
     auth: '',
