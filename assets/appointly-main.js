@@ -1039,7 +1039,7 @@ if (!window.appointlyConfig) {
       ignoreBookedSlots: false,
       adminMergeTeamMember:true,
       sendEmail: true,
-      brandingEnabled: true,
+      brandingEnabled: false,
       selectedDepositPaymentOption: -1,
       subscriptionAppointmentMessage: '',
       bookNowDisabled: true,
