@@ -2491,8 +2491,12 @@ html {
   z-index: 10;
   height: auto;
 }
-.app-btn.btn.atc {
+.app-btn .btn.btn__primary--fluid {
   width: 100%;
+  background: linear-gradient(rgb(226, 206, 156) 0%, rgb(204, 172, 92) 35%, rgb(188, 147, 47) 80%);
+  height: 6.5rem;
+  font-family: var(--font-body-family);
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.432);
 }
 
 .page-header {
