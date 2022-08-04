@@ -45,7 +45,7 @@
         "padding-bottom": 0,
         "heading": "{{ product.metafields.my_fields.product_heading_3.value }}",
         "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!",
-        "button_text": "Button Here",
+        "button_text": "",
         "button_link": ""
       }
     },
