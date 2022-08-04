@@ -19,9 +19,11 @@
       </p>
     </div>
     <div class="page-text-overlay-bg__button-container">
-      <a class="page-text-overlay-bg__button btn btn__secondary--md" href="{{ section.settings.button_link }}">
-        {{- section.settings.button_text -}}
-      </a>
+      {% if section.settings.button_text != blank %}
+        <a class="page-text-overlay-bg__button btn btn__secondary--md" href="{{ section.settings.button_link }}">
+          {{- section.settings.button_text -}}
+        </a>
+      {% endif %}
     </div>
   </div>
 </div>
