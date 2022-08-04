@@ -455,6 +455,10 @@ html {
   cursor: pointer;
   padding: 0;
 }
+.btn.atc {
+  background: transparent;
+  width: 100%;
+}
 .btn__primary, .btn__primary--sm, .btn__primary--md, .btn__primary--lg, .btn__primary--fluid {
   color: white;
   background-color: #000;
