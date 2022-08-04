@@ -12,7 +12,7 @@
           "type": "column",
           "settings": {
             "heading": "{{ product.metafields.my_fields.product_heading_1.value }}",
-            "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!",
+            "para": "A chemical peel is a cosmetic procedure that can be used to improve the appearance of your skin. The peel involves applying a chemical solution to the surface of your skin, which causes the dead skin cells to slough off. This can improve the texture and appearance of your skin, as well as reduce the appearance of wrinkles and fine lines.",
             "btn_link": "",
             "btn_text": ""
           }
