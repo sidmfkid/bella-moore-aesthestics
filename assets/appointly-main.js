@@ -1317,7 +1317,7 @@ form #apntly-book-button ~ .shopify-payment-button {
     addToCartSelector: "",
     bookingButtonContainer: "",
     widgetSettings: {
-      text: 'SCHEDULE YOUR Consultation'
+      text: 'Schedult Your Consultation'
     },
     floatWidgetSettings: {"text":"BOOK APPOINTMENT","isEnabled":true,"textColor":"#ffffff","onClickAction":2,"backgroundColor":"#cfb16d","onClickProductId":"6797233258589"},
     bookingInfoSettings: {"dateText":"Date","timeText":"Time","teamMemberText":"Employee","bookingTimeText":"Booking"},
