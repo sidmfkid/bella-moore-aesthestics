@@ -21,7 +21,7 @@
           "type": "column",
           "settings": {
             "heading": "{{ product.metafields.my_fields.product_heading_2.value }}",
-            "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "para": "A chemical peel can also be used to treat certain skin conditions, such as acne or hyperpigmentation. In addition, peels can help to promote the production of collagen, which can help to improve the elasticity of your skin. As a result, chemical peels can provide a multitude of benefits for your skin.",
             "btn_link": "",
             "btn_text": ""
           }
