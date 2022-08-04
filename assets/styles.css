@@ -363,7 +363,7 @@ template {
 
 main {
   width: 100%;
-  padding-bottom: calc(24rem + 15vw);
+  padding-bottom: calc(22.8rem + 15vw);
 }
 
 [data-animate=fadeIn],
@@ -3016,12 +3016,12 @@ html {
 
 @media screen and (max-width: 900px) {
   main {
-    padding-bottom: 60.2rem;
+    padding-bottom: 59rem;
   }
 }
 @media screen and (max-width: 600px) {
   main {
-    padding-bottom: 70.4rem;
+    padding-bottom: 69.1rem;
   }
 }
 
