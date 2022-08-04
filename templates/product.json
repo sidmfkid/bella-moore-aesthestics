@@ -52,7 +52,7 @@
     "page-text-overlay-bg": {
       "type": "page__text-overlay-bg",
       "settings": {
-        "heading": "",
+        "heading": "Schedule Your Consultation Today!",
         "para": "",
         "button_text": "",
         "button_link": "",
