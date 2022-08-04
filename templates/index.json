@@ -201,7 +201,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/3Col-1.jpg",
             "heading": "Botox",
-            "link": ""
+            "link": "shopify:\/\/products\/botox-onabotulinum-a"
           }
         },
         "column-2": {
@@ -209,7 +209,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/3Col-2.jpg",
             "heading": "Fillers",
-            "link": ""
+            "link": "shopify:\/\/products\/fillers"
           }
         },
         "column-3": {
@@ -217,7 +217,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/3Col-3.jpg",
             "heading": "Skin Care",
-            "link": ""
+            "link": "shopify:\/\/collections\/skin-care"
           }
         }
       },
