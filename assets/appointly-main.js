@@ -1306,7 +1306,7 @@ form #apntly-book-button ~ .shopify-payment-button {
 
 .apntly-float-button {
   color: #ffffff;
-  background-color: #AF4B4B;
+  background-color: #cfb16d;
 }
 
 
@@ -1319,7 +1319,7 @@ form #apntly-book-button ~ .shopify-payment-button {
     widgetSettings: {
       text: 'SCHEDULE YOUR Consultation'
     },
-    floatWidgetSettings: {"text":"BOOK APPOINTMENT","isEnabled":false,"textColor":"#ffffff","onClickAction":1,"backgroundColor":"#AF4B4B"},
+    floatWidgetSettings: {"text":"BOOK APPOINTMENT","isEnabled":true,"textColor":"#ffffff","onClickAction":2,"backgroundColor":"#cfb16d","onClickProductId":"6797233258589"},
     bookingInfoSettings: {"dateText":"Date","timeText":"Time","teamMemberText":"Employee","bookingTimeText":"Booking"},
     depositPaymentSettings: {"createdAtTimeStamp":"1659553588779","shouldDelete":false,"isEnabled":false,"options":[],"uniqueId":"F3XMUQ3G4UYBCPHNJHH1Z91L","depositPaymentScreenInfoSettings":{"headingText":"Payment Options (Pay Deposit amount now, and remaining after the appointment): "},"checkoutInfoText":{"titleText":"Deposit for Service","remainingAmountText":"Remaining Balance before Tax and Shipping"},"id":2662,"createdAt":"2022-08-03T19:06:29.097Z","updatedAt":"2022-08-03T19:06:29.097Z","clientId":4100},
     productId: '',
