@@ -5,20 +5,34 @@
 {% assign button_link = section.settings.button_link %}
 {% assign button_text = section.settings.button_text %}
 
+{% comment %}
+   <style>
+    .page-header__heading-button{
+      width: 100%;
+      padding-top: 4rem;
+    }
+    .page-header__heading-button .btn {
+      font-size: 2rem;
+  }
+  </style>
+{% endcomment %}
+
 {% case request.page_type %}
   {% when 'product' %}
     {%- capture atcButton -%}
-      {% form 'product', product %}
-        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-        <button
-          type="submit"
-          name="add"
-          value="Add To Cart"
-          class="page-image-with-text__button btn btn__tertiary--md atc"
-        >
-          Book Now
-        </button>
-      {% endform %}
+      <div class="page-header__heading-button">
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button
+            type="submit"
+            name="add"
+            value="Add To Cart"
+            class="page-image-with-text__button btn btn__tertiary--md"
+          >
+            Book Now
+          </button>
+        {% endform %}
+      </div>
     {%- endcapture -%}
 {% endcase %}
 
@@ -94,14 +108,9 @@
       </p>
     </div>
     <div class="page-image-with-text__button-container">
-      {% case request.page_type %}
-        {% when 'product' %}
-          {{ atcButton }}
-        {% else %}
-          {% if button_text != blank %}
-            <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>
-          {% endif %}
-      {% endcase %}
+      {% if button_text != blank %}
+        <a class="page-image-with-text__button btn btn__tertiary--md" href="{{btn_link}}">{{ button_text }}</a>
+      {% endif %}
     </div>
   </div>
 </div>

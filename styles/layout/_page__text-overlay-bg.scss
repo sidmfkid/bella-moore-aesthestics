@@ -24,6 +24,7 @@
         margin: 0 auto;
     }
 
+
     &__content {
         position: relative;
         z-index: 2;
@@ -58,6 +59,12 @@
         margin: 0 auto;
     }
 
+    @include media-desktop {
+        &__bg {
+            width: 150%;
+            height: auto;
+        }
+    }
     @include media-tablet {
         &__content {
             max-width: 100%;

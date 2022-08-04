@@ -1,24 +1,5 @@
 {% assign blocks = section.blocks %}
 
-{% case request.page_type %}
-  {% when 'product' %}
-    {%- capture atcButton -%}
-      <div class="text-columns__button-container">
-        {% form 'product', product %}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-          <button
-            type="submit"
-            name="add"
-            value="Add To Cart"
-            class="text-columns__button btn btn__tertiary--md atc"
-          >
-            Book Now
-          </button>
-        {% endform %}
-      </div>
-    {%- endcapture -%}
-{% endcase %}
-
 <div
   data-animate="{{ section.settings.animation }}"
   class="text-columns{%- if blocks.size > 1 -%}--two-columns{%- endif -%}"
@@ -49,24 +30,19 @@
         </div>
       {% endunless %}
 
-      {% case request.page_type %}
-        {% when 'product' %}
-          {{ atcButton }}
-        {% else %}
-          {% unless btn_text == blank and btn_link == blank %}
-            <div class="text-columns__button-container">
-              <a
-                class="text-columns__button btn btn__tertiary--md"
-                href="
-                  {%- if btn_link != blank -%}
-                  {{ btn_link }}{%- else -%}/{%- endif -%}
-                "
-              >
-                {{- btn_text -}}
-              </a>
-            </div>
-          {% endunless %}
-      {% endcase %}
+      {% unless btn_text == blank and btn_link == blank %}
+        <div class="text-columns__button-container">
+          <a
+            class="text-columns__button btn btn__tertiary--md"
+            href="
+              {%- if btn_link != blank -%}
+              {{ btn_link }}{%- else -%}/{%- endif -%}
+            "
+          >
+            {{- btn_text -}}
+          </a>
+        </div>
+      {% endunless %}
     </div>
   {% endfor %}
 

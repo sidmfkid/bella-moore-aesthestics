@@ -1,7 +1,6 @@
 <style>
     .page-header__heading-button{
       width: 100%;
-      padding-top: 4rem;
     }
     .page-header__heading-button .btn {
       font-size: 2rem;
@@ -28,10 +27,9 @@
       <li class="page-header__breadcrumb-item">
         <a class="page-header__breadcrumb-link" href="{{product.url}}">{{ product.title }}</a>
       </li>
-      
     {%- endcapture -%}
-      {%- capture atcButton -%}
-      <div class="page-header__heading-button">
+    {%- capture atcButton -%}
+      <div class="page-header__app-btn>
         {% form 'product', product %}
           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
           <button type="submit" name="add" value="Add To Cart" class="btn btn__tertiary--lg block margin-center">
@@ -88,10 +86,6 @@
           {{ breadcrumbs }}
         </ul>
       </nav>
-            {% case request.page_type %}
-        {% when 'product' %}
-          {{ atcButton }}
-      {% endcase %}
     </div>
   </div>
   <div class="page-header__logo-container">
@@ -132,6 +126,10 @@
   </div>
 </div>
 
+{% comment %} {% case request.page_type %}
+  {% when 'product' %}
+    {{ atcButton }}
+{% endcase %} {% endcomment %}
 <style>
   .page-header__title-container{
       background-position: center;

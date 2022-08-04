@@ -58,7 +58,14 @@
 
   <div class="hero__cta">
     {% unless button_text == blank %}
-      <a class="hero__btn {{ button_type }}{{ button_size }}" href="{{ button_link }}">{{ button_text }}</a>
+      <button
+        id="apntly-page-book-button"
+        data-page-product-id="6889995337821"
+        class="hero__btn atc {{ button_type }}{{ button_size }}"
+        href="{{ button_link }}"
+      >
+        {{ button_text }}
+      </button>
     {% endunless %}
   </div>
 </div>

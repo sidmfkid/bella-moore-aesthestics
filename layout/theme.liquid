@@ -216,10 +216,27 @@
 
   {% endstyle %}
   {%- endif -%}
-
+  {% case request.page_type %}
+    {% when 'product' %}
+      {%- capture atcButton -%}
+      <div class="app-btn">
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button type="submit" name="add" value="Add To Cart" class="btn btn__primary--fluid">
+            Book Now
+          </button>
+        {% endform %}
+      </div>
+    {%- endcapture -%}
+  {% endcase %}
   {% section 'header' %}
   <main id="MainContent" class="" role="main" tabindex="-1">
     {{ content_for_layout }}
+    {% case request.page_type %}
+      {% when 'product' %}
+    {{ atcButton }}
+  {% endcase %}
+
   </main>
 
   {% section 'footer' %}
