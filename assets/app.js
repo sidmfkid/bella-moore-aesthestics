@@ -85,7 +85,7 @@ if (!Shopify.designMode) {
   let animatedOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.15,
+    threshold: 0.05,
   };
 
   let sectionsObserver = new IntersectionObserver(
@@ -138,39 +138,29 @@ if (!Shopify.designMode) {
   function animateFadeIn(section, entry) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-in");
-    } else {
-      section.classList.remove("fade-in");
     }
   }
   function animateFadeRight(section, entry) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-right");
-    } else {
-      section.classList.remove("fade-right");
     }
   }
 
   function animateFadeLeft(section, entry) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-left");
-    } else {
-      section.classList.remove("fade-left");
     }
   }
 
   function animateFadeUp(section, entry) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-up");
-    } else {
-      section.classList.remove("fade-up");
     }
   }
 
   function animateFadeDown(section, entry) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-down");
-    } else {
-      section.classList.remove("fade-down");
     }
   }
 } else {

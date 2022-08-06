@@ -24,9 +24,10 @@
           {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
           {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
           {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+          {%- if block.settings.image.width >= 1700 -%}{{ block.settings.image | image_url: width: 1700 }} 1700w,{%- endif -%}
           {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
         "
-        sizes="(max-width: 400px)calc(55rem + 20vw), (max-width: 600px) calc(55rem + 20vw),(max-width: 900px) calc(75rem + 20vw),(max-width: 1500px) 1500px"
+        sizes="(max-width: 400px)calc(55rem + 20vw), (max-width: 600px) calc(55rem + 20vw),(max-width: 900px) calc(75rem + 20vw),(max-width: 1500px) calc(90rem + 20vw)"
         src="{{ block.settings.image | image_url: width: 1500 }}"
         alt="{{ block.settings.image.alt }}"
         height="{{ block.settings.image.height }}"

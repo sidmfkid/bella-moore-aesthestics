@@ -2211,6 +2211,14 @@ html {
   opacity: 1;
   z-index: 1;
 }
+@media screen and (min-width: 1300px) {
+  .image-with-card__image {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    height: auto;
+  }
+}
 @media screen and (max-width: 900px) {
   .image-with-card__tabs {
     flex-wrap: wrap;
@@ -2488,7 +2496,7 @@ html {
   bottom: 0rem;
   left: 0rem;
   width: 100%;
-  z-index: 10;
+  z-index: 5;
   height: auto;
 }
 .app-btn .btn.btn__primary--fluid {
