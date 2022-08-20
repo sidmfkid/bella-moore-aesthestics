@@ -264,6 +264,7 @@
     },
     "content-squares": {
       "type": "main__content-squares",
+      "disabled": true,
       "blocks": {
         "square-1": {
           "type": "image",
