@@ -267,12 +267,14 @@
       "blocks": {
         "square-1": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/square-1.jpg"
           }
         },
         "square-2": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "heading": "Service",
             "para": "At Bella, we take a family approach. When you choose to work with us, we are with you on your journey from the very beginning to the end — when you have met your goals.",
@@ -282,6 +284,7 @@
         },
         "square-3": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/square-2.jpg"
           }
