@@ -154,6 +154,22 @@
     "16610111211520fb01": {
       "type": "main__three-columns",
       "blocks": {
+        "6b8d45ac-481c-4e53-91bb-fdb2257a89cc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1200x1200_pretty-woman-on-bed-in-modern-apartment-smiling-af.jpg",
+            "heading": "Kybella",
+            "link": "shopify:\/\/products\/kybella"
+          }
+        },
+        "5e2c977b-fcd1-41d4-909a-02fb4b55ab8d": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1200x1200_girl-touching-face-looking-at-perfect-skin-in-mirr.jpg",
+            "heading": "Mesotherapy",
+            "link": "shopify:\/\/products\/meso-therapy"
+          }
+        },
         "d32ed391-96a3-4a40-afcf-46e4e8dd81b5": {
           "type": "column",
           "settings": {
@@ -161,28 +177,12 @@
             "heading": "Body Sculpting",
             "link": "shopify:\/\/products\/body-sculpting"
           }
-        },
-        "6b8d45ac-481c-4e53-91bb-fdb2257a89cc": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1200x1200_pretty-woman-on-bed-in-modern-apartment-smiling-af.jpg",
-            "heading": "",
-            "link": ""
-          }
-        },
-        "5e2c977b-fcd1-41d4-909a-02fb4b55ab8d": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/1200x1200_girl-touching-face-looking-at-perfect-skin-in-mirr.jpg",
-            "heading": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "d32ed391-96a3-4a40-afcf-46e4e8dd81b5",
         "6b8d45ac-481c-4e53-91bb-fdb2257a89cc",
-        "5e2c977b-fcd1-41d4-909a-02fb4b55ab8d"
+        "5e2c977b-fcd1-41d4-909a-02fb4b55ab8d",
+        "d32ed391-96a3-4a40-afcf-46e4e8dd81b5"
       ],
       "settings": {
         "animation": "fadeIn"
