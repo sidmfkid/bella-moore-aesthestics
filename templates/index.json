@@ -94,7 +94,7 @@
           "type": "column",
           "settings": {
             "heading": "Chemical Peel",
-            "para": "",
+            "para": "If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_young-female-swimmer-swimming-in-pool.jpg",
             "button__link": "shopify:\/\/products\/chemical-peel"
@@ -190,6 +190,7 @@
     },
     "image-with-card": {
       "type": "main__image-with-card",
+      "disabled": true,
       "blocks": {
         "tab-1": {
           "type": "tab",
