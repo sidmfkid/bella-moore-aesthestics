@@ -21,8 +21,8 @@
     "image-with-text": {
       "type": "main__image-with-text",
       "settings": {
-        "title": "Health Is Happiness",
-        "para": "Bella Moore Aesthestics strives to help you look and feel your best!",
+        "title": "Bella Moore Aesthestics strives to help you look and feel your best!",
+        "para": "",
         "image_position": "row",
         "image": "shopify:\/\/shop_images\/1200x1200_skin-care.jpg",
         "animation": "fadeIn",
