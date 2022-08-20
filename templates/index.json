@@ -30,6 +30,43 @@
         "button_text": ""
       }
     },
+    "three-columns": {
+      "type": "main__three-columns",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-1.jpg",
+            "heading": "Toxins \/ Botox",
+            "link": "shopify:\/\/products\/botox-onabotulinum-a"
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-2.jpg",
+            "heading": "Dermal Fillers",
+            "link": "shopify:\/\/products\/fillers"
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3Col-3.jpg",
+            "heading": "IV Nutrition",
+            "link": "shopify:\/\/collections\/skin-care"
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
     "image-columns": {
       "type": "main__image-columns",
       "blocks": {
@@ -102,14 +139,6 @@
         "heading": "Begin Your Health Revolution",
         "image": "shopify:\/\/shop_images\/banner-bg.png",
         "animation": "fadeUp"
-      }
-    },
-    "gallery-offset": {
-      "type": "main__gallery-offset",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/gallery-long-color.jpg",
-        "heading": "GALLERY",
-        "animation": "fadeIn"
       }
     },
     "quote-text": {
@@ -193,43 +222,6 @@
         "second-column_button-link": "shopify:\/\/products\/micro-derma-abrasion"
       }
     },
-    "three-columns": {
-      "type": "main__three-columns",
-      "blocks": {
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3Col-1.jpg",
-            "heading": "Botox",
-            "link": "shopify:\/\/products\/botox-onabotulinum-a"
-          }
-        },
-        "column-2": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3Col-2.jpg",
-            "heading": "Fillers",
-            "link": "shopify:\/\/products\/fillers"
-          }
-        },
-        "column-3": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/3Col-3.jpg",
-            "heading": "Skin Care",
-            "link": "shopify:\/\/collections\/skin-care"
-          }
-        }
-      },
-      "block_order": [
-        "column-1",
-        "column-2",
-        "column-3"
-      ],
-      "settings": {
-        "animation": "fadeIn"
-      }
-    },
     "content-squares": {
       "type": "main__content-squares",
       "blocks": {
@@ -291,6 +283,14 @@
         "animation": "fadeIn"
       }
     },
+    "gallery-offset": {
+      "type": "main__gallery-offset",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gallery-long-color.jpg",
+        "heading": "GALLERY",
+        "animation": "fadeIn"
+      }
+    },
     "165721241341fc60b1": {
       "type": "page__image-with-text",
       "settings": {
@@ -309,15 +309,15 @@
   "order": [
     "hero",
     "image-with-text",
+    "three-columns",
     "image-columns",
     "text-overlay-image",
     "image-banner-callout",
-    "gallery-offset",
     "quote-text",
     "image-with-card",
     "two-columns",
-    "three-columns",
     "content-squares",
+    "gallery-offset",
     "165721241341fc60b1"
   ]
 }
