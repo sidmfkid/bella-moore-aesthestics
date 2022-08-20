@@ -2,13 +2,17 @@
     position: relative;
     width: 100%;
 z-index: 2;
+display: grid;
+
+grid-template-columns: minmax(1rem, calc(3.2rem + 5vw)) 1fr 1fr minmax(1rem, calc(3.2rem + 5vw));
+
     // height: calc(22rem + 10vw);
     &__center-image {
         position: relative;
-        display: block;
+        grid-column: 2 / 4;
         // margin: calc(-2rem - 5vw) auto 0 auto;
-        margin: 0 auto;
-        width: 80%;
+        // margin: 0 auto;
+        // width: 100%;
         box-shadow: rgba(0, 0, 0, 0.25) 15px 16px 45px;
     }
 

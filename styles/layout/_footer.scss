@@ -6,17 +6,17 @@
 
 main {
     @include media-tablet {
-        padding-bottom: 59rem;
+        padding-bottom: 51rem;
     }
 
     @include media-medium {
-        padding-bottom: 69.1rem;
+        padding-bottom: 61.1rem;
     }
 }
 
 .footer {
     width: 100%;
-    min-height: calc(24rem + 15vw);
+    min-height: calc(16rem + 15vw);
     background-color: rgb(13, 13, 13);
 
     display: flex;
@@ -79,6 +79,9 @@ main {
 
     &__nav {
         width: calc(80rem + 20vw);
+        nav{
+            width: 100%;
+        }
     }
 
     &__logo {
@@ -171,6 +174,50 @@ main {
         }
     }
 
+    .socials-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-end;
+        align-self: flex-end;
+        .socials{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-end;
+            width: 100%;
+        }
+        .icon-container{
+            text-decoration: none;
+
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            .text{
+                display: block;
+                color: var(--primary-color);
+                font-size: font-size(small);
+                margin-right: .8rem;
+            }
+            .social-icon{
+                width: 3.5rem;
+                &.tiktok{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    // svg{
+                    //     width: 4.5rem;
+                    //     height: 4.5rem;
+                    // }
+                }
+                svg{
+                    path{
+                    fill: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+
     .copyright {
         font-size: font-size(xxsmall);
         color: grey;
@@ -180,7 +227,17 @@ main {
 
     @include media-tablet {
         flex-wrap: wrap;
-        height: 60.2rem;
+        height: 52.2rem;
+        .socials-container{
+            width: 100%;
+            .socials{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .icon-container{
+                // width: 100%;
+            }
+        }
 
         &__brand {
             margin-bottom: 2rem;
@@ -210,7 +267,7 @@ main {
 
     @include media-medium {
         justify-content: flex-start;
-        height: 70.4rem;
+        height: 62.4rem;
 
         &__brand {
             width: 100%;

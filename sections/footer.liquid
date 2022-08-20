@@ -3,8 +3,9 @@
         <div class="footer__brand-content">
 
             <div class="footer__logo-container">
-                <img class="footer__logo"
+                <img
                     alt=""
+                    class="footer__logo"
                     src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/logo2.png?v=1652986117">
             </div>
 
@@ -25,21 +26,38 @@
             </div>
         </div>
     </div>
-    <nav class="footer__nav">
-        {% for link in linklists.main-menu.links %}
-            <div class="footer__nav-item">
-                <div class="footer__nav-link-container">
-                    <a href="{{ link.url }}" class="footer__nav-link">{{ link.title }}</a>
-                </div>
-                {% for sub_link in link.links %}
-                    <div class="footer__sub-link-container">
-                        <a href="{{ sub_link.url }}" class="footer__sub-link">{{ sub_link.title }}</a>
+    <div class="footer__nav">
+        <nav>
+            {% for link in linklists.alt-menu.links %}
+                <div class="footer__nav-item">
+                    <div class="footer__nav-link-container">
+                        <a href="{{ link.url }}" class="footer__nav-link">{{ link.title }}</a>
                     </div>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </nav>
-    <small class="copyright">All Rights Reserved {{ shop.name | upcase }} &copy;</small>
+                    {% for sub_link in link.links %}
+                        <div class="footer__sub-link-container">
+                            <a href="{{ sub_link.url }}" class="footer__sub-link">{{ sub_link.title }}</a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </nav>
+    </div>
+    <div class="socials-container">
+        <div class="socials">
+            <a class="icon-container" href="">
+                <!-- <span class="text">Instagram</span> -->
+                <span class="social-icon">{% render 'icon-instagram' %}</span>
+            </a>
+            <a class="icon-container" href="">
+                <!-- <span class="text">Facebook</span> -->
+                <span class="social-icon">{% render 'icon-facebook' %}</span>
+            </a>
+
+        </div>
+        <small class="copyright">All Rights Reserved
+            {{ shop.name | upcase }} &copy;</small>
+    </div>
+
 </footer>
 
 {% schema %}

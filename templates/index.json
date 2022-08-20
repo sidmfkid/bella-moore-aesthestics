@@ -32,6 +32,7 @@
     },
     "three-columns": {
       "type": "main__three-columns",
+      "disabled": true,
       "blocks": {
         "column-1": {
           "type": "column",
@@ -67,6 +68,49 @@
         "animation": "fadeIn"
       }
     },
+    "1661017881f47145a8": {
+      "type": "main__image-columns",
+      "blocks": {
+        "1661017881f5cb0785-0": {
+          "type": "column",
+          "settings": {
+            "heading": "Toxins \/ Botox",
+            "para": "Our Onabotulinum A\/Botox injections are the perfect way to reduce the appearance of facial wrinkles and give you a more youthful look. In addition to reducing wrinkles, our Botox injections can also help treat conditions such as neck spasms, excessive sweating, an overactive bladder, and lazy eye. If you suffer from chronic migraines, our Botox injections may also help prevent them.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/3Col-1.jpg",
+            "button__link": "shopify:\/\/products\/botox-onabotulinum-a"
+          }
+        },
+        "1661017881f5cb0785-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Dermal Fillers",
+            "para": "If you're looking for a way to restore volume and fullness to your skin, Bella Moore Aesthetics Fillers are the perfect solution. Our fillers are specifically indicated for the correction of facial lines, wrinkles, and folds, providing you with a more youthful appearance.",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/3Col-2.jpg",
+            "button__link": "shopify:\/\/products\/fillers"
+          }
+        },
+        "1661017881f5cb0785-2": {
+          "type": "column",
+          "settings": {
+            "heading": "IV Nutrition",
+            "para": "",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_happy-cheerful-woman-relaxing-while-iv-infusion-in.jpg",
+            "button__link": "shopify:\/\/products\/iv-nutrition"
+          }
+        }
+      },
+      "block_order": [
+        "1661017881f5cb0785-0",
+        "1661017881f5cb0785-1",
+        "1661017881f5cb0785-2"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
     "image-columns": {
       "type": "main__image-columns",
       "blocks": {
@@ -76,7 +120,7 @@
             "heading": "HydraFacials",
             "para": "HydraFacials are perfect for anyone who wants to improve the appearance of their skin. Whether you are concerned about wrinkles, fine lines, dark spots, or dryness, HydraFacials can help. The treatment is gentle and non-invasive, and it works for all skin types.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_a-mature-couple-running-in-the-park-and-looking-co.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_smiling-cute-millennial-african-american-lady-with.jpg",
             "button__link": "shopify:\/\/products\/hydro-facials"
           }
         },
@@ -86,7 +130,7 @@
             "heading": "Microdermabrasion",
             "para": "Microdermabrasion is the latest in revolutionary skincare technology. This non-invasive procedure uses tiny abrasive crystals to sweep away dead skin cells, dirt, and debris that can dull your complexion. Microdermabrasion treatments can help you achieve the smooth, even texture you want without resorting to surgery or other invasive procedures.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_a-group-of-women-training-in-the-gym.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_laser-rejuvenation-treatment.jpg",
             "button__link": "shopify:\/\/products\/micro-derma-abrasion"
           }
         },
@@ -96,7 +140,7 @@
             "heading": "Chemical Peel",
             "para": "If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_young-female-swimmer-swimming-in-pool.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_chemical-peel-face-treatment-with-retinol-serum.jpg",
             "button__link": "shopify:\/\/products\/chemical-peel"
           }
         },
@@ -106,7 +150,7 @@
             "heading": "Lasers",
             "para": "This exciting new laser treatment can help you achieve tighter, more youthful-looking skin without the need for injectables. Fatona Lasers work by stimulating collagen production to promote full-thickness contraction of the skin. This results in a noticeable reduction in wrinkles and sagging skin.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_happy-cute-shy-middle-aged-woman-laughing-anti-ag.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_cosmetologist-performing-laser-hair-removal-proced.jpg",
             "button__link": "shopify:\/\/collections\/lasers"
           }
         }
@@ -121,8 +165,52 @@
         "animation": "fadeIn"
       }
     },
+    "166101825525656714": {
+      "type": "main__image-columns",
+      "blocks": {
+        "1661018255ae7d3fcb-0": {
+          "type": "column",
+          "settings": {
+            "heading": "Kybella",
+            "para": "",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_attractive-young-woman-gets-cosmetic-face-injectio.jpg",
+            "button__link": "shopify:\/\/products\/kybella"
+          }
+        },
+        "1661018255ae7d3fcb-1": {
+          "type": "column",
+          "settings": {
+            "heading": "Mesotherapy",
+            "para": "",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_localized-cryotherapy-treatment-at-spa.jpg",
+            "button__link": "shopify:\/\/products\/meso-therapy"
+          }
+        },
+        "1661018255ae7d3fcb-2": {
+          "type": "column",
+          "settings": {
+            "heading": "Body Sculpting",
+            "para": "",
+            "button__text": "Learn More",
+            "image": "shopify:\/\/shop_images\/750x1000_rf-skin-tightening-belly.jpg",
+            "button__link": "shopify:\/\/products\/body-sculpting"
+          }
+        }
+      },
+      "block_order": [
+        "1661018255ae7d3fcb-0",
+        "1661018255ae7d3fcb-1",
+        "1661018255ae7d3fcb-2"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
     "16610111211520fb01": {
       "type": "main__three-columns",
+      "disabled": true,
       "blocks": {
         "6b8d45ac-481c-4e53-91bb-fdb2257a89cc": {
           "type": "column",
@@ -354,7 +442,9 @@
     "hero",
     "image-with-text",
     "three-columns",
+    "1661017881f47145a8",
     "image-columns",
+    "166101825525656714",
     "16610111211520fb01",
     "text-overlay-image",
     "quote-text",

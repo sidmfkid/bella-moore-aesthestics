@@ -1,7 +1,10 @@
-<div data-animate="{{ section.settings.animation }}" class="image-columns">
-  {% for block in section.blocks %}
-    <!--
-      <style>
+<div data-animate="{{ section.settings.animation }}" class="image-columns-{{ section.blocks | size }}">
+
+    {% assign blockSize = section.blocks | size %}
+
+    {% for block in section.blocks %}
+        <!--
+      <temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><temp data-prettydiff-ignore><style>
 
           .image-columns__column--{{ forloop.index }}{
               background: url({{ block.settings.image | image_url }});
@@ -9,135 +12,139 @@
               background-size: cover;
               background-repeat: no-repeat;
           }
-      </style>
+      </style></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp></temp>
     -->
 
-    <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
-      <div class="image-columns__bg-image">
-        <img
-          srcset="
-            {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
-            {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-            {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
-          "
-          sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px"
-          src="{{ block.settings.image | image_url: width: 375 }}"
-          alt="{{ block.settings.image.alt }}"
-          height="{{ block.settings.image.height }}"
-          width="{{ block.settings.image.width }}"
-          loading="lazy"
-        >
-      </div>
-      <div class="image-columns__heading">
-        <span>{{ block.settings.heading | escape }}</span>
-      </div>
-      <div class="image-columns__content">
-        <p class="image-columns__para">
-          {{ block.settings.para }}
-        </p>
-        <div class="image-columns__btn-container">
-          <a class="image-columns__btn btn btn__secondary--md" href="{{ block.settings.button__link }}">
-            {{- block.settings.button__text -}}
-          </a>
+        <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
+            <div class="image-columns__bg-image">
+
+                {% if blockSize == 4 %}
+                    <img srcset="
+                                                                                                                                                                                      {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+                                                                                                                                                                                      {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                                                                                                                                                                                      {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                                                                                                                                                                                      {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                                                                                                                                                                                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 375 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
+                {% endif %}
+
+                {% if blockSize == 3 %}
+                    <img srcset="
+                                                                                                                                                                                                              {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 600 }} 275w,{%- endif -%}
+                                                                                                                                                                                                              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                                                                                                                                                                                                              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 900 }} 750w,{%- endif -%}
+                                                                                                                                                                                                              {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                                                                                                                                                                                                              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 700px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 750 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
+                {% endif %}
+
+            </div>
+            <div class="image-columns__heading">
+                <span>{{ block.settings.heading | escape }}</span>
+            </div>
+            <div class="image-columns__content">
+                <p class="image-columns__para">
+                    {{ block.settings.para }}
+                </p>
+                <div class="image-columns__btn-container">
+                    <a class="image-columns__btn btn btn__secondary--md" href="{{ block.settings.button__link }}">
+                        {{- block.settings.button__text -}}
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  {% endfor %}
+    {% endfor %}
 </div>
 
 {% schema %}
 {
-  "name": "Image Columns",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Animation",
-      "info": "Entrance & Exit Animations"
-    },
-    {
-      "type": "select",
-      "id": "animation",
-      "label": "Animation",
-      "options": [
+    "name": "Image Columns",
+    "settings": [
         {
-          "value": "fadeIn",
-          "label": "Fade In"
+            "type": "header",
+            "content": "Animation",
+            "info": "Entrance & Exit Animations"
         },
         {
-          "value": "fadeDown",
-          "label": "Fade Down"
-        },
-        {
-          "value": "fadeUp",
-          "label": "Fade Up"
-        },
-        {
-          "value": "fadeRight",
-          "label": "Fade Right"
-        },
-        {
-          "value": "fadeLeft",
-          "label": "Fade Left"
+            "type": "select",
+            "id": "animation",
+            "label": "Animation",
+            "options": [
+                {
+                    "value": "fadeIn",
+                    "label": "Fade In"
+                },
+                {
+                    "value": "fadeDown",
+                    "label": "Fade Down"
+                },
+                {
+                    "value": "fadeUp",
+                    "label": "Fade Up"
+                },
+                {
+                    "value": "fadeRight",
+                    "label": "Fade Right"
+                },
+                {
+                    "value": "fadeLeft",
+                    "label": "Fade Left"
+                }
+            ],
+            "default": "fadeIn",
+            "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
         }
-      ],
-      "default": "fadeIn",
-      "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
-    }
-  ],
-  "max_blocks": 5,
-  "blocks": [
-    {
-      "name": "Column",
-      "type": "column",
-      "settings": [
+    ],
+    "max_blocks": 5,
+    "blocks": [
         {
-          "type": "text",
-          "id": "heading",
-          "label": "Heading"
-        },
-        {
-          "type": "textarea",
-          "id": "para",
-          "label": "Paragraph"
-        },
-        {
-          "type": "text",
-          "id": "button__text",
-          "label": "Button Text"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Background Image"
-        },
-        {
-          "type": "url",
-          "id": "button__link",
-          "label": "Heading"
+            "name": "Column",
+            "type": "column",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "textarea",
+                    "id": "para",
+                    "label": "Paragraph"
+                },
+                {
+                    "type": "text",
+                    "id": "button__text",
+                    "label": "Button Text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Background Image"
+                },
+                {
+                    "type": "url",
+                    "id": "button__link",
+                    "label": "Heading"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Image Columns",
-      "blocks": [
+    ],
+    "presets": [
         {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
+            "name": "Image Columns",
+            "blocks": [
+                {
+                    "type": "column"
+                },
+                {
+                    "type": "column"
+                },
+                {
+                    "type": "column"
+                },
+                {
+                    "type": "column"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 {% endschema %}

@@ -3,6 +3,26 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fill, 68.5rem);
+    &-1{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, 68.5rem);
+    }
+    &-2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 68.5rem);
+    }
+    &-3{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(auto-fill, 68.5rem);
+    }
+    &-4{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto-fill, 68.5rem);
+    }
     // height: auto;
 
     &__bg-image {
@@ -117,11 +137,87 @@
         grid-template-columns: repeat(4, 1fr);
 
         grid-template-rows: repeat(2, 60.5rem);
+        &-1{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 60.5rem);
+        }
+        &-2{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 60.5rem);
+        .image-columns__column {
 
+            &:nth-of-type(1) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(2) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(3) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(4) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+        }
+        }
+        &-3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 60.5rem);
+        .image-columns__column {
+            // img{
+            //     width: 100%;
+            //     height: auto;
+            //     object-position: center;
+            //     object-fit: cover;
+            // }
+            &:nth-of-type(1) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(2) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(3) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+
+            &:nth-of-type(4) {
+                grid-row: auto;
+                grid-column: 1/ 5;
+            }
+        }
+        }
+        &-4{
+            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-rows: repeat(2, 60.5rem);
+            .image-columns__bg-image {
+                img {
+                    width: auto;
+                    height: 100%;
+    
+                }
+            }
+
+        }
         &__bg-image {
             img {
-                width: auto;
-                height: 100%;
+                width: 100%;
+                height: auto;
 
             }
         }
@@ -160,11 +256,34 @@
                 grid-column: 3/ 5;
             }
         }
+
     }
 
     @include media-medium {
         grid-template-rows: repeat(4, 60.5rem);
+        &-1{
+            grid-template-rows: repeat(1, 60.5rem);
 
+        }
+        &-2{
+        grid-template-rows: repeat(2, 60.5rem);
+
+        }
+        &-3{
+        grid-template-rows: repeat(3, 60.5rem);
+
+        }
+        &-4{
+        grid-template-rows: repeat(4, 60.5rem);
+
+        .image-columns__bg-image {
+            img {
+                width: 100%;
+                height: auto;
+
+            }
+        }
+        }
         &__column {
 
             &:nth-of-type(1),
@@ -195,9 +314,26 @@
         &__content {
             grid-row: 5/8;
         }
+        .image-columns__column {
+            img{
+                width: auto;
+                height: 60.5rem;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
     }
 
     @include media-small {
+        &-4{
+            .image-columns__bg-image {
+                img {
+                    width: auto;
+                    height: 100%;
+    
+                }
+            }
+        }
         &__heading {
             grid-row: 4/5;
         }

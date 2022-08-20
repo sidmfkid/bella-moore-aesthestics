@@ -96,7 +96,24 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true
+    "currency_code_enabled": true,
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "new-menu": "main-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "new-menu": "alt-menu"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
