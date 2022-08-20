@@ -1,1 +1,26 @@
-{"sections":{"page-header":{"type":"page__header","settings":{"image":"shopify:\/\/shop_images\/1200X1200_WOMAN-WITH-BACKPACK-AND-RAISED-UP-ARMS-VINTAGE.jpg"}}},"order":["page-header"]}
+{
+  "sections": {
+    "page-header": {
+      "type": "page__header",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/1200x1200_woman-with-backpack-and-raised-up-arms-vintage.jpg"
+      }
+    },
+    "16610065718af0c534": {
+      "type": "main__image-with-text",
+      "settings": {
+        "title": "About",
+        "para": "",
+        "image_position": "row",
+        "image": "shopify:\/\/shop_images\/mary-apiafi-moore-725.jpg",
+        "animation": "fadeIn",
+        "button_link": "",
+        "button_text": ""
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "16610065718af0c534"
+  ]
+}
