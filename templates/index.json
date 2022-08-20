@@ -118,36 +118,6 @@
         "column-4"
       ],
       "settings": {
-        "animation": "fadeRight"
-      }
-    },
-    "text-overlay-image": {
-      "type": "main__text-overlay-image",
-      "disabled": true,
-      "settings": {
-        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
-        "image": "shopify:\/\/shop_images\/bg-image-overlay.jpg",
-        "animation": "fadeIn",
-        "heading": "Begin Your Aesthestics journey Today",
-        "para": "You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step.",
-        "button__text": "GET STARTED",
-        "button__link": "shopify:\/\/collections"
-      }
-    },
-    "image-banner-callout": {
-      "type": "main__banner-callout",
-      "settings": {
-        "heading": "Begin Your Aesthestics Journey Today",
-        "image": "shopify:\/\/shop_images\/banner-bg.png",
-        "animation": "fadeUp"
-      }
-    },
-    "quote-text": {
-      "type": "main__quote-text",
-      "settings": {
-        "quote__text": "Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise",
-        "quote__author": "Sheila P.",
-        "quote__info": "Medical Grade HCG",
         "animation": "fadeIn"
       }
     },
@@ -186,6 +156,36 @@
       ],
       "settings": {
         "animation": "fadeIn"
+      }
+    },
+    "text-overlay-image": {
+      "type": "main__text-overlay-image",
+      "disabled": true,
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "image": "shopify:\/\/shop_images\/bg-image-overlay.jpg",
+        "animation": "fadeIn",
+        "heading": "Begin Your Aesthestics journey Today",
+        "para": "You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step.",
+        "button__text": "GET STARTED",
+        "button__link": "shopify:\/\/collections"
+      }
+    },
+    "quote-text": {
+      "type": "main__quote-text",
+      "settings": {
+        "quote__text": "Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise",
+        "quote__author": "Sheila P.",
+        "quote__info": "Medical Grade HCG",
+        "animation": "fadeIn"
+      }
+    },
+    "image-banner-callout": {
+      "type": "main__banner-callout",
+      "settings": {
+        "heading": "Begin Your Aesthestics Journey Today",
+        "image": "shopify:\/\/shop_images\/banner-bg.png",
+        "animation": "fadeUp"
       }
     },
     "image-with-card": {
@@ -355,10 +355,10 @@
     "image-with-text",
     "three-columns",
     "image-columns",
-    "text-overlay-image",
-    "image-banner-callout",
-    "quote-text",
     "16610111211520fb01",
+    "text-overlay-image",
+    "quote-text",
+    "image-banner-callout",
     "image-with-card",
     "two-columns",
     "content-squares",
