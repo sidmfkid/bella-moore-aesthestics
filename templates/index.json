@@ -245,6 +245,7 @@
     },
     "two-columns": {
       "type": "main__two-columns",
+      "disabled": true,
       "settings": {
         "logo": "shopify:\/\/shop_images\/logo__box.jpg",
         "logo_display": "",
