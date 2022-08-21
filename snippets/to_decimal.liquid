@@ -1,0 +1,12 @@
+{% if alpha == 100 %}
+    1
+{% endif %}
+{% if alpha < 10 and alpha != 0 %}
+    .0{{ alpha }}
+{% endif %}
+{% if alpha < 10 and alpha == 0 %}
+    {{ alpha }}
+{% endif %}
+{% if alpha >= 10 and alpha < 100 %}
+    .{{ alpha }}
+{% endif %}

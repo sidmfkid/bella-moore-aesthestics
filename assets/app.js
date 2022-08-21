@@ -133,6 +133,9 @@ if (!Shopify.designMode) {
     if (section.dataset.animate === "fadeDown") {
       animateFadeDown(section, entry);
     }
+    if (section.dataset.animate === "none") {
+      animateNone(section, entry);
+    }
   }
 
   function animateFadeIn(section, entry) {
@@ -156,6 +159,9 @@ if (!Shopify.designMode) {
     if (entry.isIntersecting /*&& !section.classList.contains("fade-in")*/) {
       section.classList.add("fade-up");
     }
+  }
+  function animateNone(section, entry) {
+    section.classList.add("show");
   }
 
   function animateFadeDown(section, entry) {

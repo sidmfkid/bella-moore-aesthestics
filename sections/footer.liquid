@@ -1,34 +1,120 @@
+{% assign overlay = section.settings.overlay_color %}
+
+{% capture overlay_alpha %}
+    {% render 'to_decimal', alpha: section.settings.overlay_alpha %}
+{% endcapture %}
+
+{% assign gradient1 = section.settings.gradient_color_1 %}
+{% capture gradient1_alpha %}
+    {% render 'to_decimal', alpha: section.settings.gradient1_alpha %}
+{% endcapture %}
+
+{% assign gradient2 = section.settings.gradient_color_2 %}
+{% capture gradient2_alpha %}
+    {% render 'to_decimal', alpha: section.settings.gradient2_alpha %}
+{% endcapture %}
+{% capture name %}
+    {% if section.settings.shop_name == blank %}
+        {{shop.name}}
+    {% else %}
+        {{ section.settings.shop_name }}
+    {% endif %}
+{% endcapture %}
+<style>
+    .footer {
+    background-color: {% render 'to_rgba', color: overlay, alpha: overlay_alpha %};
+    }
+    .footer__brand::before{
+
+            content: "";
+            position: absolute;
+            width: calc(100% + 2rem);
+            height: calc(100% + 4rem);
+            top: -2rem;
+            left: -2rem;
+            background: linear-gradient(to right,{% render 'to_rgba', color: gradient1, alpha: gradient1_alpha %}, {% render 'to_rgba', color: gradient2, alpha: gradient2_alpha %});
+            /* mix-blend-mode: luminosity; */
+
+            z-index: -2;
+    }
+    @media (max-width: 900px) {
+        .footer__brand::before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: -2rem;
+        left: -2rem;
+        background: transparent ;
+        z-index: -2;
+        }
+        .footer::before{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(to right,{% render 'to_rgba', color: gradient1, alpha: gradient1_alpha %}, {% render 'to_rgba', color: gradient2, alpha: gradient2_alpha %});
+        }
+    }
+    @media (max-width: 600px) {
+        .footer__brand::before{
+        content: "";
+        position: absolute;
+        width: calc(100% + 2rem);
+        height: 62.4rem;
+        top: -2rem;
+        left: -2rem;
+        background: linear-gradient(to right,{% render 'to_rgba', color: gradient1, alpha: gradient1_alpha %}, {% render 'to_rgba', color: gradient2, alpha: gradient2_alpha %});
+        z-index: -2;
+        }
+    }
+    .footer::after{
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: url('{{ section.settings.bg_image | image_url }}');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(.7);
+    }
+</style>
+
 <footer class="footer">
     <div class="footer__brand">
         <div class="footer__brand-content">
 
-            <div class="footer__logo-container">
-                <img
-                    alt=""
-                    class="footer__logo"
-                    src="https://cdn.shopify.com/s/files/1/0581/1680/0605/files/logo2.png?v=1652986117">
-            </div>
+            <a class="footer__logo-container" href="/">
+                <img alt="" class="footer__logo" loading="lazy" width="{{section.settings.logo.width }}" height="{{section.settings.logo.height }}" src="{{ section.settings.logo | image_url }}">
+            </a>
 
             <div class="footer__heading-container">
-                <h3 class="footer__heading">Bella Moore Aesthestics</h3>
+                <h3 class="footer__heading">{{ name }}</h3>
             </div>
         </div>
         <div class="footer__info">
-            <div class="footer__address">123 Made Up St. Barbonas, IL 12345</div>
-            <div class="footer__phone">(123)-456-7890</div>
+            <div class="footer__address">{{ section.settings.address }}</div>
+            <div class="footer__phone">{{ section.settings.phone }}</div>
             <div class="footer__hours">
                 <span>
-                    Mon - Sat | 9am - 6pm
+                    {{ section.settings.hours }}
                 </span>
-                <span>
+                <!-- <span>
                     Sun | Closed
-                </span>
+                </span> -->
             </div>
         </div>
     </div>
     <div class="footer__nav">
         <nav>
-            {% for link in linklists.alt-menu.links %}
+            {% for link in section.settings.new_menu.links %}
                 <div class="footer__nav-item">
                     <div class="footer__nav-link-container">
                         <a href="{{ link.url }}" class="footer__nav-link">{{ link.title }}</a>
@@ -44,14 +130,18 @@
     </div>
     <div class="socials-container">
         <div class="socials">
-            <a class="icon-container" href="">
-                <!-- <span class="text">Instagram</span> -->
-                <span class="social-icon">{% render 'icon-instagram' %}</span>
-            </a>
-            <a class="icon-container" href="">
-                <!-- <span class="text">Facebook</span> -->
-                <span class="social-icon">{% render 'icon-facebook' %}</span>
-            </a>
+            {% if settings.social_instagram_link != blank %}
+                <a class="icon-container" href="{{settings.social_instagram_link}}">
+                    <!-- <span class="text">Instagram</span> -->
+                    <span class="social-icon">{% render 'icon-instagram' %}</span>
+                </a>
+            {% endif %}
+            {% if settings.social_facebook_link != blank %}
+                <a class="icon-container" href="{{settings.social_facebook_link}}">
+                    <!-- <span class="text">Facebook</span> -->
+                    <span class="social-icon">{% render 'icon-facebook' %}</span>
+                </a>
+            {% endif %}
 
         </div>
         <small class="copyright">All Rights Reserved
@@ -62,14 +152,114 @@
 
 {% schema %}
 {
-"name": "Footer",
-"settings": [
-{
-"type": "link_list",
-"id": "new-menu",
-"label": "Navigation Menu",
-"default": "main-menu",
-"info": "Select Menu"
-}
-]
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "new_menu",
+      "label": "Navigation Menu",
+      "default": "main-menu",
+      "info": "Select Menu"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "shop_name",
+      "label": "Shop Name",
+      "info": "Name Of Your Business",
+      "placeholder": "Shop Name"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Shop Address",
+      "default": "123 Made Up St. Barbonas, IL 12345",
+      "info": "Shop Location",
+      "placeholder": "Address"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone Number",
+      "default": "(123)-456-7890",
+      "info": "Shop Phone Number",
+      "placeholder": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "hours",
+      "label": "Store Hours",
+      "default": "Mon - Sat | 9am - 6pm, Sun | Closed",
+      "info": "Shop Operational Hours",
+      "placeholder": "Hours"
+    },
+    {
+      "type": "header",
+      "content": "Images",
+      "info": "Section Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Section Colors"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Color Overlay",
+      "default": "#0d0d0d"
+    },
+    {
+      "type": "range",
+      "id": "overlay_alpha",
+      "label": "Color Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 80
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_1",
+      "label": "Color Gradient Left",
+      "default": "#cdb16c"
+    },
+    {
+      "type": "range",
+      "id": "gradient1_alpha",
+      "label": "Color Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 30
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_2",
+      "label": "Color Gradient Right",
+      "default": "#cdb16c"
+    },
+    {
+      "type": "range",
+      "id": "gradient2_alpha",
+      "label": "Color Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    }
+  ]
 } {% endschema %}

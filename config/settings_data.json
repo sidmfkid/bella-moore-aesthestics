@@ -84,19 +84,19 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "text",
+    "social_facebook_link": "https:\/\/facebook.com",
+    "social_instagram_link": "https:\/\/instagram.com",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "currency_code_enabled": true,
     "social_twitter_link": "",
-    "social_facebook_link": "",
     "social_pinterest_link": "",
-    "social_instagram_link": "",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
     "social_vimeo_link": "",
-    "predictive_search_enabled": true,
-    "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
-    "currency_code_enabled": true,
     "sections": {
       "header": {
         "type": "header",
@@ -107,7 +107,19 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "new-menu": "alt-menu"
+          "new_menu": "alt-menu",
+          "shop_name": "",
+          "address": "123 Made Up St. Barbonas, IL 12345",
+          "phone": "(123)-456-7890",
+          "hours": "Mon - Sat | 9am - 6pm, Sun | Closed",
+          "logo": "shopify:\/\/shop_images\/logo2.png",
+          "bg_image": "shopify:\/\/shop_images\/1500x1000_woman-with-dark-short-hair-sitting-and-pulling-her.jpg",
+          "overlay_color": "#0d0d0d",
+          "overlay_alpha": 80,
+          "gradient_color_1": "#cdb16c",
+          "gradient1_alpha": 30,
+          "gradient_color_2": "#cdb16c",
+          "gradient2_alpha": 0
         }
       }
     },

@@ -29,28 +29,44 @@
 
     &__content {
         width: 100%;
-        height: calc(40rem + 5vw);
+        height: calc(45rem + 5vw);
         top: 0;
         left: 0;
-        // position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
+        // position: absolute;
+    }
+    &__text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0 calc(3.2rem + 5vw);
     }
 
 
 
     &__heading {
+        display: block;
         font-size: calc(4rem + 1.5vw);
         color: white;
         text-align: center;
         font-weight: 100;
     }
+    &__para{
+        margin-top: 2.2rem;
+        font-size: calc(1rem + 1vw);
+        color: white;
+        text-align: center;
+        font-weight: 100;
+
+    }
 
     @include media-tablet {
         &__content {
-            padding: 0 4rem;
-            height: calc(25rem + 5vw);
+            // padding: 0 4rem;
+            height: calc(40rem + 5vw);
 
         }
 
@@ -73,8 +89,8 @@
         }
 
         &__content {
-            padding: 0 4rem;
-            height: calc(20rem + 5vw);
+            // padding: 0 4rem;
+            height: calc(25rem + 5vw);
 
         }
 
@@ -83,11 +99,18 @@
             top: 0;
 
         }
+        &__text{
+
+            padding: 0 calc(1.2rem + 2.5vw);
+        }
     }
 
     @include media-small {
         padding-top: 2rem;
+        &__text{
 
+            padding: 0 calc(1.2rem + .5vw);
+        }
         &__bg {
             // height: calc(100% - 20vw);
             width: auto;

@@ -1,26 +1,28 @@
+{% style %}
+
+.banner-callout {
+    padding-top: {{section.settings.padding-top}}px;
+    padding-bottom: {{section.settings.padding-bottom}}px;
+}
+
+{% endstyle %}
+
 <div data-animate="{{ section.settings.animation }}" class="banner-callout">
     <div class="banner-callout__content">
         <div class="banner-callout__svg-container">
-            <img srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
-            {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
-            {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
-            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
-            sizes="(max-width: 400px) 713px, (max-width: 600px) 735px,(max-width: 910px) 900px,(max-width: 1500px) 1500px "
-            width="{{ section.settings.image.width }}"1
-            height="{{ section.settings.image.height }}"
-            src="{{ section.settings.image | image_url: width: 1500 }}"
-            class="banner-callout__bg"
-            loading="lazy">
-            <!-- <img
+            <img srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%} {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%} {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%} {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%} {{ section.settings.image | image_url }} {{ section.settings.image.width }}w" sizes="(max-width: 400px) 713px, (max-width: 600px) 735px,(max-width: 910px) 900px,(max-width: 1500px) 1500px " width="{{ section.settings.image.width }}" 1 height="{{ section.settings.image.height }}" src="{{ section.settings.image | image_url: width: 1500 }}" class="banner-callout__bg" loading="lazy"> <!-- <img
                 alt=""
                 class="banner-callout__bg"
                 height="575"
                 src="{{ section.settings.image | image_url: width: 1500 }}"
                 width="1506"> -->
         </div>
-
-        <h2 class="banner-callout__heading">{{ section.settings.heading }}</h2>
+        <div class="banner-callout__text">
+            <h2 class="banner-callout__heading">{{ section.settings.heading }}</h2>
+            {% if section.settings.para != blank %}
+            <p class="banner-callout__para">{{ section.settings.para }}</p>
+            {% endif %}
+        </div>
     </div>
 </div>
 
@@ -28,6 +30,16 @@
 {
   "name": "Banner Callout",
   "settings": [
+    {
+      "type": "header",
+      "content": "Text Content"
+    },
+    {
+      "type": "textarea",
+      "id": "para",
+      "label": "Body Text",
+      "default": "You can count on Bella Moore Aesthetics to be there offering our expertise and support, whether you’re experiencing a nerve disorder, joint pain, sexual issues, weight gain, or a lack of natural essentials. We will be with you for every step."
+    },
     {
       "type": "text",
       "id": "heading",
@@ -71,6 +83,30 @@
       ],
       "default": "fadeIn",
       "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding-top",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-bottom",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
     }
   ],
   "presets": [
@@ -79,5 +115,4 @@
       "name": "Banner Callout"
     }
   ]
-}
-{% endschema %}
+} {% endschema %}

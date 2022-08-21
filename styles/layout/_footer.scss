@@ -17,7 +17,6 @@ main {
 .footer {
     width: 100%;
     min-height: calc(16rem + 15vw);
-    background-color: rgb(13, 13, 13);
 
     display: flex;
     justify-content: center;
@@ -33,16 +32,16 @@ main {
         z-index: 1;
 
         &::before {
-            content: "";
-            content: "";
-            position: absolute;
-            width: calc(100% + 2rem);
-            height: calc(100% + 4rem);
-            top: -2rem;
-            left: -2rem;
-            background: $primary-color;
-            mix-blend-mode: luminosity;
-            z-index: -1;
+            // content: "";
+            // content: "";
+            // position: absolute;
+            // width: calc(100% + 2rem);
+            // height: calc(100% + 4rem);
+            // top: -2rem;
+            // left: -2rem;
+            // background: $primary-color;
+            // mix-blend-mode: luminosity;
+            // z-index: -1;
         }
     }
 
@@ -55,6 +54,7 @@ main {
         height: 9rem;
         width: 9rem;
         margin: 0 auto;
+        text-decoration: none;
     }
 
     &__heading-container {
@@ -102,7 +102,7 @@ main {
             width: 100%;
             height: calc(100% + 1rem);
             z-index: -1;
-            background: rgb(13, 13, 13);
+            // background: rgb(13, 13, 13);
         }
     }
 
@@ -126,6 +126,7 @@ main {
 
     &__nav-item {
         width: 20%;
+        margin-bottom: .8rem;
     }
 
     &__nav-link-container {
@@ -188,7 +189,8 @@ main {
         }
         .icon-container{
             text-decoration: none;
-
+position: relative;
+z-index: 2;
             width: fit-content;
             display: flex;
             align-items: center;
@@ -200,7 +202,7 @@ main {
                 margin-right: .8rem;
             }
             .social-icon{
-                width: 3.5rem;
+                width: 3rem;
                 &.tiktok{
                     width: 4.5rem;
                     height: 4.5rem;
@@ -232,9 +234,12 @@ main {
             width: 100%;
             .socials{
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
             }
             .icon-container{
+                &:not(.icon-container:nth-of-type(1)){
+                    margin-left: .8rem;
+                }
                 // width: 100%;
             }
         }

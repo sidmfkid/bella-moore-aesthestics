@@ -402,14 +402,20 @@ main {
 
 .fade-up, .fade-down {
   opacity: 1;
-  transition: all 0.5s ease-in-out 0.2s;
-  transform: translateY(0px);
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0px) translateX(0px);
 }
 
 .fade-right, .fade-left {
   opacity: 1;
   transition: all 0.7s ease-in-out;
-  transform: translateY(0px);
+  transform: translateY(0px) translateX(0px);
+}
+
+.show {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(0px) translateX(0px);
 }
 
 html {
@@ -1806,23 +1812,37 @@ html {
 }
 .banner-callout__content {
   width: 100%;
-  height: calc(40rem + 5vw);
+  height: calc(45rem + 5vw);
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.banner-callout__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 calc(3.2rem + 5vw);
+}
 .banner-callout__heading {
+  display: block;
   font-size: calc(4rem + 1.5vw);
+  color: white;
+  text-align: center;
+  font-weight: 100;
+}
+.banner-callout__para {
+  margin-top: 2.2rem;
+  font-size: calc(1rem + 1vw);
   color: white;
   text-align: center;
   font-weight: 100;
 }
 @media screen and (max-width: 900px) {
   .banner-callout__content {
-    padding: 0 4rem;
-    height: calc(25rem + 5vw);
+    height: calc(40rem + 5vw);
   }
   .banner-callout__heading {
     font-size: calc(3rem + 1vw);
@@ -1838,17 +1858,22 @@ html {
     width: auto;
   }
   .banner-callout__content {
-    padding: 0 4rem;
-    height: calc(20rem + 5vw);
+    height: calc(25rem + 5vw);
   }
   .banner-callout__svg-container {
     height: calc(30rem + 5vw);
     top: 0;
   }
+  .banner-callout__text {
+    padding: 0 calc(1.2rem + 2.5vw);
+  }
 }
 @media screen and (max-width: 400px) {
   .banner-callout {
     padding-top: 2rem;
+  }
+  .banner-callout__text {
+    padding: 0 calc(1.2rem + 0.5vw);
   }
   .banner-callout__bg {
     width: auto;
@@ -3121,6 +3146,48 @@ html {
   }
 }
 
+.list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(1rem, calc(3.2rem + 5vw)) 1fr 1fr minmax(1rem, calc(3.2rem + 5vw));
+  padding: 2rem;
+  row-gap: 0.8rem;
+}
+.list__heading-container {
+  grid-column: 2/4;
+}
+.list__heading {
+  font-size: calc(1.5rem + 2vw);
+  font-weight: 100;
+  color: black;
+  text-decoration: none;
+  text-decoration-color: unset;
+  background-color: unset !important;
+  background: linear-gradient(#f3c44f, #a57a0d);
+  background: -webkit-linear-gradient(#f3c44f, #a57a0d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+}
+.list__list-container {
+  grid-column: 2/4;
+  place-self: center;
+}
+.list ul > li {
+  margin-left: 15px;
+}
+.list__item {
+  font-size: calc(1.2rem + 0.5vw);
+  font-weight: 100;
+  text-align: left;
+}
+@media screen and (max-width: 400px) {
+  .list__list-container, .list__heading-container {
+    grid-column: 1/5;
+  }
+}
+
 #shopify-section-footer {
   position: absolute;
   bottom: 0;
@@ -3141,7 +3208,6 @@ html {
 .footer {
   width: 100%;
   min-height: calc(16rem + 15vw);
-  background-color: #0d0d0d;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -3152,18 +3218,6 @@ html {
   position: relative;
   z-index: 1;
 }
-.footer__brand::before {
-  content: "";
-  content: "";
-  position: absolute;
-  width: calc(100% + 2rem);
-  height: calc(100% + 4rem);
-  top: -2rem;
-  left: -2rem;
-  background: var(--primary-color);
-  mix-blend-mode: luminosity;
-  z-index: -1;
-}
 .footer__brand-content {
   width: 100%;
 }
@@ -3172,6 +3226,7 @@ html {
   height: 9rem;
   width: 9rem;
   margin: 0 auto;
+  text-decoration: none;
 }
 .footer__heading-container {
   display: block;
@@ -3211,7 +3266,6 @@ html {
   width: 100%;
   height: calc(100% + 1rem);
   z-index: -1;
-  background: #0d0d0d;
 }
 .footer__address, .footer__phone, .footer__hours {
   font-size: calc(1.2rem + 0.5vw);
@@ -3228,6 +3282,7 @@ html {
 }
 .footer__nav-item {
   width: 20%;
+  margin-bottom: 0.8rem;
 }
 .footer__nav-link-container {
   position: relative;
@@ -3291,6 +3346,8 @@ html {
 }
 .footer .socials-container .icon-container {
   text-decoration: none;
+  position: relative;
+  z-index: 2;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -3302,7 +3359,7 @@ html {
   margin-right: 0.8rem;
 }
 .footer .socials-container .icon-container .social-icon {
-  width: 3.5rem;
+  width: 3rem;
 }
 .footer .socials-container .icon-container .social-icon.tiktok {
   width: 4.5rem;
@@ -3327,7 +3384,10 @@ html {
   }
   .footer .socials-container .socials {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+  .footer .socials-container .icon-container:not(.icon-container:nth-of-type(1)) {
+    margin-left: 0.8rem;
   }
   .footer__brand {
     margin-bottom: 2rem;

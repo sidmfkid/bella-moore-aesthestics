@@ -1,0 +1,5 @@
+{%- capture rgb -%}
+    {{ color | color_to_rgb }}
+{%- endcapture -%}
+{%- assign tail = alpha | prepend: ', ' | append: ')' -%}
+{{ rgb | replace: 'rgb', 'rgba' | replace: ')', tail }}

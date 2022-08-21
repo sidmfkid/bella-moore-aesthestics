@@ -9,13 +9,12 @@
 
 <div data-animate="{{ section.settings.animation }}" class="gallery-offset">
     <div class="gallery-offset__center-image">
-        <img srcset="
-                                {%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
-                                {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
-                                {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
-                                {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                                {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-                              " sizes="(max-width: 400px) 320px, (max-width: 600px) 480px,(max-width: 900px) 720px,(max-width: 1500px) 1200px" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" src="{{ section.settings.image | image_url: width: 1500 }}" class="gallery-offset__image" alt="{{section.settings.image.alt}}"> <!--
+        <img loading="lazy" srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+{%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
+{%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+{%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+{{ section.settings.image | image_url }} {{ section.settings.image.width }}w" sizes="(max-width: 400px) 320px, (max-width: 600px) 480px,(max-width: 900px) 720px,(max-width: 1500px) 1200px" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" src="{{ section.settings.image | image_url: width: 1500 }}" class="gallery-offset__image" alt="{{section.settings.image.alt}}"> 
+<!--
       <img alt="" class="gallery-offset__image" height="615" src="{{ section.settings.image | image_url }}" width="1200">
     -->
         <div class="gallery-offset__heading-container">
@@ -23,13 +22,11 @@
         </div>
 
         <div class="gallery-offset__offset-image-container">
-            <img srcset="
-                                          {%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
-                                          {%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
-                                          {%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
-                                          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                                          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
-                                        " sizes="(max-width: 400px) 312px, (max-width: 600px) 351px,(max-width: 900px) 478px,(max-width: 1500px) 780px" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" src="{{ section.settings.image | image_url: width: 1500 }}" class="gallery-offset__offset-image" alt="{{section.settings.image.alt}}"> <!--
+            <img loading="lazy" srcset="{%- if section.settings.image.width >= 400 -%}{{ section.settings.image | image_url: width: 400 }} 400w,{%- endif -%}
+{%- if section.settings.image.width >= 600 -%}{{ section.settings.image | image_url: width: 600 }} 600w,{%- endif -%}
+{%- if section.settings.image.width >= 900 -%}{{ section.settings.image | image_url: width: 900 }} 900w,{%- endif -%}
+{%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+{{ section.settings.image | image_url }} {{ section.settings.image.width }}w" sizes="(max-width: 400px) 312px, (max-width: 600px) 351px,(max-width: 900px) 478px,(max-width: 1500px) 780px" width="{{ section.settings.image.width }}" height="{{ section.settings.image.height }}" src="{{ section.settings.image | image_url: width: 1500 }}" class="gallery-offset__offset-image" alt="{{section.settings.image.alt}}"> <!--
         <img alt="" class="gallery-offset__offset-image" height="615" src="{{ section.settings.image | image_url }}" width="1200">
       -->
         </div>
@@ -38,83 +35,83 @@
 
 {% schema %}
 {
-    "name": "Offeset Gallery",
-    "settings": [
+  "name": "Offeset Gallery",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Gallery"
+    },
+    {
+      "type": "header",
+      "content": "Animation",
+      "info": "Entrance & Exit Animations"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "options": [
         {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Main Image"
+          "value": "fadeIn",
+          "label": "Fade In"
         },
         {
-            "type": "text",
-            "id": "heading",
-            "label": "Heading",
-            "default": "Gallery"
+          "value": "fadeDown",
+          "label": "Fade Down"
         },
         {
-            "type": "header",
-            "content": "Animation",
-            "info": "Entrance & Exit Animations"
+          "value": "fadeUp",
+          "label": "Fade Up"
         },
         {
-            "type": "select",
-            "id": "animation",
-            "label": "Animation",
-            "options": [
-                {
-                    "value": "fadeIn",
-                    "label": "Fade In"
-                },
-                {
-                    "value": "fadeDown",
-                    "label": "Fade Down"
-                },
-                {
-                    "value": "fadeUp",
-                    "label": "Fade Up"
-                },
-                {
-                    "value": "fadeRight",
-                    "label": "Fade Right"
-                },
-                {
-                    "value": "fadeLeft",
-                    "label": "Fade Left"
-                }
-            ],
-            "default": "fadeIn",
-            "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
+          "value": "fadeRight",
+          "label": "Fade Right"
         },
         {
-            "type": "header",
-            "content": "Spacing"
-        },
-        {
-            "type": "range",
-            "id": "padding-top",
-            "min": 0,
-            "max": 80,
-            "step": 1,
-            "unit": "px",
-            "label": "Padding Top",
-            "default": 0
-        },
-        {
-            "type": "range",
-            "id": "padding-bottom",
-            "min": 0,
-            "max": 80,
-            "step": 1,
-            "unit": "px",
-            "label": "Padding Bottom",
-            "default": 0
+          "value": "fadeLeft",
+          "label": "Fade Left"
         }
-    ],
-    "presets": [
-        {
-            "category": "Images",
-            "name": "Gallery Offset"
-        }
-    ]
+      ],
+      "default": "fadeIn",
+      "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding-top",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-bottom",
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "category": "Images",
+      "name": "Gallery Offset"
+    }
+  ]
 }
 {% endschema %}

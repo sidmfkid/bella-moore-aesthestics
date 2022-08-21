@@ -38,7 +38,7 @@
     "page-image-with-text": {
       "type": "page__image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/1200x1200_happy-woman-with-closed-eyes-and-hands-raised-up.jpg",
+        "image": "{{ product.metafields.my_fields.product_image_1.value }}",
         "logo": "shopify:\/\/shop_images\/logo__box.jpg",
         "animation": "fadeIn",
         "padding-top": 0,

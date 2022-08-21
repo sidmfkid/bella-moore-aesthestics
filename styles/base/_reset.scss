@@ -444,13 +444,18 @@ transition: all .5s ease-in-out .2s;
 
 .fade-up, .fade-down{
   opacity: 1;
-transition: all .5s ease-in-out .2s;
-transform: translateY(0px);
+transition: all .5s ease-in-out;
+transform: translateY(0px) translateX(0px);
 }
 
 .fade-right, .fade-left{
-
   opacity: 1;
 transition: all .7s ease-in-out;
-transform: translateY(0px);
+transform: translateY(0px) translateX(0px);
+}
+
+.show {
+  opacity: 1;
+  transition: all .5s ease-in-out;
+  transform: translateY(0px) translateX(0px);
 }
