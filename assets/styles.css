@@ -1460,7 +1460,6 @@ html {
 }
 .image-columns__bg-image img {
   display: block;
-  margin: auto;
   height: auto;
   width: calc(45rem + 20vw);
 }
@@ -1478,6 +1477,22 @@ html {
 }
 .image-columns__column:active .image-columns__content, .image-columns__column:hover .image-columns__content {
   transform: translateY(0);
+}
+.image-columns__column:active .image-columns__heading, .image-columns__column:hover .image-columns__heading {
+  transform: translateY(-9.7rem);
+}
+.image-columns__column:active .image-columns__heading span, .image-columns__column:hover .image-columns__heading span {
+  filter: drop-shadow(2px 2.5px 0px black);
+}
+@media screen and (max-width: 600px) {
+  .image-columns__column:active .image-columns__heading, .image-columns__column:hover .image-columns__heading {
+    transform: translateY(-8.64rem);
+  }
+}
+@media screen and (max-width: 900px) {
+  .image-columns__column:active .image-columns__heading, .image-columns__column:hover .image-columns__heading {
+    transform: translateY(-8.64rem);
+  }
 }
 .image-columns__column--1 {
   columns: 1/2;
@@ -1498,24 +1513,28 @@ html {
   grid-column: 2/3;
   grid-row: 4/5;
   place-self: center;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
 }
 .image-columns__heading span {
   text-align: center;
   display: block;
   text-transform: uppercase;
   letter-spacing: 4px;
+  filter: drop-shadow(0px 0px 0px black);
 }
 .image-columns__content {
   transition: transform 0.3s ease-in-out;
   transform: translateY(69rem);
   place-self: stretch;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   grid-column: 1/4;
-  grid-row: 5/8;
+  grid-row: 4/8;
   background-color: rgba(0, 0, 0, 0.9);
   border-top: 10px solid var(--primary-color);
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   flex-wrap: wrap;
 }
 .image-columns__para {
@@ -1673,9 +1692,10 @@ html {
   }
   .image-columns__heading {
     grid-row: 4/5;
+    color: var(--color-primary);
   }
   .image-columns__content {
-    grid-row: 5/8;
+    grid-row: 4/8;
   }
 }
 

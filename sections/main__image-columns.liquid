@@ -1,3 +1,5 @@
+
+
 <div data-animate="{{ section.settings.animation }}" class="image-columns-{{ section.blocks | size }}">
 
     {% assign blockSize = section.blocks | size %}
@@ -16,24 +18,24 @@
     -->
 
         <div {{ block.shopify_attributes }} class="image-columns__column image-columns__column--{{ forloop.index }}">
-            <div class="image-columns__bg-image">
+            <div style="justify-content:{{ block.settings.x_position }}; align-items: {{ block.settings.y_position }};" class="image-columns__bg-image">
 
                 {% if blockSize == 4 %}
                     <img srcset="
-                                                                                                                                                                                      {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
-                                                                                                                                                                                      {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-                                                                                                                                                                                      {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                                                                                                                                                                                      {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-                                                                                                                                                                                      {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 375 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
+            {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+            {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 450px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 375 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
                 {% endif %}
 
                 {% if blockSize == 3 %}
                     <img srcset="
-                                                                                                                                                                                                              {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 600 }} 275w,{%- endif -%}
-                                                                                                                                                                                                              {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
-                                                                                                                                                                                                              {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 900 }} 750w,{%- endif -%}
-                                                                                                                                                                                                              {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
-                                                                                                                                                                                                              {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 700px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 750 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
+            {%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 600 }} 275w,{%- endif -%}
+            {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+            {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 900 }} 750w,{%- endif -%}
+            {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+            {{ block.settings.image | image_url }} {{ block.settings.image.width }}w" sizes="(min-width: 1500px) calc(750px + 5vw),(max-width: 1500px) 750px, (max-width: 900px) 700px, (max-width: 600px) 600px, (max-width: 400px) 400px" src="{{ block.settings.image | image_url: width: 750 }}" alt="{{ block.settings.image.alt }}" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
                 {% endif %}
 
             </div>
@@ -118,6 +120,48 @@
                     "type": "image_picker",
                     "id": "image",
                     "label": "Background Image"
+                },
+                {
+                    "type": "select",
+                    "id": "x_position",
+                    "label": "Horizontal Position",
+                    "options": [
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "flex-start",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "flex-end",
+                            "label": "Right"
+                        }
+                    ],
+                    "default": "center",
+                    "info": "Change the position of your background image"
+                },
+                {
+                    "type": "select",
+                    "id": "y_position",
+                    "label": "Vertical Position",
+                    "options": [
+                        {
+                            "value": "center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "flex-start",
+                            "label": "Top"
+                        },
+                        {
+                            "value": "flex-end",
+                            "label": "Bottom"
+                        }
+                    ],
+                    "default": "center",
+                    "info": "Change the position of your background image"
                 },
                 {
                     "type": "url",

@@ -78,6 +78,8 @@
             "para": "Our Onabotulinum A\/Botox injections are the perfect way to reduce the appearance of facial wrinkles and give you a more youthful look. In addition to reducing wrinkles, our Botox injections can also help treat conditions such as neck spasms, excessive sweating, an overactive bladder, and lazy eye. If you suffer from chronic migraines, our Botox injections may also help prevent them.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/3Col-1.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/botox-onabotulinum-a"
           }
         },
@@ -88,6 +90,8 @@
             "para": "If you're looking for a way to restore volume and fullness to your skin, Bella Moore Aesthetics Fillers are the perfect solution. Our fillers are specifically indicated for the correction of facial lines, wrinkles, and folds, providing you with a more youthful appearance.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/3Col-2.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/fillers"
           }
         },
@@ -98,6 +102,8 @@
             "para": "",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_happy-cheerful-woman-relaxing-while-iv-infusion-in.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/iv-nutrition"
           }
         }
@@ -121,6 +127,8 @@
             "para": "HydraFacials are perfect for anyone who wants to improve the appearance of their skin. Whether you are concerned about wrinkles, fine lines, dark spots, or dryness, HydraFacials can help. The treatment is gentle and non-invasive, and it works for all skin types.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_smiling-cute-millennial-african-american-lady-with.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/hydro-facials"
           }
         },
@@ -130,7 +138,9 @@
             "heading": "Microdermabrasion",
             "para": "Microdermabrasion is the latest in revolutionary skincare technology. This non-invasive procedure uses tiny abrasive crystals to sweep away dead skin cells, dirt, and debris that can dull your complexion. Microdermabrasion treatments can help you achieve the smooth, even texture you want without resorting to surgery or other invasive procedures.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_laser-rejuvenation-treatment.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_woman-during-the-facial-treatment-procedure.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/micro-derma-abrasion"
           }
         },
@@ -140,7 +150,9 @@
             "heading": "Chemical Peel",
             "para": "If you're looking for a way to achieve firmer, younger-looking skin, then a chemical peel from Bella Moore Aesthetics is the answer. This skin-resurfacing procedure uses a chemicals solution to improve the texture and appearance of your skin. It can be used to treat wrinkles, scars, and discolored skin.",
             "button__text": "Learn More",
-            "image": "shopify:\/\/shop_images\/750x1000_chemical-peel-face-treatment-with-retinol-serum.jpg",
+            "image": "shopify:\/\/shop_images\/750x1000_chemical-peeling-facial-beauty-treatment.jpg",
+            "x_position": "center",
+            "y_position": "flex-end",
             "button__link": "shopify:\/\/products\/chemical-peel"
           }
         },
@@ -151,6 +163,8 @@
             "para": "This exciting new laser treatment can help you achieve tighter, more youthful-looking skin without the need for injectables. Fatona Lasers work by stimulating collagen production to promote full-thickness contraction of the skin. This results in a noticeable reduction in wrinkles and sagging skin.",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_cosmetologist-performing-laser-hair-removal-proced.jpg",
+            "x_position": "flex-end",
+            "y_position": "center",
             "button__link": "shopify:\/\/collections\/lasers"
           }
         }
@@ -175,6 +189,8 @@
             "para": "",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_attractive-young-woman-gets-cosmetic-face-injectio.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/kybella"
           }
         },
@@ -185,6 +201,8 @@
             "para": "",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_localized-cryotherapy-treatment-at-spa.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/meso-therapy"
           }
         },
@@ -195,6 +213,8 @@
             "para": "",
             "button__text": "Learn More",
             "image": "shopify:\/\/shop_images\/750x1000_rf-skin-tightening-belly.jpg",
+            "x_position": "center",
+            "y_position": "center",
             "button__link": "shopify:\/\/products\/body-sculpting"
           }
         }
