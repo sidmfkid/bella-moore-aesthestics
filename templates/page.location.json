@@ -8,6 +8,7 @@
     },
     "16610915508fa80901": {
       "type": "page__image-with-text",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/mary-apiafi-moore-725.jpg",
         "logo": "shopify:\/\/shop_images\/logo__box.jpg",
@@ -22,13 +23,34 @@
     },
     "1661092067c4511bc5": {
       "type": "page__list",
+      "disabled": true,
       "settings": {
+      }
+    },
+    "166318480772028526": {
+      "type": "page__map",
+      "settings": {
+        "url": "https:\/\/api.mapbox.com\/styles\/v1\/mapbox\/dark-v10\/static\/pin-s+cdb06c(-117.4774,33.8724)\/-117.4774,33.8724,11,0\/600x400@2x?access_token=pk.eyJ1Ijoic2lkZm1raWQiLCJhIjoiY2t3NWowOHYyMHBpeDJubzBoZnhtdmtrZSJ9.ytX4VQV61QXM9eD83RQfZw",
+        "heading": "Illinois Location",
+        "para": "285 Barrington Drive, Bourbonnais, Illinois, 60914",
+        "hours": "Monday through Friday 5pm to 8pm. Saturday and Sunday 8am to 8pm."
+      }
+    },
+    "166318863065b6588d": {
+      "type": "page__map",
+      "settings": {
+        "url": "https:\/\/api.mapbox.com\/styles\/v1\/mapbox\/dark-v10\/static\/pin-s+cdb06c(-117.4774,33.8724)\/-117.4774,33.8724,14,0\/600x400@2x?access_token=pk.eyJ1Ijoic2lkZm1raWQiLCJhIjoiY2t3NWowOHYyMHBpeDJubzBoZnhtdmtrZSJ9.ytX4VQV61QXM9eD83RQfZw",
+        "heading": "California Location",
+        "para": "17021 Rocky Bend Court, Riverside, California, 92503",
+        "hours": "Monday through Friday 5pm to 8pm. Saturday and Sunday 8am to 8pm."
       }
     }
   },
   "order": [
     "page-header",
     "16610915508fa80901",
-    "1661092067c4511bc5"
+    "1661092067c4511bc5",
+    "166318480772028526",
+    "166318863065b6588d"
   ]
 }

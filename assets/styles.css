@@ -3208,6 +3208,60 @@ html {
   }
 }
 
+.map__container {
+  width: 100%;
+  display: grid;
+  margin: 3rem 0;
+  grid-template-columns: minmax(1rem, calc(3.2rem + 5vw)) 1fr 2rem 1fr minmax(1rem, calc(3.2rem + 5vw));
+}
+.map__wrapper {
+  place-self: center;
+  grid-column: 2/3;
+}
+.map__info {
+  align-self: center;
+  justify-self: start;
+  grid-column: 4/5;
+}
+.map__image {
+  width: 100%;
+}
+.map__heading {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: unset;
+  background-color: unset !important;
+  background: linear-gradient(#f3c44f, #a57a0d);
+  background: -webkit-linear-gradient(#f3c44f, #a57a0d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  font-size: calc(1.5rem + 2vw);
+}
+.map__para {
+  font-size: calc(1.5rem + 1vw);
+}
+.map__hours {
+  font-size: calc(1.2rem + 0.5vw);
+  margin-top: 1.2rem;
+}
+@media screen and (max-width: 900px) {
+  .map__container {
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: auto;
+  }
+  .map__wrapper {
+    grid-column: 2/3;
+  }
+  .map__info {
+    grid-column: 2/3;
+    max-width: 60rem;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+}
+
 #shopify-section-footer {
   position: absolute;
   bottom: 0;

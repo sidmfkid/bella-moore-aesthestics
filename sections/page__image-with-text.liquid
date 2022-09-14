@@ -54,12 +54,12 @@
     <div class="page-image-with-text__image-container">
         {% unless image == blank %}
             <img srcset="
-                {%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
-                {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
-                {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
-                {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                {{ image | image_url }} {{ image.width }}w
-                " sizes="(max-width: 400px) 374.5px, (max-width: 600px) 428.1px,(max-width: 900px) 508.7px,(max-width: 1500px) 750px" width="{{ image.width }}" height="{{ image.height }}" src="{{ image | image_url: width: 1000 }}" class="page-image-with-text__image" loading="lazy"> <!--
+                                {%- if image.width >= 400 -%}{{ image | image_url: width: 400 }} 400w,{%- endif -%}
+                                {%- if image.width >= 600 -%}{{ image | image_url: width: 600 }} 600w,{%- endif -%}
+                                {%- if image.width >= 900 -%}{{ image | image_url: width: 900 }} 900w,{%- endif -%}
+                                {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                                {{ image | image_url }} {{ image.width }}w
+                                " sizes="(max-width: 400px) 374.5px, (max-width: 600px) 428.1px,(max-width: 900px) 508.7px,(max-width: 1500px) 750px" width="{{ image.width }}" height="{{ image.height }}" src="{{ image | image_url: width: 1000 }}" class="page-image-with-text__image" loading="lazy"> <!--
         <img
         alt=""
         class="page-image-with-text__image"
@@ -88,7 +88,7 @@
         <div class="page-image-with-text__para-container">
             <p class="page-image-with-text__para">
                 {% if para == blank %}
-                    {{ product.metafields.my_fields.product_info_2.value }}
+                    {{ product.metafields.my_fields.product_info_3.value }}
                 {% else %}
                     {{ para }}
                 {% endif %}
@@ -151,9 +151,9 @@
                     "label": "Fade Left"
                 },
                 {
-                  "value": "none",
-                  "label": "None"
-              }
+                    "value": "none",
+                    "label": "None"
+                }
             ],
             "default": "fadeIn",
             "info": "Select one of the options to animate the entrance and exit of this section. Save changes after selection to preview animation"

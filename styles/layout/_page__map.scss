@@ -1,0 +1,47 @@
+.map {
+    &__container{
+        width: 100%;
+        display: grid;
+        margin: 3rem 0;
+grid-template-columns: minmax(1rem, calc(3.2rem + 5vw)) 1fr 2rem 1fr minmax(1rem, calc(3.2rem + 5vw));
+    }
+    &__wrapper{
+        place-self: center;
+        grid-column: 2 / 3;
+    }
+    &__info{
+        align-self: center;
+        justify-self: start;
+        grid-column: 4 / 5;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__heading {
+        @include text-gradient;
+        font-size: font-size(medium);
+    }
+    &__para {
+        font-size: font-size(regular);
+    }
+    &__hours{
+        font-size: font-size(small);
+        margin-top: 1.2rem;
+    }
+
+    @include media-tablet {
+        &__container{
+            grid-template-columns: 1rem 1fr 1rem;
+            grid-template-rows: auto;
+        }
+        &__wrapper {
+            grid-column: 2 / 3;
+        }
+        &__info {
+            grid-column: 2 / 3;
+            max-width: 60rem;
+            justify-self: center;
+            margin-top: 2rem;
+        }
+    }
+}

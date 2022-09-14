@@ -1,0 +1,67 @@
+<div class="map__container">
+    <div class="map__wrapper">
+        <img class="map__image" alt="" src="{{ section.settings.url }}">
+    </div>
+    <div class="map__info">
+        <div class="map__heading">{{ section.settings.heading }}</div>
+        <div class="map__para">{{ section.settings.para }}</div>
+        <div class="map__hours">{{ section.settings.hours }}</div>
+    </div>
+</div>
+
+<script>
+    const map = L.map('map').setView([41.155910, -87.906700], 15);
+
+    const circle = L.circle([41.155910, -87.906700], {
+  color: "red",
+  fillColor: "#ff00f7",
+  fillOpacity: 0.5,
+  radius: 6,
+}).addTo(mymap);
+
+L.tileLayer(
+  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2lkZm1raWQiLCJhIjoiY2t3NWowOHYyMHBpeDJubzBoZnhtdmtrZSJ9.ytX4VQV61QXM9eD83RQfZw",
+  {
+    attribution:
+      'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: "mapbox/streets-v11",
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: "your.mapbox.access.token",
+  }
+).addTo(mymap);
+</script>
+
+{% schema %}
+{
+   "name": "Map",
+  "settings": [
+ {
+    "type": "text",
+    "id": "url",
+    "label": "Map Url"
+ },
+ {
+    "type": "text",
+    "id": "heading",
+    "label": "Heading"
+ },
+ {
+    "type": "text",
+    "id": "para",
+    "label": "Location Information"
+ },
+ {
+    "type": "text",
+    "id": "hours",
+    "label": "Operation Information"
+ }
+  ],
+ "presets": [
+    {
+        "category": "Page",
+        "name":"Map"
+    }
+ ]
+} {% endschema %}
