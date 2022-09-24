@@ -1,0 +1,76 @@
+{
+  "sections": {
+    "page-header": {
+      "type": "page__header",
+      "settings": {
+      }
+    },
+    "page-text-columns": {
+      "type": "page__text-columns",
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "heading": "{{ product.metafields.my_fields.product_heading_1.value }}",
+            "para": "A chemical peel is a cosmetic procedure that can be used to improve the appearance of your skin. The peel involves applying a chemical solution to the surface of your skin, which causes the dead skin cells to slough off. This can improve the texture and appearance of your skin, as well as reduce the appearance of wrinkles and fine lines.",
+            "btn_link": "",
+            "btn_text": ""
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "heading": "{{ product.metafields.my_fields.product_heading_2.value }}",
+            "para": "A chemical peel can also be used to treat certain skin conditions, such as acne or hyperpigmentation. In addition, peels can help to promote the production of collagen, which can help to improve the elasticity of your skin. As a result, chemical peels can provide a multitude of benefits for your skin.",
+            "btn_link": "",
+            "btn_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-1",
+        "column-2"
+      ],
+      "settings": {
+        "animation": "fadeIn"
+      }
+    },
+    "page-image-with-text": {
+      "type": "page__image-with-text",
+      "settings": {
+        "image": "{{ product.metafields.my_fields.product_image_1.value }}",
+        "logo": "shopify:\/\/shop_images\/logo__box.jpg",
+        "animation": "fadeIn",
+        "padding-top": 0,
+        "padding-bottom": 0,
+        "heading": "{{ product.metafields.my_fields.product_heading_3.value }}",
+        "para": "",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "page-text-overlay-bg": {
+      "type": "page__text-overlay-bg",
+      "settings": {
+        "heading": "Schedule Your Consultation Today!",
+        "para": "",
+        "button_text": "",
+        "button_link": "",
+        "animation": "fadeIn"
+      }
+    },
+    "page-contact": {
+      "type": "page__contact",
+      "settings": {
+        "animation": "fadeIn"
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "page-text-columns",
+    "page-image-with-text",
+    "page-text-overlay-bg",
+    "page-contact"
+  ]
+}
