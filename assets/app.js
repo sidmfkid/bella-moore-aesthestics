@@ -24,10 +24,10 @@ subLinks.forEach((subLink) => {
   subLink.addEventListener("click", openSubMenu.bind(this));
 });
 
-console.log(subLinks);
+// console.log(subLinks);
 
 function openSubMenu(e) {
-  console.log(e.target);
+  // console.log(e.target);
   if (
     e.target.classList.contains("header__sub-link") ||
     e.target.classList.contains("header__sub-link-item")
@@ -67,7 +67,7 @@ let stickyNavObserver = new IntersectionObserver(
 );
 
 function toggleStickyNav(entries, observer) {
-  console.log(entries);
+  // console.log(entries);
   if (!entries[0].isIntersecting) {
     nav.classList.add("sticky");
     navShop.classList.add("sticky");
@@ -172,8 +172,26 @@ if (!Shopify.designMode) {
 } else {
   const allAnimatedSections = document.querySelectorAll("[data-animate]");
 
-  console.log(allAnimatedSections);
+  // console.log(allAnimatedSections);
   allAnimatedSections.forEach((section) => {
     section.style = "opacity: 1; transform: translateX(0px) translateY(0px)";
   });
 }
+
+window.addEventListener("scroll", function () {
+  const allAnimatedSections = document.querySelectorAll("[data-animate]");
+  allAnimatedSections.forEach((section) => {
+    let position = section.getBoundingClientRect();
+    // checking whether fully visible
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+      // console.log("Element is fully visible in screen");
+    }
+
+    // checking for partial visibility
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+      // console.log("Element is partially visible in screen", section.className);
+      section.style = "opacity: 1; transform: translateX(0px) translateY(0px)";
+    }
+  });
+});
+// console.log(window.page);
