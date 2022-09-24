@@ -10,6 +10,8 @@
 // ******** Components FILES **** //
 @import 'components/buttons.scss';
 
+
+
 // ******** Layout FILES **** //
 
 @import 'layout/_header.scss';
@@ -34,3 +36,10 @@
 @import 'layout/page__list.scss';
 @import 'layout/page__map.scss';
 @import 'layout/_footer.scss';
+
+@media (min-width: 900px) {
+    main {
+        padding-bottom: calc(14.8rem + 15vw);
+    }
+}
+

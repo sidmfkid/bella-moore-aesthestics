@@ -3517,3 +3517,9 @@ html {
     text-align: left;
   }
 }
+
+@media (min-width: 900px) {
+  main {
+    padding-bottom: calc(14.8rem + 15vw);
+  }
+}
