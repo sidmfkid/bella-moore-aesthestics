@@ -283,8 +283,8 @@
       "type": "main__quote-text",
       "settings": {
         "quote__text": "Dr. Moore and her associates have consistently set the bar for professionalism. They provide unmatched service and expertise",
-        "quote__author": "Sheila P.",
-        "quote__info": "Medical Grade HCG",
+        "quote__author": "",
+        "quote__info": "",
         "animation": "fadeIn"
       }
     },
