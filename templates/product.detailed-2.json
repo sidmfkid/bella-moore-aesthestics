@@ -53,6 +53,7 @@
     },
     "351e6910-3038-47a2-8469-f56789e0b875": {
       "type": "page__text-columns",
+      "disabled": true,
       "blocks": {
         "5a07988f-5bab-43d5-bd80-7cdd339ece6d": {
           "type": "column",

@@ -5,7 +5,6 @@
     padding-top: 5rem;
     z-index: 1;
 
-
     &__svg-container {
         position: absolute;
         top: 0;
@@ -19,7 +18,6 @@
         display: flex;
         justify-content: center;
         // align-items: center;
-
     }
 
     &__bg {
@@ -37,7 +35,7 @@
         align-items: center;
         // position: absolute;
     }
-    &__text{
+    &__text {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,34 +43,29 @@
         padding: 0 calc(3.2rem + 5vw);
     }
 
-
-
     &__heading {
         display: block;
-        font-size: calc(4rem + 1.5vw);
+        @include section-title--no-gradient;
         color: white;
         text-align: center;
         font-weight: 100;
     }
-    &__para{
+    &__para {
         margin-top: 2.2rem;
         font-size: calc(1rem + 1vw);
         color: white;
         text-align: center;
         font-weight: 100;
-
     }
 
     @include media-tablet {
         &__content {
             // padding: 0 4rem;
             height: calc(40rem + 5vw);
-
         }
 
         &__heading {
             font-size: calc(3rem + 1vw);
-
         }
 
         &__bg {
@@ -91,25 +84,21 @@
         &__content {
             // padding: 0 4rem;
             height: calc(25rem + 5vw);
-
         }
 
         &__svg-container {
             height: calc(30rem + 5vw);
             top: 0;
-
         }
-        &__text{
-
+        &__text {
             padding: 0 calc(1.2rem + 2.5vw);
         }
     }
 
     @include media-small {
         padding-top: 2rem;
-        &__text{
-
-            padding: 0 calc(1.2rem + .5vw);
+        &__text {
+            padding: 0 calc(1.2rem + 0.5vw);
         }
         &__bg {
             // height: calc(100% - 20vw);

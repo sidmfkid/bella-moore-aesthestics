@@ -1,45 +1,42 @@
 // ******** BASE FILES **** //
-@import 'base/_reset.scss';
-@import 'base/variables.scss';
-@import 'base/_colors.scss';
+@import "base/_reset.scss";
+@import "base/variables.scss";
+@import "base/_colors.scss";
 
 // ******** Utility FILES **** //
 
-@import 'utilities/mixins.scss';
+@import "utilities/mixins.scss";
 
 // ******** Components FILES **** //
-@import 'components/buttons.scss';
-
-
+@import "components/buttons.scss";
 
 // ******** Layout FILES **** //
 
-@import 'layout/_header.scss';
-@import 'layout/main__hero.scss';
-@import 'layout/main__image-with-text.scss';
-@import 'layout/main__image-columns.scss';
-@import 'layout/main__text-overlay-image.scss';
-@import 'layout/main__banner-callout.scss';
-@import 'layout/main__gallery-offset.scss';
-@import 'layout/main__quote-text.scss';
-@import 'layout/main__two-columns.scss';
-@import 'layout/main__three-columns.scss';
-@import 'layout/main__image-with-card.scss';
-@import 'layout/main__content-squares.scss';
-@import 'layout/main__list-collections.scss';
-@import 'layout/page__title-text.scss';
-@import 'layout/page__contact.scss';
-@import 'layout/_page__header.scss';
-@import 'layout/page__image-with-text.scss';
-@import 'layout/page__text-columns.scss';
-@import 'layout/page__text-overlay-bg.scss';
-@import 'layout/page__list.scss';
-@import 'layout/page__map.scss';
-@import 'layout/_footer.scss';
+@import "layout/_header.scss";
+@import "layout/main__hero.scss";
+@import "layout/main__image-with-text.scss";
+@import "layout/main__image-columns.scss";
+@import "layout/main__text-overlay-image.scss";
+@import "layout/main__banner-callout.scss";
+@import "layout/main__gallery-offset.scss";
+@import "layout/main__quote-text.scss";
+@import "layout/main__two-columns.scss";
+@import "layout/main__three-columns.scss";
+@import "layout/main__image-with-card.scss";
+@import "layout/main__content-squares.scss";
+@import "layout/main__list-collections.scss";
+@import "layout/page__title-text.scss";
+@import "layout/page__contact.scss";
+@import "layout/_page__header.scss";
+@import "layout/_page__image-with-text.scss";
+@import "layout/_page__text-columns.scss";
+@import "layout/_page__text-overlay-bg.scss";
+@import "layout/_page__list.scss";
+@import "layout/_page__map.scss";
+@import "layout/_footer.scss";
 
 @media (min-width: 900px) {
     main {
         padding-bottom: calc(14.8rem + 15vw);
     }
 }
-

@@ -8,24 +8,29 @@
     {% assign heading = block.settings.heading %}
 
     {% assign para = block.settings.para %}
+    {% assign meta = block.settings.meta %}
     {% assign btn_link = block.settings.btn_link %}
     {% assign btn_text = block.settings.btn_text %}
 
-    <div class="text-columns__column">
-      {% unless heading == blank %}
+    <div class="text-columns__column" {{ block.shopify_attributes }}>
+      {% unless heading == empty %}
         <div class="text-columns__heading-container">
           <h2 class="text-columns__heading">{{ heading }}</h2>
         </div>
       {% endunless %}
 
-      {% unless para == blank and product.metafields.my_fields.product_info_2.value == blank and product.metafields.my_fields.product_info_1.value == blank %}
+      {% unless para == empty %}
         <div class="text-columns__para-container">
           <p class="text-columns__para">
-            {% if forloop.index == 1 %}
-              {{ product.metafields.my_fields.product_info_1.value }}
-            {% elsif forloop.index == 2 %}
-              {{ product.metafields.my_fields.product_info_2.value }}
-            {% endif %}
+            {{ para }}
+          </p>
+        </div>
+      {% endunless %}
+
+      {% unless meta == empty %}
+        <div class="text-columns__para-container">
+          <p class="text-columns__para">
+            {{ meta }}
           </p>
         </div>
       {% endunless %}
@@ -118,6 +123,11 @@
           "id": "para",
           "label": "Paragraph",
           "default": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iste neque! Unde, architecto corporis natus temporibus hic placeat vel perspiciatis obcaecati repellat fuga, asperiores minus reiciendis deleniti ut nostrum officia! Laborum maxime ipsam quos enim vitae cumque optio consequatur sequi quaerat at ut eveniet commodi error temporibus possimus, nisi vero laboriosam veritatis!"
+        },
+        {
+          "type": "richtext",
+          "id": "meta",
+          "label": "Metafield Para"
         },
         {
           "type": "url",

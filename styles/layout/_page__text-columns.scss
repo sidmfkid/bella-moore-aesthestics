@@ -22,7 +22,7 @@
 
     &__heading-container,
     &__para-container {
-        padding-bottom: 3rem
+        padding-bottom: 3rem;
     }
 
     &__heading {
@@ -33,17 +33,13 @@
     }
 
     &__para {
-        font-size: font-size(small);
+        @include section-para;
         text-align: center;
         font-weight: 100;
-
     }
-
-
 
     &__button {
         margin: 0 auto;
-
     }
 
     @include media-tablet {
@@ -52,7 +48,7 @@
         &--two-columns {
             flex-wrap: wrap;
 
-            padding: calc(3rem + 2vw) calc(.5rem + 5vw);
+            padding: calc(3rem + 2vw) calc(0.5rem + 5vw);
 
             .text-columns__button-container {
                 margin-bottom: 6rem;
@@ -67,26 +63,16 @@
             }
         }
 
-
-        &__heading {
-            font-size: font-size(medium);
-        }
-
-        &__para {
-            font-size: font-size(regular);
-        }
-
         &__button-container {
             margin-bottom: 1rem;
         }
     }
 
     @include media-medium {
-
         &--two-columns {
             flex-wrap: wrap;
 
-            padding: calc(3rem + 2vw) calc(.5rem + 4vw);
+            padding: calc(3rem + 2vw) calc(0.5rem + 4vw);
 
             .text-columns__column {
                 padding: 0 0;
@@ -99,10 +85,8 @@
 
         &__column {
             max-width: unset;
-            padding: 0 calc(.8rem + 4vw);
+            padding: 0 calc(0.8rem + 4vw);
         }
-
-        &__heading {}
     }
 
     @include media-small {

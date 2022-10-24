@@ -11,11 +11,7 @@
     </div>
     <div class="page-text-overlay-bg__para-container">
       <p class="page-text-overlay-bg__para">
-        {% if section.settings.para == blank %}
-          {{ product.metafields.my_fields.product_info_3.value }}
-        {% else %}
-          {{ section.settings.para }}
-        {% endif %}
+        {{ section.settings.para }}
       </p>
     </div>
     <div class="page-text-overlay-bg__button-container">
