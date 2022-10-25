@@ -46,7 +46,7 @@
         "padding-top": 0,
         "padding-bottom": 0,
         "heading": "{{ product.metafields.my_fields.product_heading_3.value }}",
-        "para": "",
+        "para": "<p>{{ product.metafields.my_fields.product_info_3 | metafield_tag }}<\/p>",
         "button_text": "",
         "button_link": ""
       }

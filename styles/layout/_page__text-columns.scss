@@ -10,6 +10,7 @@
         @extend .text-columns;
         justify-content: space-evenly;
         padding: calc(3rem + 2vw) calc(5rem + 5vw);
+        align-items: flex-start;
     }
 
     &__column {
@@ -26,8 +27,7 @@
     }
 
     &__heading {
-        @include text-gradient;
-        font-size: font-size(medium);
+        @include section-title;
         font-weight: 100;
         text-align: center;
     }

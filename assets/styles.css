@@ -2976,6 +2976,7 @@ html {
 }
 .page-image-with-text__heading {
   font-weight: 100;
+  text-align: center;
   color: black;
   text-decoration: none;
   text-decoration-color: unset;
@@ -3081,6 +3082,7 @@ html {
 .text-columns--two-columns {
   justify-content: space-evenly;
   padding: calc(3rem + 2vw) calc(5rem + 5vw);
+  align-items: flex-start;
 }
 .text-columns__column {
   max-width: calc(26.6rem + 20vw);
@@ -3103,8 +3105,33 @@ html {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   font-size: calc(1.5rem + 2vw);
+  line-height: calc(1.5rem + 2vw + 1.5rem);
   font-weight: 100;
   text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .text-columns__heading {
+    font-size: calc(1.5rem + 2vw);
+    line-height: calc(1.5rem + 2vw + 1rem);
+  }
+}
+@media screen and (max-width: 600px) {
+  .text-columns__heading {
+    font-size: calc(1.5rem + 5vw);
+    line-height: calc(1.5rem + 5vw + 1.2rem);
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-columns__heading {
+    font-size: calc(1.5rem + 5vw);
+    line-height: calc(1.5rem + 5vw + 1rem);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .text-columns__heading {
+    font-size: calc(1.5rem + 2vw);
+    line-height: calc(1.5rem + 2vw + 1.5rem);
+  }
 }
 .text-columns__para {
   font-size: calc(1.2rem + 0.5vw);
