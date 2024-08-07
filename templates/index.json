@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "hero": {
@@ -10,7 +19,7 @@
         "animation": "fadeDown",
         "margin_top": 11,
         "margin_bottom": 0,
-        "heading": "BELLA MOORE AESTHESTICS",
+        "heading": "BELLA MOORE AESTHETICS",
         "subheading": "Lifestyle Innovation",
         "button_text": "Book Now",
         "button_link": "",
@@ -32,7 +41,6 @@
     },
     "three-columns": {
       "type": "main__three-columns",
-      "disabled": true,
       "blocks": {
         "column-1": {
           "type": "column",
@@ -64,6 +72,7 @@
         "column-2",
         "column-3"
       ],
+      "disabled": true,
       "settings": {
         "animation": "fadeIn"
       }
@@ -230,7 +239,6 @@
     },
     "16610111211520fb01": {
       "type": "main__three-columns",
-      "disabled": true,
       "blocks": {
         "6b8d45ac-481c-4e53-91bb-fdb2257a89cc": {
           "type": "column",
@@ -262,6 +270,7 @@
         "5e2c977b-fcd1-41d4-909a-02fb4b55ab8d",
         "d32ed391-96a3-4a40-afcf-46e4e8dd81b5"
       ],
+      "disabled": true,
       "settings": {
         "animation": "fadeIn"
       }
@@ -301,7 +310,6 @@
     },
     "image-with-card": {
       "type": "main__image-with-card",
-      "disabled": true,
       "blocks": {
         "tab-1": {
           "type": "tab",
@@ -350,6 +358,7 @@
         "tab-3",
         "tab-4"
       ],
+      "disabled": true,
       "settings": {
         "animation": "fadeIn"
       }
@@ -375,7 +384,6 @@
     },
     "content-squares": {
       "type": "main__content-squares",
-      "disabled": true,
       "blocks": {
         "square-1": {
           "type": "image",
@@ -434,6 +442,7 @@
         "square-5",
         "square-6"
       ],
+      "disabled": true,
       "settings": {
         "animation": "fadeIn"
       }
@@ -457,7 +466,7 @@
         "padding-top": 30,
         "padding-bottom": 20,
         "heading": "About The Founder",
-        "para": "Dr. Moore received her doctor of medicine at Saint George's University School of Medicine in Grenada, West Indies. She then completed an internal medicine internship at Mount Sinai School of Medicine in Queens, New York, and a residency in physical medicine and rehabilitation at Albert Einstein College of Medicine, Montefiore Medical Center in Bronx, New York. Dr. Apiafi Moore then completed a sports medicine fellowship at Cleveland Clinic in Cleveland, Ohio.",
+        "para": "<p>Dr. Moore received her doctor of medicine at Saint George's University School of Medicine in Grenada, West Indies. She then completed an internal medicine internship at Mount Sinai School of Medicine in Queens, New York, and a residency in physical medicine and rehabilitation at Albert Einstein College of Medicine, Montefiore Medical Center in Bronx, New York. Dr. Apiafi Moore then completed a sports medicine fellowship at Cleveland Clinic in Cleveland, Ohio.<\/p>",
         "button_text": "",
         "button_link": ""
       }
