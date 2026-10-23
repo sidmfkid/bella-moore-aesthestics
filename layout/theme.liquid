@@ -137,7 +137,7 @@
     --text-boxes-shadow-horizontal-offset: {{settings.text_boxes_shadow_horizontal_offset}}px;
     --text-boxes-shadow-vertical-offset: {{settings.text_boxes_shadow_vertical_offset}}px;
     --text-boxes-shadow-blur-radius: {{settings.text_boxes_shadow_blur}}px; --buttons-radius:
-    {{settings.buttons_radius}}px; --buttons-radius-outset: {% if settings.buttons_radius> 0 %}
+    {{settings.buttons_radius}}px; --buttons-radius-outset: {% if settings.buttons_radius %}
     {{settings.buttons_radius
     | plus: settings.buttons_border_thickness}}{% else %}0{% endif %}
     px;
@@ -292,4 +292,13 @@
 </head>
 </head>
 
-</html>>
+</html>>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% if settings.buttons_radius> 0 %}"
+  to: "{% if settings.buttons_radius %}"
+  position: 8215..8247
+{%- endcomment -%}
